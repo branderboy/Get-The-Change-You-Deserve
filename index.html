@@ -237,6 +237,8 @@
             section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
             .grid > div, .flex.flex-col.md\:flex-row.items-stretch, .editorial-border { break-inside: avoid; page-break-inside: avoid; }
             .shadow-lg, .shadow-xl, .shadow-2xl, .shadow-sm { box-shadow: none !important; }
+            .insight-body { display: block !important; }
+            .insight-row span[aria-hidden] { display: none; }
         }
 
         /* Abstract Shape */
@@ -327,75 +329,75 @@
                         <div class="grid md:grid-cols-2 gap-4">
                             
                             <!-- Card 1 -->
-                            <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
+                            <div class="bg-[#FAF0E6] text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"Who is Rhonda Hamilton?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-white font-light">A recurring candidate-origin-story series: <em>“Who Is Rhonda Hamilton?”</em></p>
+                                <p class="text-sm text-gray-700 font-light">A recurring candidate-origin-story series: <em>“Who Is Rhonda Hamilton?”</em></p>
                             </div>
 
                             <!-- Card 2 -->
-                            <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
+                            <div class="bg-[#FAF0E6] text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"Is she a serious citywide candidate?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-white font-light">Content showing consistent activity, resident conversations, issue fluency, community proof, events, and organization.</p>
+                                <p class="text-sm text-gray-700 font-light">Content showing consistent activity, resident conversations, issue fluency, community proof, events, and organization.</p>
                             </div>
 
                             <!-- Card 3 -->
-                            <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
+                            <div class="bg-[#FAF0E6] text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"What does independent mean?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-white font-light">An <em>“Independent, Explained”</em> content pillar that frames independence as resident accountability—not isolation.</p>
+                                <p class="text-sm text-gray-700 font-light">An <em>“Independent, Explained”</em> content pillar that frames independence as resident accountability—not isolation.</p>
                             </div>
 
                             <!-- Card 4 -->
-                            <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
+                            <div class="bg-[#FAF0E6] text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"What has she actually done?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-white font-light">A <em>“Proof, Not Slogans”</em> content pillar covering ANC service, nonprofit leadership, mental-health advocacy, and business experience.</p>
+                                <p class="text-sm text-gray-700 font-light">A <em>“Proof, Not Slogans”</em> content pillar covering ANC service, nonprofit leadership, mental-health advocacy, and business experience.</p>
                             </div>
 
                              <!-- Card 5 -->
-                             <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
+                             <div class="bg-[#FAF0E6] text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"She lost in 2022—why run again?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-white font-light">A <em>“Why I Ran Again”</em> response: she did not disappear after the prior election and continued her work in the community.</p>
+                                <p class="text-sm text-gray-700 font-light">A <em>“Why I Ran Again”</em> response: she did not disappear after the prior election and continued her work in the community.</p>
                             </div>
 
                             <!-- Card 6 -->
-                            <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
+                            <div class="bg-[#FAF0E6] text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"Is she only a mental-health candidate?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-white font-light">A <em>“Beyond Mental Health”</em> lane connecting mental health to housing, safety, schools, jobs, and city services.</p>
+                                <p class="text-sm text-gray-700 font-light">A <em>“Beyond Mental Health”</em> lane connecting mental health to housing, safety, schools, jobs, and city services.</p>
                             </div>
                             
                             <!-- Card 7 (Spans 2 cols on md) -->
-                            <div class="md:col-span-2 bg-[#6395EE] p-6 border-l-4 border-dcRed flex flex-col md:flex-row gap-6 items-start">
+                            <div class="md:col-span-2 bg-[#FAF0E6] text-dcBlack p-6 border-l-4 border-dcRed flex flex-col md:flex-row gap-6 items-start">
                                 <div class="md:w-1/2">
                                     <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                    <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">The Ultimate Critique</p>
+                                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">The Ultimate Critique</p>
                                     <h4 class="font-heading font-bold text-2xl">"Her campaign may not look organized or polished."</h4>
                                 </div>
                                 <div class="md:w-1/2 border-t md:border-t-0 md:border-l border-gray-600 pt-4 md:pt-0 md:pl-6">
                                     <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                    <p class="text-sm text-white font-light leading-relaxed">The plan says not to debate this publicly; instead, show disciplined, consistent content, professional presentation, schedules, neighborhood activity, and real proof.</p>
+                                    <p class="text-sm text-gray-700 font-light leading-relaxed">The plan says not to debate this publicly; instead, show disciplined, consistent content, professional presentation, schedules, neighborhood activity, and real proof.</p>
                                 </div>
                             </div>
 
@@ -418,57 +420,104 @@
                     
                     <div class="md:w-2/3">
                         <div class="space-y-6">
-                            <div class="flex gap-4 md:gap-6 items-start p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack">
+                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="The Top Three Concerns" data-body="77% of residents call cost of living very important. 73% say public safety. 71% say housing. Every content package starts from one of these three." data-src="Representative polling · City Cast DC / TrueDot · May 2026 · 735 adults · ±3.7">
                                 <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">01</div>
-                                <div>
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack mb-2 uppercase tracking-tight">The Top Three Concerns</strong>
-                                    <p class="text-sm text-gray-600 font-light">77% of residents call cost of living very important. 73% say public safety. 71% say housing. Every content package starts from one of these three.</p>
-                                    <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Representative polling · City Cast DC / TrueDot · May 2026 · 735 adults · ±3.7</p>
+                                <div class="flex-1">
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">The Top Three Concerns</strong>
+                                    <div class="insight-body hidden mt-2">
+                                        <p class="text-sm text-gray-600 font-light">77% of residents call cost of living very important. 73% say public safety. 71% say housing. Every content package starts from one of these three.</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Representative polling · City Cast DC / TrueDot · May 2026 · 735 adults · ±3.7</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex gap-4 md:gap-6 items-start p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack">
+                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
+                            </button>
+                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="Residents Want A New Direction" data-body="More than half say D.C. is on the wrong track. Nearly half want a mayor who represents a new direction. More than half say D.C. is unaffordable for them." data-src="Representative polling · Washington Post / Schar School · June 2026">
                                 <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">02</div>
-                                <div>
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack mb-2 uppercase tracking-tight">Residents Want A New Direction</strong>
-                                    <p class="text-sm text-gray-600 font-light">More than half say D.C. is on the wrong track. Nearly half want a mayor who represents a new direction. More than half say D.C. is unaffordable for them.</p>
-                                    <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Representative polling · Washington Post / Schar School · June 2026</p>
+                                <div class="flex-1">
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">Residents Want A New Direction</strong>
+                                    <div class="insight-body hidden mt-2">
+                                        <p class="text-sm text-gray-600 font-light">More than half say D.C. is on the wrong track. Nearly half want a mayor who represents a new direction. More than half say D.C. is unaffordable for them.</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Representative polling · Washington Post / Schar School · June 2026</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex gap-4 md:gap-6 items-start p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack">
+                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
+                            </button>
+                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="Safety Concern Is Not Support For Federal Control" data-body="79% oppose the federal takeover of D.C. police. 78% feel safe in their neighborhood. 54% think crime is improving, while 31% still call it extremely or very serious. Safety content has to hold both." data-src="Representative polling · Washington Post / Schar School · Aug 2025 · 604 residents">
                                 <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">03</div>
-                                <div>
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack mb-2 uppercase tracking-tight">Safety Concern Is Not Support For Federal Control</strong>
-                                    <p class="text-sm text-gray-600 font-light">79% oppose the federal takeover of D.C. police. 78% feel safe in their neighborhood. 54% think crime is improving, while 31% still call it extremely or very serious. Safety content has to hold both.</p>
-                                    <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Representative polling · Washington Post / Schar School · Aug 2025 · 604 residents</p>
+                                <div class="flex-1">
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">Safety Concern Is Not Support For Federal Control</strong>
+                                    <div class="insight-body hidden mt-2">
+                                        <p class="text-sm text-gray-600 font-light">79% oppose the federal takeover of D.C. police. 78% feel safe in their neighborhood. 54% think crime is improving, while 31% still call it extremely or very serious. Safety content has to hold both.</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Representative polling · Washington Post / Schar School · Aug 2025 · 604 residents</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex gap-4 md:gap-6 items-start p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack">
+                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
+                            </button>
+                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="The Votes Are Up For Grabs" data-body="Over 40% of voters east of the Anacostia were undecided shortly before the primary. Only 32% of registered voters turned out for it. About 91,000 independents, 18.4% of the electorate, could not vote in it at all." data-src="Polling and election behavior · Post / Schar · DC Board of Elections 2026">
                                 <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">04</div>
-                                <div>
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack mb-2 uppercase tracking-tight">The Votes Are Up For Grabs</strong>
-                                    <p class="text-sm text-gray-600 font-light">Over 40% of voters east of the Anacostia were undecided shortly before the primary. Only 32% of registered voters turned out for it. About 91,000 independents, 18.4% of the electorate, could not vote in it at all.</p>
-                                    <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Polling and election behavior · Post / Schar · DC Board of Elections 2026</p>
+                                <div class="flex-1">
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">The Votes Are Up For Grabs</strong>
+                                    <div class="insight-body hidden mt-2">
+                                        <p class="text-sm text-gray-600 font-light">Over 40% of voters east of the Anacostia were undecided shortly before the primary. Only 32% of registered voters turned out for it. About 91,000 independents, 18.4% of the electorate, could not vote in it at all.</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Polling and election behavior · Post / Schar · DC Board of Elections 2026</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex gap-4 md:gap-6 items-start p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack">
+                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
+                            </button>
+                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="What Residents Actually Report" data-body="Trash and parking enforcement were the highest-volume 311 categories in July 2026, with rodents in Glover Park, trash-cart repairs across Ward 5, and dockless vehicles around Shaw. These are the City Reliability stories, neighborhood by neighborhood." data-src="Government service data · DC Open Data · City Cast July 2026">
                                 <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">05</div>
-                                <div>
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack mb-2 uppercase tracking-tight">What Residents Actually Report</strong>
-                                    <p class="text-sm text-gray-600 font-light">Trash and parking enforcement were the highest-volume 311 categories in July 2026, with rodents in Glover Park, trash-cart repairs across Ward 5, and dockless vehicles around Shaw. These are the City Reliability stories, neighborhood by neighborhood.</p>
-                                    <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Government service data · DC Open Data · City Cast July 2026</p>
+                                <div class="flex-1">
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">What Residents Actually Report</strong>
+                                    <div class="insight-body hidden mt-2">
+                                        <p class="text-sm text-gray-600 font-light">Trash and parking enforcement were the highest-volume 311 categories in July 2026, with rodents in Glover Park, trash-cart repairs across Ward 5, and dockless vehicles around Shaw. These are the City Reliability stories, neighborhood by neighborhood.</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Government service data · DC Open Data · City Cast July 2026</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex gap-4 md:gap-6 items-start p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack">
+                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
+                            </button>
+                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="Live Signals, Refreshed Monthly" data-body="Google Trends for candidate names, rent, Pepco bills, federal layoffs, curfews, and police. Reddit and ward groups for the exact language residents use. Both are labeled as signals and checked against polling before they shape a script." data-src="Search behavior and online sentiment · Google Trends · r/washingtondc">
                                 <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">06</div>
-                                <div>
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack mb-2 uppercase tracking-tight">Live Signals, Refreshed Monthly</strong>
-                                    <p class="text-sm text-gray-600 font-light">Google Trends for candidate names, rent, Pepco bills, federal layoffs, curfews, and police. Reddit and ward groups for the exact language residents use. Both are labeled as signals and checked against polling before they shape a script.</p>
-                                    <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Search behavior and online sentiment · Google Trends · r/washingtondc</p>
+                                <div class="flex-1">
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">Live Signals, Refreshed Monthly</strong>
+                                    <div class="insight-body hidden mt-2">
+                                        <p class="text-sm text-gray-600 font-light">Google Trends for candidate names, rent, Pepco bills, federal layoffs, curfews, and police. Reddit and ward groups for the exact language residents use. Both are labeled as signals and checked against polling before they shape a script.</p>
+                                        <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-2">Search behavior and online sentiment · Google Trends · r/washingtondc</p>
+                                    </div>
                                 </div>
-                            </div>
+                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
+                            </button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Insight popup -->
+                <dialog id="insight-dialog" class="p-0 bg-transparent backdrop:bg-dcBlack/80 max-w-2xl w-[92vw]">
+                    <div class="bg-white border-t-4 border-dcRed shadow-2xl p-8 md:p-10">
+                        <div class="flex justify-between items-start gap-6 mb-4">
+                            <div class="flex gap-1 text-dcRed text-lg"><span>★</span><span>★</span><span>★</span></div>
+                            <button type="button" id="insight-close" class="font-heading font-bold text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-dcRed" aria-label="Close">Close ✕</button>
+                        </div>
+                        <h4 id="insight-title" class="font-heading font-black text-2xl md:text-3xl uppercase tracking-tight text-dcBlack mb-4"></h4>
+                        <p id="insight-text" class="text-base md:text-lg text-gray-700 font-light leading-relaxed mb-6"></p>
+                        <p id="insight-src" class="text-[10px] text-gray-400 uppercase tracking-wider"></p>
+                    </div>
+                </dialog>
+                <script>
+                    (function () {
+                        var dlg = document.getElementById('insight-dialog');
+                        if (!dlg) return;
+                        document.querySelectorAll('.insight-row').forEach(function (row) {
+                            row.addEventListener('click', function () {
+                                document.getElementById('insight-title').textContent = row.dataset.title;
+                                document.getElementById('insight-text').textContent = row.dataset.body;
+                                document.getElementById('insight-src').textContent = row.dataset.src;
+                                if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+                            });
+                        });
+                        document.getElementById('insight-close').addEventListener('click', function () { dlg.close(); });
+                        dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+                    })();
+                </script>
 
                 <!-- Central Brand Position Block -->
                 <div class="bg-dcBlack text-white p-8 md:p-20 relative overflow-hidden flex flex-col items-center text-center shadow-2xl">
