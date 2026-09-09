@@ -32,16 +32,17 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 | 2.4 | "Proof, Not Slogans" pillar | 2 | 75 | [ ] |
 | 2.5 | "Why I Ran Again" response | 2 | 80 | [ ] |
 | 2.6 | "Beyond Mental Health" lane | 2 | 80 | [ ] |
-| 2.7 | "D.C. Issues, Plainly" content | 2 | 85 | [ ] |
+| 2.7 | "D.C. Issues, Plainly" content | 2 | 90 | [ ] |
 | 2.8 | Plain-language public safety content | 2 | 70 | [ ] |
 | 2.9 | Pro-resident reframe content | 2 | 75 | [ ] |
 | 2.10 | "Humanitarian" practical-standard content | 2 | 75 | [ ] |
 | 2.11 | Organized-campaign proof (shown, not argued) | 2 | 60 | [ ] |
-| 3.1 | Google Trends search-interest report | 3 | 90 | [ ] |
-| 3.2 | Polling review, high-priority issues list | 3 | 65 | [ ] |
-| 3.3 | D.C. Language & Conversation Guide | 3 | 85 | [ ] |
+| 3.1 | Audit insights (polling, election behavior, 311) on the page | 3 | 100 | [x] |
+| 3.2 | Google Trends search-interest report (monthly) | 3 | 90 | [ ] |
+| 3.3 | D.C. Language & Conversation Guide (monthly) | 3 | 85 | [ ] |
+| 3.4 | Monthly insight update | 3 | 85 | [ ] |
 | 4.1 | Central brand position, applied | 4 | 95 | [ ] |
-| 4.2 | Issue content package system | 4 | 80 | [ ] |
+| 4.2 | Issue content package system | 4 | 85 | [ ] |
 | 4.3 | City Reliability package (first) | 4 | 95 | [ ] |
 | 5.1 | Podcast clipping pipeline | 5 | 70 | [ ] |
 | 5.2 | Discovery content (TikTok / Reels) | 5 | 80 | [ ] |
@@ -61,7 +62,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 | Window | Work | Unlocks |
 |---|---|---|
 | Week 0 | Close out Phase 0 assets (photo, video, PDF). Lock brand position (4.1). Start the campaign website (0.5) so it is live before Week 4 posting begins. | A complete proposal page to share, and a destination for every handoff. |
-| Weeks 1–2 | Phase One audit: 3.1, 3.2, 3.3 in parallel. | The issue list every content package is built from. |
+| Weeks 1–2 | Audit insights are in (3.1). Run the first Google Trends pull (3.2) and the Reddit language guide (3.3). | The language and search signals that sharpen the packages. |
 | Week 3 | Phase Two: build 4.2 system, produce 4.3, then one package per audit issue. | Scripts and hooks for production. |
 | Weeks 3–4 | Candidate interview day(s): capture raw material for 2.1, 2.4, 2.5, 2.6, 2.8 and the briefing video (0.3) in one sitting. | Weeks of clips from one shoot. |
 | Week 4 onward | Phase Three production and posting: 5.2 and 5.3 weekly, 5.1 as podcasts land, 5.4 on a set neighborhood schedule. 5.5 live before first post. | Measured reach and the retargeting pool. |
@@ -93,7 +94,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 **Basis:** The page says it "Includes Complete Metrics, Data Sources, & Timelines." The strategy narrative exists on the page. The metrics, data sources, and timelines do not exist yet, and they depend on the Phase One audit.
 - **Inputs:** this document, Phase One outputs, the funnel metrics from 5.5.
 - **Steps:** export the page narrative to a document; add the audit outputs as appendices; add the sequence table above as the timeline; add the 5.5 metric definitions; brand to match the page; export PDF; link the download button.
-- **Depends on:** 3.1–3.3, 5.5.
+- **Depends on:** 5.5 for live metrics. Audit insights (3.1) are ready to drop in.
 - **Done when:** the download button serves a PDF containing all three promised sections.
 
 ### 0.5 Campaign website — Confidence 85
@@ -162,11 +163,11 @@ Each critique on the page gets a content lane. Every lane shares the same produc
 - **Steps:** one explainer per connection using the Problem → City Action → Measurable Result frame from 2.7.
 - **Done when:** six explainers are cut.
 
-### 2.7 "D.C. Issues, Plainly" content — Confidence 85
-**Basis:** The framework is defined (Problem → City Action → Measurable Result). The issues come from Phase One, which is a solvable dependency.
-- **Inputs:** the high-priority issues list from 3.2.
+### 2.7 "D.C. Issues, Plainly" content — Confidence 90
+**Basis:** The framework is defined (Problem → City Action → Measurable Result) and the audit has already ranked the issues.
+- **Inputs:** the top-three concerns from 3.1 (cost of living, public safety, housing), then the 311 categories and the split issues.
 - **Steps:** one issue per piece; write all three framework parts before shooting; no piece airs without a measurable result named.
-- **Depends on:** 3.1–3.3.
+- **Depends on:** 3.1 (done). 3.3 sharpens the phrasing.
 - **Done when:** one piece exists for every issue on the priority list.
 
 ### 2.8 Plain-language public safety content — Confidence 70
@@ -196,27 +197,33 @@ Each critique on the page gets a content lane. Every lane shares the same produc
 
 ---
 
-## Phase 3 — The Sentiment Audit (Phase One on the page)
+## Phase 3 — Audit Insights (Phase One on the page)
 
-### 3.1 Google Trends search-interest report — Confidence 90
-**Basis:** Public, free, no approvals. The page lists the seed topics (cost of living, crime, Pepco bills, 311 complaints, youth curfews).
+The audit is done. Its findings are on the page as the "What D.C. Already Told Us" section, sourced from the strategy doc's data-sources appendix. What remains are the two live signals the audit refreshes monthly.
+
+### 3.1 Audit insights on the page — Confidence 100
+**Basis:** Complete. Eight insight cards and three messaging takeaways, each labeled by source type. Done.
+- **Sources used:** City Cast DC / TrueDot 2026 mayoral poll (735 adults, May 12–17 2026, ±3.7); Washington Post / Schar School 2026 mayoral poll; Washington Post / Schar School August 2025 public safety poll (604 residents); DC Board of Elections 2026 primary and 2022 general turnout; DCBOE 2026 voter registration; DC Open Data 311 and City Cast's July 2026 analysis.
+- **Rule carried into all content:** every finding is labeled representative polling, election behavior, government service data, search behavior, or anecdotal online sentiment. A Reddit thread is never treated as a poll.
+- **Done when:** the section is live. Done.
+
+### 3.2 Google Trends search-interest report — Confidence 90
+**Basis:** Public, free, no approvals. The term list is set (Rhonda Hamilton, Janeese Lewis George, DC mayor, independent candidate DC, DC crime, DC rent, affordable housing DC, Pepco bill, Washington Gas bill, federal layoffs, DC unemployment, DC small business, DC schools, DC youth curfew, DC statehood, DC police, cost of living DC).
 - **Inputs:** none.
-- **Steps:** pull D.C. metro interest over 12 months for each seed topic; capture rising related queries; flag news-driven spikes; rank.
-- **Done when:** a report ranks topics by interest and lists rising questions.
-
-### 3.2 Polling review, high-priority issues list — Confidence 65
-**Basis:** Depends on what public polling exists for D.C. voter attitudes and candidate awareness. Citywide polls are infrequent, and candidate-awareness numbers for Hamilton specifically may not exist. Commissioning a poll is not in the plan.
-- **Inputs:** any public D.C. polls covering issue priorities and confidence in local government.
-- **Steps:** collect what exists; note recency and sample; extract issue priority and demographic splits; where awareness data is missing, say so rather than estimate.
-- **Done when:** a ranked issues list exists with sources and dates, and gaps are marked.
+- **Steps:** pull D.C. metro interest over 12 months for each term; capture rising related queries; separate sustained interest from one-day spikes; rank. Repeat monthly.
+- **Done when:** the first report is delivered and a monthly pull is on the calendar. Measures attention, never support.
 
 ### 3.3 D.C. Language & Conversation Guide — Confidence 85
-**Basis:** The sources are public (r/washingtondc, ward discussions, news comments). Time-consuming but straightforward.
+**Basis:** Sources are public (r/washingtondc, ward discussions, housing, federal-worker, small-business, and safety threads). Time-consuming but straightforward.
 - **Inputs:** none.
-- **Steps:** read 30 days of threads on the seed topics; log exact phrasing, recurring jokes, misunderstandings, and emotional triggers; sort by issue.
-- **Done when:** the guide has a phrasing section per issue and is handed to scriptwriters.
+- **Steps:** read 30 days of threads on the top-three concerns; log repeated questions, exact phrasing, misunderstandings about the election, and what residents say would make them trust a candidate; label every entry anecdotal and check it against polling or government data before it shapes a script.
+- **Done when:** the guide has a phrasing section per issue and is handed to scriptwriters. Refreshed monthly.
 
----
+### 3.4 Monthly insight update — Confidence 85
+**Basis:** The strategy doc commits to a monthly process for updating the findings. It is a calendar commitment more than a build.
+- **Inputs:** 3.2 and 3.3 outputs, the 5.5 dashboard.
+- **Steps:** one page per month: what changed in search, what changed in conversation, what content responded best, and which packages to adjust.
+- **Done when:** the first monthly update ships and the second is scheduled.
 
 ## Phase 4 — Convert Audit Into Messaging (Phase Two on the page)
 
@@ -225,11 +232,11 @@ Each critique on the page gets a content lane. Every lane shares the same produc
 - **Steps:** add to every script template, the video end-card, and the social bios.
 - **Done when:** it appears on every published asset.
 
-### 4.2 Issue content package system — Confidence 80
-**Basis:** The four-part structure is defined on the page. Quality depends on Phase One feeding real issues in.
-- **Inputs:** 3.2 issues list, 3.3 language guide.
-- **Steps:** template with the four fields (Public Question, Hamilton Perspective, Short-form Hook, Poll Question); one package per priority issue; candidate signs off on each Perspective line.
-- **Depends on:** Phase 3.
+### 4.2 Issue content package system — Confidence 85
+**Basis:** The four-part structure is defined on the page and the audit has already supplied the issue list.
+- **Inputs:** 3.1 audit insights, 3.3 language guide.
+- **Steps:** template with the four fields (Public Question, Hamilton Perspective, Short-form Hook, Poll Question); one package per priority issue, starting with cost of living, public safety, and housing; candidate signs off on each Perspective line.
+- **Depends on:** 3.1 (done).
 - **Done when:** a signed-off package exists for every priority issue.
 
 ### 4.3 City Reliability package — Confidence 95
