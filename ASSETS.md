@@ -21,7 +21,7 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 |---|---|---|---|---|
 | 0.1 | Plan page (`index.html`) | 0 | 95 | [x] |
 | 0.2 | Hero photo file | 0 | 100 | [x] |
-| 0.3 | Strategy briefing video (AI-produced) | 0 | 85 | [ ] |
+| 0.3 | Strategy briefing video (AI-produced) | 0 | 85 | [~] |
 | 0.5 | Campaign website | 0 | 85 | [ ] |
 | 0.6 | D.C. Progress timeline graphic | 0 | 100 | [x] |
 | 1.1 | Strategy brief (objective + target outcome) | 1 | 95 | [ ] |
@@ -90,7 +90,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 ### 0.3 Strategy briefing video (AI-produced) — Confidence 85
 **Basis:** The "Play Briefing" block in the Crucible section is a mock player. The video will be AI-produced, so it does not wait on the candidate's calendar. Script, voice, and visuals all come from material already on the page. Score is not higher only because AI voice and visuals need one round of review before they represent the campaign.
 - **Inputs:** the Crucible section (critiques and responses), the audit insights, the page's brand (Montserrat, Open Sans, D.C. red, slate, gold), the hero photo and progression graphic.
-- **Steps:** write a 90 to 120 second script that walks the seven critiques and the three messaging takeaways; generate an AI narration; build motion graphics from the page's own cards and stats; render a 16:9 MP4 with captions; host it; replace the mock player with the embed.
+- **Steps:** script written, see `briefing-video-script.md` [x]; generate an AI narration; build motion graphics from the page's own cards and stats; render a 16:9 MP4 with captions; host it; replace the mock player with the embed.
 - **Depends on:** nothing outside the repo.
 - **Done when:** the play button plays the video and it has been reviewed once by the campaign.
 
