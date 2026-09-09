@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS: compiled stylesheet first, runtime script kept for any new classes -->
+    <link rel="stylesheet" href="tailwind.css">
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script>
@@ -64,8 +65,22 @@
         }
         @media (min-width: 1024px) {
             .hero-section {
-                background-size: 125% auto;
-                background-position: 0% 22%;
+                background-image: none;
+                background-color: #0F172A;
+            }
+            /* the photo, sitting to the right, fading into the slate on both sides */
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -22vh;
+                height: 100%;
+                aspect-ratio: 1527 / 1030;
+                background: url('hero-rhonda-hamilton.png') center top / cover no-repeat;
+                -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, #000 34%, #000 78%, rgba(0,0,0,0) 100%);
+                mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, #000 34%, #000 78%, rgba(0,0,0,0) 100%);
+                z-index: 0;
             }
         }
         @media (max-width: 767px) {
@@ -332,75 +347,75 @@
                         <div class="grid md:grid-cols-2 gap-4">
                             
                             <!-- Card 1 -->
-                            <div class="bg-dcNavy p-6 border-l-4 border-slate-700 hover:border-dcRed transition-colors">
+                            <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"Who is Rhonda Hamilton?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-gray-300 font-light">A recurring candidate-origin-story series: <em>“Who Is Rhonda Hamilton?”</em></p>
+                                <p class="text-sm text-white font-light">A recurring candidate-origin-story series: <em>“Who Is Rhonda Hamilton?”</em></p>
                             </div>
 
                             <!-- Card 2 -->
-                            <div class="bg-dcNavy p-6 border-l-4 border-slate-700 hover:border-dcRed transition-colors">
+                            <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"Is she a serious citywide candidate?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-gray-300 font-light">Content showing consistent activity, resident conversations, issue fluency, community proof, events, and organization.</p>
+                                <p class="text-sm text-white font-light">Content showing consistent activity, resident conversations, issue fluency, community proof, events, and organization.</p>
                             </div>
 
                             <!-- Card 3 -->
-                            <div class="bg-dcNavy p-6 border-l-4 border-slate-700 hover:border-dcRed transition-colors">
+                            <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"What does independent mean?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-gray-300 font-light">An <em>“Independent, Explained”</em> content pillar that frames independence as resident accountability—not isolation.</p>
+                                <p class="text-sm text-white font-light">An <em>“Independent, Explained”</em> content pillar that frames independence as resident accountability—not isolation.</p>
                             </div>
 
                             <!-- Card 4 -->
-                            <div class="bg-dcNavy p-6 border-l-4 border-slate-700 hover:border-dcRed transition-colors">
+                            <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"What has she actually done?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-gray-300 font-light">A <em>“Proof, Not Slogans”</em> content pillar covering ANC service, nonprofit leadership, mental-health advocacy, and business experience.</p>
+                                <p class="text-sm text-white font-light">A <em>“Proof, Not Slogans”</em> content pillar covering ANC service, nonprofit leadership, mental-health advocacy, and business experience.</p>
                             </div>
 
                              <!-- Card 5 -->
-                             <div class="bg-dcNavy p-6 border-l-4 border-slate-700 hover:border-dcRed transition-colors">
+                             <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"She lost in 2022—why run again?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-gray-300 font-light">A <em>“Why I Ran Again”</em> response: she did not disappear after the prior election and continued her work in the community.</p>
+                                <p class="text-sm text-white font-light">A <em>“Why I Ran Again”</em> response: she did not disappear after the prior election and continued her work in the community.</p>
                             </div>
 
                             <!-- Card 6 -->
-                            <div class="bg-dcNavy p-6 border-l-4 border-slate-700 hover:border-dcRed transition-colors">
+                            <div class="bg-[#6395EE] p-6 border-l-4 border-white/40 hover:border-dcRed transition-colors">
                                 <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
+                                <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
                                 <h4 class="font-heading font-bold text-xl mb-4">"Is she only a mental-health candidate?"</h4>
                                 <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
                                 <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                <p class="text-sm text-gray-300 font-light">A <em>“Beyond Mental Health”</em> lane connecting mental health to housing, safety, schools, jobs, and city services.</p>
+                                <p class="text-sm text-white font-light">A <em>“Beyond Mental Health”</em> lane connecting mental health to housing, safety, schools, jobs, and city services.</p>
                             </div>
                             
                             <!-- Card 7 (Spans 2 cols on md) -->
-                            <div class="md:col-span-2 bg-dcNavy p-6 border-l-4 border-dcRed flex flex-col md:flex-row gap-6 items-start">
+                            <div class="md:col-span-2 bg-[#6395EE] p-6 border-l-4 border-dcRed flex flex-col md:flex-row gap-6 items-start">
                                 <div class="md:w-1/2">
                                     <div class="flex gap-1.5 text-dcRed text-lg mb-3"><span>★</span><span>★</span><span>★</span></div>
-                                    <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.1em] mb-2">The Ultimate Critique</p>
+                                    <p class="text-[10px] text-blue-100 font-bold uppercase tracking-[0.1em] mb-2">The Ultimate Critique</p>
                                     <h4 class="font-heading font-bold text-2xl">"Her campaign may not look organized or polished."</h4>
                                 </div>
                                 <div class="md:w-1/2 border-t md:border-t-0 md:border-l border-gray-600 pt-4 md:pt-0 md:pl-6">
                                     <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Strategy</p>
-                                    <p class="text-sm text-gray-300 font-light leading-relaxed">The plan says not to debate this publicly; instead, show disciplined, consistent content, professional presentation, schedules, neighborhood activity, and real proof.</p>
+                                    <p class="text-sm text-white font-light leading-relaxed">The plan says not to debate this publicly; instead, show disciplined, consistent content, professional presentation, schedules, neighborhood activity, and real proof.</p>
                                 </div>
                             </div>
 
