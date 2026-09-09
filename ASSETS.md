@@ -23,6 +23,7 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 | 0.2 | Hero photo file | 0 | 90 | [ ] |
 | 0.3 | Strategy briefing video | 0 | 55 | [ ] |
 | 0.4 | Full Strategy Proposal PDF | 0 | 60 | [ ] |
+| 0.5 | Campaign website | 0 | 85 | [ ] |
 | 1.1 | Strategy brief (objective + target outcome) | 1 | 95 | [ ] |
 | 2.1 | "Who Is Rhonda Hamilton?" series | 2 | 80 | [ ] |
 | 2.2 | Serious-candidate proof content | 2 | 65 | [ ] |
@@ -43,12 +44,12 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 | 4.3 | City Reliability package (first) | 4 | 95 | [ ] |
 | 5.1 | Podcast clipping pipeline | 5 | 70 | [ ] |
 | 5.2 | Discovery content (TikTok / Reels) | 5 | 80 | [ ] |
-| 5.3 | Long-form hub (Facebook) | 5 | 85 | [ ] |
+| 5.3 | Long-form hub (Facebook) | 5 | 90 | [ ] |
 | 5.4 | Neighborhood Conversations | 5 | 70 | [ ] |
-| 5.5 | Funnel tracking setup | 5 | 70 | [ ] |
-| 6.1 | Paid: top funnel | 6 | 60 | [ ] |
-| 6.2 | Paid: mid funnel | 6 | 60 | [ ] |
-| 6.3 | Paid: bottom funnel | 6 | 60 | [ ] |
+| 5.5 | Funnel tracking setup | 5 | 80 | [ ] |
+| 6.1 | Paid: top funnel | 6 | 65 | [ ] |
+| 6.2 | Paid: mid funnel | 6 | 65 | [ ] |
+| 6.3 | Paid: bottom funnel | 6 | 65 | [ ] |
 
 ---
 
@@ -58,7 +59,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 
 | Window | Work | Unlocks |
 |---|---|---|
-| Week 0 | Close out Phase 0 assets (photo, video, PDF). Lock brand position (4.1). | A complete proposal page to share. |
+| Week 0 | Close out Phase 0 assets (photo, video, PDF). Lock brand position (4.1). Start the campaign website (0.5) so it is live before Week 4 posting begins. | A complete proposal page to share, and a destination for every handoff. |
 | Weeks 1–2 | Phase One audit: 3.1, 3.2, 3.3 in parallel. | The issue list every content package is built from. |
 | Week 3 | Phase Two: build 4.2 system, produce 4.3, then one package per audit issue. | Scripts and hooks for production. |
 | Weeks 3–4 | Candidate interview day(s): capture raw material for 2.1, 2.4, 2.5, 2.6, 2.8 and the briefing video (0.3) in one sitting. | Weeks of clips from one shoot. |
@@ -93,6 +94,13 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 - **Steps:** export the page narrative to a document; add the audit outputs as appendices; add the sequence table above as the timeline; add the 5.5 metric definitions; brand to match the page; export PDF; link the download button.
 - **Depends on:** 3.1–3.3, 5.5.
 - **Done when:** the download button serves a PDF containing all three promised sections.
+
+### 0.5 Campaign website — Confidence 85
+**Basis:** The plan hands every viewer off to "the campaign website for official positions, donations, and voter information." We build it, so it is execution rather than an outside dependency. Score is not higher because donations need a payment or compliance processor and the positions content depends on the candidate signing off.
+- **Inputs:** domain, hosting, the brand from `index.html`, the positions from Phases 2 and 4, a donation processor, volunteer form, D.C. voter-information links.
+- **Steps:** build on the same design system as this page (Montserrat, Open Sans, D.C. red and slate); pages for Positions, Donate, Volunteer, Events, Voter Info, and About drawing from the "Who Is Rhonda Hamilton?" material; install analytics and Google Search Console on day one so 5.5 has data; connect the donation processor; link it from every social bio.
+- **Depends on:** 4.1 brand position; candidate sign-off on positions; a donation processor account.
+- **Done when:** all six pages are live, analytics reports traffic, a test donation and a test volunteer signup both complete.
 
 ---
 
@@ -238,11 +246,11 @@ Each critique on the page gets a content lane. Every lane shares the same produc
 - **Steps:** weekly batch: one tension per piece; rotate formats; caption every piece; post on a fixed schedule.
 - **Done when:** the schedule has held for four weeks.
 
-### 5.3 Long-form hub (Facebook) — Confidence 85
-**Basis:** Page setup and a posting routine. The one thing the page assumes that isn't confirmed is a campaign website to hand viewers off to.
+### 5.3 Long-form hub (Facebook) — Confidence 90
+**Basis:** Page setup and a posting routine. The handoff destination is the campaign website we build in 0.5.
 - **Inputs:** Facebook page, campaign website URL for positions, donations, voter info.
 - **Steps:** post full-length videos and interview cuts; pin the website link; reply to comments within 24 hours.
-- **Depends on:** a live campaign website. Confirm it exists.
+- **Depends on:** 0.5 campaign website live.
 - **Done when:** the page is live with the website link pinned and a weekly long-form post.
 
 ### 5.4 Neighborhood Conversations — Confidence 70
@@ -251,11 +259,11 @@ Each critique on the page gets a content lane. Every lane shares the same produc
 - **Steps:** one ward per outing; ask the audit's questions; capture the candidate's answers on the spot; cut into rapid-response clips.
 - **Done when:** the first three wards are shot and posted.
 
-### 5.5 Funnel tracking setup — Confidence 70
-**Basis:** The four stages and their outcomes are defined on the page. Measuring "name searches" and "site visits" requires Google Search Console and site analytics on a campaign website, which is unconfirmed.
+### 5.5 Funnel tracking setup — Confidence 80
+**Basis:** The four stages and their outcomes are defined on the page. "Name searches" and "site visits" come from Google Search Console and site analytics on the campaign website, which 0.5 installs on day one.
 - **Inputs:** platform analytics access, website analytics, Search Console.
 - **Steps:** one dashboard with the four rows (Exposure: impressions and reach; Recognition: repeat viewers and profile visits; Association: shares, saves, name searches; Interest & Handoff: site visits, warm audiences); weekly review.
-- **Depends on:** campaign website analytics.
+- **Depends on:** 0.5 campaign website analytics.
 - **Done when:** all four rows report real numbers for one full week.
 
 ---
@@ -264,35 +272,34 @@ Each critique on the page gets a content lane. Every lane shares the same produc
 
 All three tiers share the same score and the same caveats.
 
-**Basis for 60:** The plan makes paid conditional on organic winners, which is the right gate, but three things sit outside our control. Budget is not defined. Political ads on Meta and Google require advertiser identity verification and disclaimers before anything can run, which takes time. And TikTok's advertising policy prohibits political ads, including for candidates, so the page's "TikTok Spark Ads" line should be confirmed against current policy before it is promised to anyone. Treat that line as at risk.
+**Basis for 65:** The plan makes paid conditional on organic winners, which is the right gate. Channels are Meta and Google Search. Two things sit outside our control: budget is not defined, and political ads on both platforms require advertiser identity verification and disclaimers before anything can run, which takes time. Start verification early so it is not the bottleneck when the first organic winner is ready.
 
-### 6.1 Top funnel: Video-view and Reach ads — Confidence 60
+### 6.1 Top funnel: Video-view and Reach ads — Confidence 65
 - **Inputs:** verified ad accounts, budget, proven organic clips.
 - **Steps:** promote only clips with strong organic watch time; geo-target D.C.; broad audiences.
 - **Done when:** first flight runs and reach is reported in 5.5.
 
-### 6.2 Mid funnel: retarget viewers with explainers — Confidence 60
+### 6.2 Mid funnel: retarget viewers with explainers — Confidence 65
 - **Inputs:** video-view audiences from 6.1, explainers from 2.6 and 2.7.
 - **Steps:** build retargeting audiences from viewers; serve explainers; measure profile visits and site visits.
 - **Done when:** the retargeting pool is live and reporting.
 
-### 6.3 Bottom funnel: RSVP, Donate, Volunteer — Confidence 60
-- **Inputs:** warm audiences from 6.2, working action pages on the campaign website.
+### 6.3 Bottom funnel: RSVP, Donate, Volunteer — Confidence 65
+- **Inputs:** warm audiences from 6.2, the Donate and Volunteer pages from 0.5.
 - **Steps:** direct-action ads to the warmest audience only; one action per ad.
-- **Depends on:** campaign website action pages.
+- **Depends on:** 0.5 Donate and Volunteer pages live.
 - **Done when:** actions are tracked back to ad spend.
 
 ---
 
 ## Assumptions the plan makes that need confirming
 
-These affect scores above. Confirming them raises confidence; each one is a single question.
+These affect scores above. Confirming them raises confidence; each one is a single question. The campaign website is no longer an assumption: it is asset 0.5 and we build it.
 
-1. A campaign website exists, or will, with positions, donation, volunteer, and voter-info pages (affects 5.3, 5.5, 6.3).
-2. The candidate can commit to at least one full interview day in Weeks 3–4 (affects 0.3, 2.1, 2.4, 2.5, 2.6, 2.8, 4.3).
-3. Campaign operations will run real events on a schedule (affects 2.2, 2.11).
-4. TikTok paid political advertising is available. Current policy says it is not (affects 6.1–6.3).
-5. A paid budget exists (affects Phase 6).
+1. The candidate can commit to at least one full interview day in Weeks 3–4 (affects 0.3, 2.1, 2.4, 2.5, 2.6, 2.8, 4.3).
+2. Campaign operations will run real events on a schedule (affects 2.2, 2.11).
+3. A paid budget exists (affects Phase 6).
+4. A donation processor account can be opened for the campaign (affects 0.5, 6.3).
 
 ---
 
