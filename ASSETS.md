@@ -24,6 +24,7 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 | 0.3 | Strategy briefing video | 0 | 55 | [ ] |
 | 0.4 | Full Strategy Proposal PDF | 0 | 60 | [ ] |
 | 0.5 | Campaign website | 0 | 85 | [ ] |
+| 0.6 | Mayoral timeline headshots (4) | 0 | 75 | [ ] |
 | 1.1 | Strategy brief (objective + target outcome) | 1 | 95 | [ ] |
 | 2.1 | "Who Is Rhonda Hamilton?" series | 2 | 80 | [ ] |
 | 2.2 | Serious-candidate proof content | 2 | 65 | [ ] |
@@ -79,7 +80,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 **Basis:** The photo exists (Rhonda, two thumbs up, Washington Monument behind her). Only the file transfer is outstanding.
 - **Inputs:** the JPG.
 - **Steps:** save to repo root under that exact name, push.
-- **Done when:** the hero's right column shows the photo on desktop and below the text on mobile.
+- **Done when:** the photo shows in the hero's right column, the hero background, the Rhonda Hamilton timeline node, the briefing video poster, and the brand-position block. All five point at the same file.
 
 ### 0.3 Strategy briefing video — Confidence 55
 **Basis:** The page promises "Rhonda Hamilton on answering the critics directly." Nothing is scripted or shot, and it needs the candidate on camera.
@@ -101,6 +102,12 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 - **Steps:** build on the same design system as this page (Montserrat, Open Sans, D.C. red and slate); pages for Positions, Donate, Volunteer, Events, Voter Info, and About drawing from the "Who Is Rhonda Hamilton?" material; install analytics and Google Search Console on day one so 5.5 has data; connect the donation processor; link it from every social bio.
 - **Depends on:** 4.1 brand position; candidate sign-off on positions; a donation processor account.
 - **Done when:** all six pages are live, analytics reports traffic, a test donation and a test volunteer signup both complete.
+
+### 0.6 Mayoral timeline headshots — Confidence 75
+**Basis:** The "D.C. Progress" timeline shows Anthony A. Williams, Adrian M. Fenty, Vincent C. Gray, and Muriel Bowser. All four currently load grey placeholder images from placehold.co. Public-domain or licensed photos exist for each, but rights must be checked before use on a campaign page.
+- **Inputs:** four headshots with confirmed usage rights (official D.C. government portraits or Wikimedia Commons images with their license noted).
+- **Steps:** source each photo; record the license; crop to square; save as `timeline-williams.jpg`, `timeline-fenty.jpg`, `timeline-gray.jpg`, `timeline-bowser.jpg` in the repo root; replace the four placeholder URLs in `index.html`.
+- **Done when:** all four nodes show real photos and the license record is on file.
 
 ---
 
