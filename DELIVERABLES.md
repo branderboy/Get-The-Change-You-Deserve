@@ -11,7 +11,7 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 The proposal landing page is the first deliverable. It references three assets that do not exist in the repo yet.
 
 - [x] `index.html` — Rhonda Hamilton 2026 Digital Campaign Proposal page (Tailwind, Montserrat/Open Sans, D.C. flag palette)
-- [ ] Hero background image — the CSS points to `maxresdefault (3).jpg`, which is not in the repo. Supply the file or update the path. *(Hero)*
+- [ ] Hero photo — `index.html` now expects `hero-rhonda-hamilton.jpg` in the repo root (Rhonda Hamilton, two thumbs up, Washington Monument behind her). Layout is built: text left, photo right. Drop the file in and it renders. *(Hero)*
 - [ ] Strategy briefing video — the "Play Strategy Briefing" block is a mock player. Needs a real embed or video file: "Rhonda Hamilton on answering the critics directly." *(The Crucible)*
 - [ ] Full Strategy Proposal download — the "Download Full Strategy Proposal" button links to `#`. Needs the PDF, which the page says "Includes Complete Metrics, Data Sources, & Timelines." *(Ready to Execute)*
 

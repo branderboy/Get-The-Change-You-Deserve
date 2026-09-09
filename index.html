@@ -44,27 +44,45 @@
             border-top: 4px solid #E31837;
         }
 
-        /* Hero Section */
+        /* Hero Section: text left, photo right */
         .hero-section {
             position: relative;
-            background-image: url('maxresdefault (3).jpg');
-            background-size: cover;
-            background-position: center top;
+            background-color: #0F172A;
             min-height: 85vh;
             display: flex;
             align-items: center;
+            overflow: hidden;
         }
 
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                90deg,
-                rgba(15, 23, 42, 0.98) 0%,
-                rgba(15, 23, 42, 0.85) 40%,
-                rgba(15, 23, 42, 0.2) 100%
-            );
-            z-index: 1;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .hero-grid { grid-template-columns: 1.1fr 1fr; }
+        }
+
+        .hero-photo {
+            position: relative;
+            border-top: 4px solid #E31837;
+            background: #1e293b;
+        }
+
+        .hero-photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            max-height: 70vh;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        @media (min-width: 768px) {
+            .hero-photo img { min-height: 520px; }
         }
 
         /* D.C. Flag Divider */
@@ -170,19 +188,23 @@
     </nav>
 
     <header class="hero-section">
-        <div class="hero-overlay"></div>
         <div class="relative z-10 w-full max-w-6xl mx-auto px-6 py-20">
-            <div class="max-w-2xl">
-                <p class="text-dcRed font-heading font-bold uppercase tracking-widest text-sm mb-4">Official Digital Strategy</p>
-                <h1 class="font-heading text-6xl md:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tighter">
-                    DC! We Just <br>
-                    <span class="text-gray-300">Have To Win.</span>
-                </h1>
-                <p class="text-xl md:text-2xl font-light text-gray-300 mb-10 leading-relaxed border-l-2 border-dcRed pl-6">
-                    A data-driven, organic-first strategy to build broad visibility, cultural relevance, and undeniable momentum for Rhonda Hamilton.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#the-challenge" class="btn-premium">Read The Strategy</a>
+            <div class="hero-grid">
+                <div class="max-w-2xl">
+                    <p class="text-dcRed font-heading font-bold uppercase tracking-widest text-sm mb-4">Official Digital Strategy</p>
+                    <h1 class="font-heading text-6xl md:text-8xl font-black text-white mb-6 leading-[0.9] tracking-tighter">
+                        DC! We Just <br>
+                        <span class="text-gray-300">Have To Win.</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl font-light text-gray-300 mb-10 leading-relaxed border-l-2 border-dcRed pl-6">
+                        A data-driven, organic-first strategy to build broad visibility, cultural relevance, and undeniable momentum for Rhonda Hamilton.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#the-challenge" class="btn-premium">Read The Strategy</a>
+                    </div>
+                </div>
+                <div class="hero-photo">
+                    <img src="hero-rhonda-hamilton.jpg" alt="Rhonda Hamilton smiling with two thumbs up on the National Mall, Washington Monument behind her">
                 </div>
             </div>
         </div>
