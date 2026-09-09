@@ -91,7 +91,7 @@ Full detail, confidence scores, and status for every asset are in `ASSETS.md`. S
 
 Reach inside the D.C. market, video completion rate, repeat viewers, shares and saves, comments and poll participation, candidate-name searches, profile visits, Facebook video consumption, campaign-site traffic, email and text signups, volunteer interest, donations.
 
-Social listening: a social listening tool monitors social media mentions and sentiment.
+Social listening: we build our own tool to monitor social media mentions and sentiment.
 
 ## 8. Decisions still open
 
