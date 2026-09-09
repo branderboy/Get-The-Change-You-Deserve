@@ -22,7 +22,6 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 | 0.1 | Plan page (`index.html`) | 0 | 95 | [x] |
 | 0.2 | Hero photo file | 0 | 100 | [x] |
 | 0.3 | Strategy briefing video | 0 | 55 | [ ] |
-| 0.4 | Full Strategy Proposal PDF | 0 | 60 | [ ] |
 | 0.5 | Campaign website | 0 | 85 | [ ] |
 | 0.6 | D.C. Progress timeline graphic | 0 | 100 | [x] |
 | 1.1 | Strategy brief (objective + target outcome) | 1 | 95 | [ ] |
@@ -61,7 +60,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 
 | Window | Work | Unlocks |
 |---|---|---|
-| Week 0 | Close out Phase 0 assets (photo, video, PDF). Lock brand position (4.1). Start the campaign website (0.5) so it is live before Week 4 posting begins. | A complete proposal page to share, and a destination for every handoff. |
+| Week 0 | Close out Phase 0 assets (video). Lock brand position (4.1). Start the campaign website (0.5) so it is live before Week 4 posting begins. | A complete proposal page to share, and a destination for every handoff. |
 | Weeks 1–2 | Audit insights are in (3.1). Run the first Google Trends pull (3.2) and the Reddit language guide (3.3). | The language and search signals that sharpen the packages. |
 | Week 3 | Phase Two: build 4.2 system, produce 4.3, then one package per audit issue. | Scripts and hooks for production. |
 | Weeks 3–4 | Candidate interview day(s): capture raw material for 2.1, 2.4, 2.5, 2.6, 2.8 and the briefing video (0.3) in one sitting. | Weeks of clips from one shoot. |
@@ -75,7 +74,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 ### 0.1 Plan page `index.html` — Confidence 95
 **Basis:** Built and pushed. Only the photo file is missing.
 - **Inputs:** none further.
-- **Done when:** the two placeholder links (video, PDF) point to real assets. Hero photo and Progress graphic are in.
+- **Done when:** the briefing video placeholder plays a real video. Hero photo and Progress graphic are in. The PDF download was removed from the page.
 
 ### 0.2 Hero photo `hero-rhonda-hamilton.png` — Confidence 100
 **Basis:** Uploaded by the campaign and in the repo (Rhonda, two thumbs up, Washington Monument behind her). Done.
@@ -89,13 +88,6 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 - **Steps:** write a 90–120 second script that walks the critique table; shoot direct-to-camera on the interview day; cut, caption, host (YouTube unlisted or self-hosted); replace the mock player with the embed.
 - **Depends on:** candidate interview day (Weeks 3–4).
 - **Done when:** the play button plays the real video.
-
-### 0.4 Full Strategy Proposal PDF — Confidence 60
-**Basis:** The page says it "Includes Complete Metrics, Data Sources, & Timelines." The strategy narrative exists on the page. The metrics, data sources, and timelines do not exist yet, and they depend on the Phase One audit.
-- **Inputs:** this document, Phase One outputs, the funnel metrics from 5.5.
-- **Steps:** export the page narrative to a document; add the audit outputs as appendices; add the sequence table above as the timeline; add the 5.5 metric definitions; brand to match the page; export PDF; link the download button.
-- **Depends on:** 5.5 for live metrics. Audit insights (3.1) are ready to drop in.
-- **Done when:** the download button serves a PDF containing all three promised sections.
 
 ### 0.5 Campaign website — Confidence 85
 **Basis:** The plan hands every viewer off to "the campaign website for official positions, donations, and voter information." We build it, so it is execution rather than an outside dependency. Score is not higher because donations need a payment or compliance processor and the positions content depends on the candidate signing off.
