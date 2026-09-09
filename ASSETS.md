@@ -20,11 +20,11 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 | # | Asset | Phase | Confidence | Status |
 |---|---|---|---|---|
 | 0.1 | Plan page (`index.html`) | 0 | 95 | [x] |
-| 0.2 | Hero photo file | 0 | 90 | [ ] |
+| 0.2 | Hero photo file | 0 | 100 | [x] |
 | 0.3 | Strategy briefing video | 0 | 55 | [ ] |
 | 0.4 | Full Strategy Proposal PDF | 0 | 60 | [ ] |
 | 0.5 | Campaign website | 0 | 85 | [ ] |
-| 0.6 | Mayoral timeline headshots (4) | 0 | 75 | [ ] |
+| 0.6 | D.C. Progress timeline graphic | 0 | 100 | [x] |
 | 1.1 | Strategy brief (objective + target outcome) | 1 | 95 | [ ] |
 | 2.1 | "Who Is Rhonda Hamilton?" series | 2 | 80 | [ ] |
 | 2.2 | Serious-candidate proof content | 2 | 65 | [ ] |
@@ -74,13 +74,13 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 ### 0.1 Plan page `index.html` — Confidence 95
 **Basis:** Built and pushed. Only the photo file is missing.
 - **Inputs:** none further.
-- **Done when:** hero photo renders and the two placeholder links (video, PDF) point to real assets.
+- **Done when:** the two placeholder links (video, PDF) point to real assets. Hero photo and Progress graphic are in.
 
-### 0.2 Hero photo `hero-rhonda-hamilton.jpg` — Confidence 90
-**Basis:** The photo exists (Rhonda, two thumbs up, Washington Monument behind her). Only the file transfer is outstanding.
-- **Inputs:** the JPG.
-- **Steps:** save to repo root under that exact name, push.
-- **Done when:** the photo shows in the hero's right column, the hero background, the Rhonda Hamilton timeline node, the briefing video poster, and the brand-position block. All five point at the same file.
+### 0.2 Hero photo `hero-rhonda-hamilton.png` — Confidence 100
+**Basis:** Uploaded by the campaign and in the repo (Rhonda, two thumbs up, Washington Monument behind her). Done.
+- **Inputs:** none further.
+- **Steps:** complete.
+- **Done when:** the photo shows in the hero's right column, the hero background, the briefing video poster, and the brand-position block. All four point at the same file. Done.
 
 ### 0.3 Strategy briefing video — Confidence 55
 **Basis:** The page promises "Rhonda Hamilton on answering the critics directly." Nothing is scripted or shot, and it needs the candidate on camera.
@@ -103,11 +103,11 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 - **Depends on:** 4.1 brand position; candidate sign-off on positions; a donation processor account.
 - **Done when:** all six pages are live, analytics reports traffic, a test donation and a test volunteer signup both complete.
 
-### 0.6 Mayoral timeline headshots — Confidence 75
-**Basis:** The "D.C. Progress" timeline shows Anthony A. Williams, Adrian M. Fenty, Vincent C. Gray, and Muriel Bowser. All four currently load grey placeholder images from placehold.co. Public-domain or licensed photos exist for each, but rights must be checked before use on a campaign page.
-- **Inputs:** four headshots with confirmed usage rights (official D.C. government portraits or Wikimedia Commons images with their license noted).
-- **Steps:** source each photo; record the license; crop to square; save as `timeline-williams.jpg`, `timeline-fenty.jpg`, `timeline-gray.jpg`, `timeline-bowser.jpg` in the repo root; replace the four placeholder URLs in `index.html`.
-- **Done when:** all four nodes show real photos and the license record is on file.
+### 0.6 D.C. Progress timeline graphic `progression.png` — Confidence 100
+**Basis:** The campaign supplied a finished graphic for the "D.C. Has Made Progress. The Next Phase Is Proof." section, with the four mayoral portraits and Rhonda Hamilton as the next phase. It replaces the coded timeline and its placeholder images. Done.
+- **Inputs:** none further.
+- **Steps:** complete.
+- **Done when:** the Progress section shows the graphic at full width. Done.
 
 ---
 
