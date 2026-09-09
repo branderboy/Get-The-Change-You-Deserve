@@ -19,7 +19,7 @@ Central brand position: **Promises are easy. Follow-through is the proof.**
 
 **Goal of the social media campaign:** increase search volume for Rhonda Hamilton in Google, in LLMs, and across social media search. There is evidence that candidate Google-search interest can correlate with vote outcomes, especially when you compare candidates' search share within the same place and near an election. But it is not reliable enough to treat "most searched" as "will win." Search volume measures attention and curiosity; it does not tell you whether that attention is positive, negative, voter-eligible, or likely to become a vote.
 
-## 2. The audience
+## 2. The target
 
 About 91,133 independent and no-party-preference voters in D.C., 18.4% of registered voters, based on the most recently published party-registration breakdown. The public datasets do not provide a verified age-by-party table for D.C., so this plan does not claim exact counts of independent voters by age band (18 to 24, 25 to 34, 35 to 44, and so on). The job: win the independents, and persuade some voters from other parties.
 
