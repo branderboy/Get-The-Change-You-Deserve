@@ -21,7 +21,7 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 |---|---|---|---|---|
 | 0.1 | Plan page (`index.html`) | 0 | 95 | [x] |
 | 0.2 | Hero photo file | 0 | 100 | [x] |
-| 0.3 | Strategy briefing video | 0 | 55 | [ ] |
+| 0.3 | Strategy briefing video (AI-produced) | 0 | 85 | [ ] |
 | 0.5 | Campaign website | 0 | 85 | [ ] |
 | 0.6 | D.C. Progress timeline graphic | 0 | 100 | [x] |
 | 1.1 | Strategy brief (objective + target outcome) | 1 | 95 | [ ] |
@@ -63,7 +63,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 | Week 0 | Close out Phase 0 assets (video). Lock brand position (4.1). Start the campaign website (0.5) so it is live before Week 4 posting begins. | A complete proposal page to share, and a destination for every handoff. |
 | Weeks 1–2 | Audit insights are in (3.1). Run the first Google Trends pull (3.2) and the Reddit language guide (3.3). | The language and search signals that sharpen the packages. |
 | Week 3 | Phase Two: build 4.2 system, produce 4.3, then one package per audit issue. | Scripts and hooks for production. |
-| Weeks 3–4 | Candidate interview day(s): capture raw material for 2.1, 2.4, 2.5, 2.6, 2.8 and the briefing video (0.3) in one sitting. | Weeks of clips from one shoot. |
+| Weeks 3–4 | Candidate interview day(s): capture raw material for 2.1, 2.4, 2.5, 2.6, 2.8 in one sitting. The AI briefing video (0.3) is produced in parallel and does not wait on this. | Weeks of clips from one shoot. |
 | Week 4 onward | Phase Three production and posting: 5.2 and 5.3 weekly, 5.1 as podcasts land, 5.4 on a set neighborhood schedule. 5.5 live before first post. | Measured reach and the retargeting pool. |
 | When organic winners are proven | Phase Six paid, only on assets with strong watch time, shares, and profile visits. | Scale and conversions. |
 
@@ -82,12 +82,12 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 - **Steps:** complete.
 - **Done when:** the photo shows in the hero's right column, the hero background, the briefing video poster, and the brand-position block. All four point at the same file. Done.
 
-### 0.3 Strategy briefing video — Confidence 55
-**Basis:** The page promises "Rhonda Hamilton on answering the critics directly." Nothing is scripted or shot, and it needs the candidate on camera.
-- **Inputs:** candidate availability, a script drawn from section 2, camera and audio.
-- **Steps:** write a 90–120 second script that walks the critique table; shoot direct-to-camera on the interview day; cut, caption, host (YouTube unlisted or self-hosted); replace the mock player with the embed.
-- **Depends on:** candidate interview day (Weeks 3–4).
-- **Done when:** the play button plays the real video.
+### 0.3 Strategy briefing video (AI-produced) — Confidence 85
+**Basis:** The "Play Briefing" block in the Crucible section is a mock player. The video will be AI-produced, so it does not wait on the candidate's calendar. Script, voice, and visuals all come from material already on the page. Score is not higher only because AI voice and visuals need one round of review before they represent the campaign.
+- **Inputs:** the Crucible section (critiques and responses), the audit insights, the page's brand (Montserrat, Open Sans, D.C. red, slate, gold), the hero photo and progression graphic.
+- **Steps:** write a 90 to 120 second script that walks the seven critiques and the three messaging takeaways; generate an AI narration; build motion graphics from the page's own cards and stats; render a 16:9 MP4 with captions; host it; replace the mock player with the embed.
+- **Depends on:** nothing outside the repo.
+- **Done when:** the play button plays the video and it has been reviewed once by the campaign.
 
 ### 0.5 Campaign website — Confidence 85
 **Basis:** The plan hands every viewer off to "the campaign website for official positions, donations, and voter information." We build it, so it is execution rather than an outside dependency. Score is not higher because donations need a payment or compliance processor and the positions content depends on the candidate signing off.
@@ -302,7 +302,7 @@ All three tiers share the same score and the same caveats.
 
 These affect scores above. Confirming them raises confidence; each one is a single question. The campaign website is no longer an assumption: it is asset 0.5 and we build it.
 
-1. The candidate can commit to at least one full interview day in Weeks 3–4 (affects 0.3, 2.1, 2.4, 2.5, 2.6, 2.8, 4.3).
+1. The candidate can commit to at least one full interview day in Weeks 3–4 (affects 2.1, 2.4, 2.5, 2.6, 2.8, 4.3).
 2. Campaign operations will run real events on a schedule (affects 2.2, 2.11).
 3. A paid budget exists (affects Phase 6).
 4. A donation processor account can be opened for the campaign (affects 0.5, 6.3).
