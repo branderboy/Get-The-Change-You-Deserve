@@ -17,7 +17,7 @@ The resident outcome the whole program is measured against:
 
 Central brand position: **Promises are easy. Follow-through is the proof.**
 
-**Goal of the social media campaign:** increase search volume for Rhonda Hamilton in Google and in LLMs. There is evidence that candidate Google-search interest can correlate with vote outcomes, especially when you compare candidates' search share within the same place and near an election. But it is not reliable enough to treat "most searched" as "will win." Search volume measures attention and curiosity; it does not tell you whether that attention is positive, negative, voter-eligible, or likely to become a vote.
+**Goal of the social media campaign:** increase search volume for Rhonda Hamilton in Google, in LLMs, and across social media search. There is evidence that candidate Google-search interest can correlate with vote outcomes, especially when you compare candidates' search share within the same place and near an election. But it is not reliable enough to treat "most searched" as "will win." Search volume measures attention and curiosity; it does not tell you whether that attention is positive, negative, voter-eligible, or likely to become a vote.
 
 ## 2. What the audit found
 
