@@ -17,6 +17,8 @@ The resident outcome the whole program is measured against:
 
 Central brand position: **Promises are easy. Follow-through is the proof.**
 
+**Focus of the social media campaign:** increase mentions of Rhonda Hamilton in Google and in LLMs. There is evidence that candidate Google-search interest can correlate with vote outcomes, especially when you compare candidates' search share within the same place and near an election. But it is not reliable enough to treat "most searched" as "will win." Search volume measures attention and curiosity; it does not tell you whether that attention is positive, negative, voter-eligible, or likely to become a vote.
+
 ## 2. What the audit found
 
 The audit is complete. Sources: City Cast DC / TrueDot 2026 mayoral poll (735 adults, May 12–17 2026, ±3.7), Washington Post / Schar School 2026 mayoral poll, Washington Post / Schar School August 2025 public safety poll (604 residents), DC Board of Elections turnout and registration, DC Open Data 311 with City Cast's July 2026 analysis.
