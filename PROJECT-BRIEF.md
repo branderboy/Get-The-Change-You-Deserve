@@ -50,7 +50,7 @@ Google Trends and Reddit are tracked monthly as signals. They are never treated 
 | 2. Campaign page: app and website, web, mobile, and progressive web app, with poll capture to contact capture to donation | $3,940 |
 | 3. Man-on-the-street content: we help produce it and recruit a videographer | Free |
 | 4. Seeding campaign: we manage it end to end through deployment as volunteers; the seeds themselves are the only cost | Our work free; seeds at cost |
-| Ads | Optional |
+| 5. Paid ads: we manage them; the best videos become Facebook and Instagram ads to activate | $1,250 management on a $2,000–$3,000 ad budget |
 
 ## 4. Deliverables
 
@@ -96,9 +96,8 @@ Social listening: we monitor social media mentions and sentiment.
 
 1. Poster roster size.
 2. Whether any seeding is paid. If yes, disclosure requirements are confirmed first.
-3. Paid budget, if the optional ads line is taken.
-4. Candidate availability for at least one full interview day in Weeks 3–4.
-5. Donation processor and SMS provider accounts for the website and app.
+3. Candidate availability for at least one full interview day in Weeks 3–4.
+4. Donation processor and SMS provider accounts for the website and app.
 
 ## 9. Working rules for this project
 
