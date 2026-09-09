@@ -19,7 +19,11 @@ Central brand position: **Promises are easy. Follow-through is the proof.**
 
 **Goal of the social media campaign:** increase search volume for Rhonda Hamilton in Google, in LLMs, and across social media search. There is evidence that candidate Google-search interest can correlate with vote outcomes, especially when you compare candidates' search share within the same place and near an election. But it is not reliable enough to treat "most searched" as "will win." Search volume measures attention and curiosity; it does not tell you whether that attention is positive, negative, voter-eligible, or likely to become a vote.
 
-## 2. What the audit found
+## 2. The audience
+
+About 91,133 independent and no-party-preference voters in D.C., 18.4% of registered voters, based on the most recently published party-registration breakdown. The public datasets do not provide a verified age-by-party table for D.C., so this plan does not claim exact counts of independent voters by age band (18 to 24, 25 to 34, 35 to 44, and so on). The job: win the independents, and persuade some voters from other parties.
+
+## 3. What the audit found
 
 The audit is complete. Sources: City Cast DC / TrueDot 2026 mayoral poll (735 adults, May 12–17 2026, ±3.7), Washington Post / Schar School 2026 mayoral poll, Washington Post / Schar School August 2025 public safety poll (604 residents), DC Board of Elections turnout and registration, DC Open Data 311 with City Cast's July 2026 analysis.
 
@@ -35,14 +39,14 @@ The audit is complete. Sources: City Cast DC / TrueDot 2026 mayoral poll (735 ad
 | Call crime extremely or very serious | 31% | Representative polling |
 | Voters east of the Anacostia undecided before the primary | Over 40% | Representative polling |
 | 2026 primary turnout | 32% (about 155,940 of 485,398) | Election behavior |
-| Independent or unaffiliated voters locked out of the closed primary | About 91,000 (18.4%) | Election behavior |
+| Independent or no-party-preference voters locked out of the closed primary | About 91,133 (18.4%) | Election behavior |
 | Highest-volume 311 categories, July 2026 | Trash, parking enforcement | Government service data |
 
 Google Trends and Reddit are tracked monthly as signals. They are never treated as polling.
 
 **What it means for messaging:** lead with cost of living, safety, and housing. Talk safety the way residents feel it, most feel safe and oppose federal control while a third still call crime serious. The audience is the two thirds who sat out the primary, the 91,000 independents who could not vote in it, and the undecided east of the river.
 
-## 3. Scope and pricing
+## 4. Scope and pricing
 
 | Line | Price |
 |---|---|
@@ -52,7 +56,7 @@ Google Trends and Reddit are tracked monthly as signals. They are never treated 
 | 4. Seeding campaign: we manage it end to end through deployment as volunteers; the seeds themselves are the only cost | Our work free; seeds at cost |
 | 5. Paid ads: we manage them; the best videos become Facebook and Instagram ads to activate | $750 management on a $2,000–$3,000 ad budget |
 
-## 4. Deliverables
+## 5. Deliverables
 
 Full detail, confidence scores, and status for every asset are in `ASSETS.md`. Summary:
 
@@ -66,7 +70,7 @@ Full detail, confidence scores, and status for every asset are in `ASSETS.md`. S
 
 **Paid (optional).** Top, mid, and bottom funnel on Meta and Google Search, sourced only from organic winners.
 
-## 5. The clipping and seeding process
+## 6. The clipping and seeding process
 
 1. **Collect.** Every podcast show, interview, street conversation, and other content asset goes into one shared Google Drive the day it is recorded.
 2. **Review.** Download and run through Opus Clip. AI review finds the clips with viral potential and flags the repositioning.
@@ -75,7 +79,7 @@ Full detail, confidence scores, and status for every asset are in `ASSETS.md`. S
 5. **Post and seed.** Daily Posters, recruited volunteers who post one clip a day. Seeders, page owners who push clips into audiences the campaign does not own.
 6. **Measure and scale.** Impressions, mentions, word of mouth, saves, reposts, add-to-story. High performers become Facebook and Instagram ads.
 
-## 6. Sequence
+## 7. Sequence
 
 | Window | Work |
 |---|---|
@@ -86,20 +90,20 @@ Full detail, confidence scores, and status for every asset are in `ASSETS.md`. S
 | Week 4 onward | Weekly production and posting. The clipping machine runs from the first recording. Posters and seeders start once the folder has a week of clips. Funnel tracking live before the first post. |
 | When organic winners are proven | Paid, only on assets with strong watch time, shares, and profile visits. |
 
-## 7. Measurement
+## 8. Measurement
 
 Reach inside the D.C. market, video completion rate, repeat viewers, shares and saves, comments and poll participation, candidate-name searches, profile visits, Facebook video consumption, campaign-site traffic, email and text signups, volunteer interest, donations.
 
 Social listening: we monitor social media mentions and sentiment.
 
-## 8. Decisions still open
+## 9. Decisions still open
 
 1. Poster roster size.
 2. Whether any seeding is paid. If yes, disclosure requirements are confirmed first.
 3. Candidate availability for at least one full interview day in Weeks 3–4.
 4. Donation processor and SMS provider accounts for the website and app.
 
-## 9. Working rules for this project
+## 10. Working rules for this project
 
 - The plan page is the client's template. It is edited, never redesigned. Nothing is designed on the client's behalf.
 - Only content the client supplies or approves goes on the page.
