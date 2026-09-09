@@ -15,6 +15,21 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 
 ---
 
+## Scope as quoted
+
+The engagement as you defined it. Each line maps to the assets below.
+
+| Line | Price | Delivered by |
+|---|---|---|
+| Campaign website and app (web, mobile, progressive web app) with poll capture to contact capture to donation | $3,940 | 0.5 |
+| Social media 1. Podcast clipping and content asset storage, finding the most viral clips, adding them to a campaign content folder | included in social | 5.1, 5.6, 5.7 |
+| Social media 2. Seeders | included in social | 5.9, with 5.8 Daily Posters |
+| Social media 3. New videos: self-analysis and top-of-funnel | included in social | 2.1–2.11 (self-analysis, direct-to-camera), 5.2 (top of funnel), 0.3 (briefing) |
+| Social media 4. Facebook fan page setup | included in social | 5.3 |
+| Social media 5. Ads (optional) | optional | 5.10, Phase 6 |
+
+Social media pricing is not set yet. Only the website and app carries a number.
+
 ## Scoreboard
 
 | # | Asset | Phase | Confidence | Status |
@@ -22,8 +37,9 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 | 0.1 | Plan page (`index.html`) | 0 | 95 | [x] |
 | 0.2 | Hero photo file | 0 | 100 | [x] |
 | 0.3 | Strategy briefing video (AI-produced) | 0 | 85 | [~] |
-| 0.5 | Campaign website | 0 | 85 | [ ] |
+| 0.5 | Campaign website, mobile, and progressive web app ($3,940) | 0 | 80 | [ ] |
 | 0.6 | D.C. Progress timeline graphic | 0 | 100 | [x] |
+| 0.7 | Printable plan (print button + print stylesheet) | 0 | 100 | [x] |
 | 1.1 | Strategy brief (objective + target outcome) | 1 | 95 | [ ] |
 | 2.1 | "Who Is Rhonda Hamilton?" series | 2 | 80 | [ ] |
 | 2.2 | Serious-candidate proof content | 2 | 65 | [ ] |
@@ -43,9 +59,11 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 | 4.1 | Central brand position, applied | 4 | 95 | [ ] |
 | 4.2 | Issue content package system | 4 | 85 | [ ] |
 | 4.3 | City Reliability package (first) | 4 | 95 | [ ] |
+| 4.4 | Poll question library | 4 | 85 | [ ] |
+| 4.5 | Swipe-post concept library | 4 | 85 | [ ] |
 | 5.1 | Podcast clipping pipeline | 5 | 70 | [ ] |
 | 5.2 | Discovery content (TikTok / Reels) | 5 | 80 | [ ] |
-| 5.3 | Long-form hub (Facebook) | 5 | 90 | [ ] |
+| 5.3 | Facebook fan page setup and long-form hub | 5 | 90 | [ ] |
 | 5.4 | Neighborhood Conversations | 5 | 70 | [ ] |
 | 5.5 | Funnel tracking setup | 5 | 80 | [ ] |
 | 5.6 | Drive intake + Opus Clip review pipeline | 5 | 90 | [ ] |
@@ -53,6 +71,7 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 | 5.8 | Daily Posters (recruited volunteers) | 5 | 65 | [ ] |
 | 5.9 | Seeder network (theme, repost, meme pages) | 5 | 55 | [ ] |
 | 5.10 | Winner-to-ads loop | 5 | 70 | [ ] |
+| 5.11 | Monthly publishing calendar | 5 | 90 | [ ] |
 | 6.1 | Paid: top funnel | 6 | 65 | [ ] |
 | 6.2 | Paid: mid funnel | 6 | 65 | [ ] |
 | 6.3 | Paid: bottom funnel | 6 | 65 | [ ] |
@@ -94,18 +113,27 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 - **Depends on:** nothing outside the repo.
 - **Done when:** the play button plays the video and it has been reviewed once by the campaign.
 
-### 0.5 Campaign website — Confidence 85
-**Basis:** The plan hands every viewer off to "the campaign website for official positions, donations, and voter information." We build it, so it is execution rather than an outside dependency. Score is not higher because donations need a payment or compliance processor and the positions content depends on the candidate signing off.
-- **Inputs:** domain, hosting, the brand from `index.html`, the positions from Phases 2 and 4, a donation processor, volunteer form, D.C. voter-information links.
-- **Steps:** build on the same design system as this page (Montserrat, Open Sans, D.C. red and slate); pages for Positions, Donate, Volunteer, Events, Voter Info, and About drawing from the "Who Is Rhonda Hamilton?" material; install analytics and Google Search Console on day one so 5.5 has data; connect the donation processor; link it from every social bio.
-- **Depends on:** 4.1 brand position; candidate sign-off on positions; a donation processor account.
-- **Done when:** all six pages are live, analytics reports traffic, a test donation and a test volunteer signup both complete.
+### 0.5 Campaign website, mobile, and progressive web app — $3,940 — Confidence 80
+**Basis:** Confirmed: we build it. One codebase delivered three ways: a responsive website, a mobile-first experience, and a progressive web app residents can install from the browser. It is the destination for every clip, seeder post, and ad. Score reflects three outside pieces: a donation processor with political-compliance fields, SMS opt-in compliance for the text capture, and candidate sign-off on positions.
+- **Inputs:** domain, hosting, the brand from `index.html`, the positions from Phases 2 and 4, the poll question library (4.4), a donation processor, an email and SMS provider, D.C. voter-information links.
+- **The capture flow the page commits to:**
+  1. Capture the poll. The same poll questions from the content packages, answered on the site in one tap, no login.
+  2. Capture the contact. Email or text to see results and get the follow-up. Volunteer signup lives here.
+  3. Donate. The warm, polled, identified resident is asked to give.
+- **Pages:** Home, Positions, Poll, Donate, Volunteer, Events, Voter Info, About (from the "Who Is Rhonda Hamilton?" material).
+- **Steps:** build on the page's design system (Montserrat, Open Sans, D.C. red, slate, navy, gold); ship the poll-to-donation flow first, then the content pages; add the web app manifest and service worker so it installs to a home screen and loads offline; install analytics and Google Search Console on day one so 5.5 has data; connect the donation processor and the email and SMS provider; link it from every social bio and every clip caption.
+- **Depends on:** 4.1 brand position; 4.4 poll library; candidate sign-off on positions; donation processor and SMS provider accounts.
+- **Done when:** the poll-to-contact-to-donate flow completes end to end on a phone, the app installs to a home screen, analytics reports traffic, and a test donation and a test volunteer signup both complete.
 
 ### 0.6 D.C. Progress timeline graphic `progression.png` — Confidence 100
 **Basis:** The campaign supplied a finished graphic for the "D.C. Has Made Progress. The Next Phase Is Proof." section, with the four mayoral portraits and Rhonda Hamilton as the next phase. It replaces the coded timeline and its placeholder images. Done.
 - **Inputs:** none further.
 - **Steps:** complete.
 - **Done when:** the Progress section shows the graphic at full width. Done.
+
+### 0.7 Printable plan — Confidence 100
+**Basis:** A Print Plan button in the nav and a print stylesheet on the page. Dark sections keep their color, cards do not split across pages, and the nav, video mock, and buttons drop out. Done.
+- **Done when:** printing from the browser produces a clean letter-size copy. Done.
 
 ---
 
@@ -241,6 +269,18 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 - **Steps:** shoot the Perspective line and the Hook on interview day; run the poll on Instagram and Facebook the same week.
 - **Done when:** the clip and the poll are live.
 
+### 4.4 Poll question library — Confidence 85
+**Basis:** One poll per content package, so the library grows with 4.2. The same questions run on social and on the website's poll capture (0.5).
+- **Inputs:** 4.2 packages, 3.1 audit issues.
+- **Steps:** one poll question per priority issue, written in the language from 3.3; each with four answer options and the issue it maps to; tagged for social (Instagram, TikTok, Facebook) and for the site.
+- **Done when:** a poll exists for every package and the site's poll flow uses it.
+
+### 4.5 Swipe-post concept library — Confidence 85
+**Basis:** The page's example is "Five city services residents should be able to track publicly." One swipe concept per package.
+- **Inputs:** 4.2 packages, the brand templates.
+- **Steps:** one carousel concept per priority issue, five to seven frames, first frame is the hook, last frame is the poll or the site link; designed on the page's brand.
+- **Done when:** a swipe concept exists for every package and the first three are designed.
+
 ---
 
 ## Phase 5 — The Organic Content System (Phase Three on the page)
@@ -257,10 +297,10 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 - **Steps:** weekly batch: one tension per piece; rotate formats; caption every piece; post on a fixed schedule.
 - **Done when:** the schedule has held for four weeks.
 
-### 5.3 Long-form hub (Facebook) — Confidence 90
+### 5.3 Facebook fan page setup and long-form hub — Confidence 90
 **Basis:** Page setup and a posting routine. The handoff destination is the campaign website we build in 0.5.
 - **Inputs:** Facebook page, campaign website URL for positions, donations, voter info.
-- **Steps:** post full-length videos and interview cuts; pin the website link; reply to comments within 24 hours.
+- **Steps:** set up the campaign fan page (name, cover, profile from the hero photo, about text from the brand position, website link, donate button); post full-length videos and interview cuts; pin the website link; reply to comments within 24 hours.
 - **Depends on:** 0.5 campaign website live.
 - **Done when:** the page is live with the website link pinned and a weekly long-form post.
 
@@ -310,6 +350,12 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 - **Depends on:** 5.5, 6.1 verification.
 - **Done when:** the first organic winner is running as a Meta ad.
 
+### 5.11 Monthly publishing calendar — Confidence 90
+**Basis:** A calendar commitment that ties every asset above to a date. The strategy doc lists it as a deliverable.
+- **Inputs:** 5.2 posting schedule, 5.4 ward schedule, 5.1 recorded shows, 5.8 daily drop.
+- **Steps:** one shared calendar per month: what posts where, which package it belongs to, which poll runs, which seeders get which clip; reviewed in the 3.4 monthly update.
+- **Done when:** the first month is fully scheduled before it starts.
+
 ---
 
 ## Phase 6 — The Paid Amplifier (Optional)
@@ -346,6 +392,28 @@ These affect scores above. Confirming them raises confidence; each one is a sing
 4. A donation processor account can be opened for the campaign (affects 0.5, 6.3).
 
 ---
+
+## Coverage check
+
+Every deliverable the strategy doc lists, mapped to the asset that delivers it, so nothing is promised without an owner here.
+
+| Strategy doc deliverable | Delivered by |
+|---|---|
+| DC public sentiment audit | 3.1 (done), refreshed by 3.2, 3.3, 3.4 |
+| Messaging and issue framework | 4.1, 4.2, 2.1–2.11 |
+| Content-pillar system | 2.1–2.11 |
+| Podcast clipping plan | 5.1, 5.6 |
+| TikTok and Reels series | 5.2 |
+| Facebook content-hub structure | 5.3 |
+| Poll question library | 4.4 |
+| Swipe-post concepts | 4.5 |
+| Street-interview format | 5.4 |
+| Local theme-page distribution list | 5.9 (the seeder list) |
+| Monthly publishing calendar | 5.11 |
+| Performance dashboard | 5.5, extended per clip in 5.10 |
+| Monthly insight updates | 3.4 |
+
+Assets on the page that the strategy doc did not list, and that we are also delivering: the plan page itself (0.1), the hero photo (0.2), the AI briefing video (0.3), the campaign website and app (0.5), the progress graphic (0.6), the printable plan (0.7), the volunteer asset library (5.7), Daily Posters (5.8), and the winner-to-ads loop (5.10).
 
 ## Not in the plan
 
