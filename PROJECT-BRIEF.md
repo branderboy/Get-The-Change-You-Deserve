@@ -91,6 +91,8 @@ Full detail, confidence scores, and status for every asset are in `ASSETS.md`. S
 
 Reach inside the D.C. market, video completion rate, repeat viewers, shares and saves, comments and poll participation, candidate-name searches, profile visits, Facebook video consumption, campaign-site traffic, email and text signups, volunteer interest, donations.
 
+Social listening: Brandwatch (brandwatch.com) monitors social media mentions and sentiment.
+
 ## 8. Decisions still open
 
 1. Social media pricing for lines 1 through 5.

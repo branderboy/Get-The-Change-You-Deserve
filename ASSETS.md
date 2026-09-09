@@ -312,7 +312,7 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 
 ### 5.5 Funnel tracking setup — Confidence 80
 **Basis:** The four stages and their outcomes are defined on the page. "Name searches" and "site visits" come from Google Search Console and site analytics on the campaign website, which 0.5 installs on day one.
-- **Inputs:** platform analytics access, website analytics, Search Console.
+- **Inputs:** platform analytics access, website analytics, Search Console, a Brandwatch account for social listening (mentions and sentiment across social media).
 - **Steps:** one dashboard with the four rows (Exposure: impressions and reach; Recognition: repeat viewers and profile visits; Association: shares, saves, name searches; Interest & Handoff: site visits, warm audiences); weekly review.
 - **Depends on:** 0.5 campaign website analytics.
 - **Done when:** all four rows report real numbers for one full week.
@@ -345,7 +345,7 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 
 ### 5.10 Winner-to-ads loop — Confidence 70
 **Basis:** Step 06 of the map. Measurement is straightforward; the ads side depends on Meta advertiser verification (see Phase 6).
-- **Inputs:** the 5.5 dashboard extended to per-clip tracking across posters and seeders; the six signals from the page: impressions, mentions, word of mouth, saves, reposts, add-to-story.
+- **Inputs:** the 5.5 dashboard extended to per-clip tracking across posters and seeders; the six signals from the page: impressions, mentions, word of mouth, saves, reposts, add-to-story; Brandwatch (brandwatch.com) for social media mentions and sentiment, meaning social listening.
 - **Steps:** weekly review of every clip's signals; the top performers move to a `03 Winners` folder; each winner becomes a Facebook and Instagram ad in Phase 6 with the same cut and caption that won organically.
 - **Depends on:** 5.5, 6.1 verification.
 - **Done when:** the first organic winner is running as a Meta ad.
