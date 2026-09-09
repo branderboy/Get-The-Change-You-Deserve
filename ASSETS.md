@@ -1,4 +1,4 @@
-# Rhonda Hamilton 2026 — Implementation Plan
+# Rhonda Hamilton 2026 — Asset Implementation Plan
 
 `index.html` is the plan. This document is how it gets built. Every asset the plan commits to is listed below with the inputs it needs, the steps to produce it, what "done" means, what it depends on, and a confidence score. Nothing here goes beyond what the page states; where a step requires something the plan does not yet have, that gap is named.
 
