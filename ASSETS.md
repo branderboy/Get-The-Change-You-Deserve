@@ -22,7 +22,7 @@ The engagement as you defined it. Each line maps to the assets below.
 | Line | Price | Delivered by |
 |---|---|---|
 | 1. Social media: content, podcast content identifier (finding the viral clips and adding them to the campaign content folder), criticism response video formatting, Buffer scheduling to Election Day | $2,150 | 2.1–2.11, 5.1, 5.6, 5.7, 5.11 |
-| 2. Campaign page: app and website (web, mobile, progressive web app) with poll capture to contact capture to donation | $3,940 | 0.5 |
+| 2. Campaign page: app and website (web, mobile, progressive web app) with poll capture to contact capture to donation, plus a ManyChat flow for automated donations and support via DMs and Messenger | $3,450 | 0.5 |
 | 3. Man-on-the-street content: we help produce it and recruit a videographer | Free | 5.4 |
 | 4. Seeding campaign: we manage it end to end through deployment as volunteers; the seeds themselves are the only cost | Our work free; seeds at cost | 5.8, 5.9, 5.10 |
 | 5. Paid ads: we manage them, the best videos become Facebook and Instagram ads to activate | $750 management on a $2,000–$3,000 ad budget | 5.10, Phase 6 |
@@ -34,7 +34,7 @@ The engagement as you defined it. Each line maps to the assets below.
 | 0.1 | Plan page (`index.html`) | 0 | 95 | [x] |
 | 0.2 | Hero photo file | 0 | 100 | [x] |
 | 0.3 | Strategy briefing video (AI-produced) | 0 | 85 | [~] |
-| 0.5 | Campaign website, mobile, and progressive web app ($3,940) | 0 | 80 | [ ] |
+| 0.5 | Campaign website, mobile, and progressive web app ($3,450) | 0 | 80 | [ ] |
 | 0.6 | D.C. Progress timeline graphic | 0 | 100 | [x] |
 | 0.7 | Printable plan (print button + print stylesheet) | 0 | 100 | [x] |
 | 1.1 | Strategy brief (objective + target outcome) | 1 | 95 | [ ] |
@@ -111,7 +111,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 - **Depends on:** nothing outside the repo.
 - **Done when:** the play button plays the video and it has been reviewed once by the campaign.
 
-### 0.5 Campaign website, mobile, and progressive web app — $3,940 — Confidence 80
+### 0.5 Campaign website, mobile, and progressive web app — $3,450 — Confidence 80
 **Basis:** Confirmed: we build it. One codebase delivered three ways: a responsive website, a mobile-first experience, and a progressive web app residents can install from the browser. It is the destination for every clip, seeder post, and ad. Score reflects three outside pieces: a donation processor with political-compliance fields, SMS opt-in compliance for the text capture, and candidate sign-off on positions.
 - **Inputs:** domain, hosting, the brand from `index.html`, the positions from Phases 2 and 4, the poll question library (4.4), a donation processor, an email and SMS provider, D.C. voter-information links.
 - **The capture flow the page commits to:**
@@ -119,6 +119,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
   2. Capture the contact. Email or text to see results and get the follow-up. Volunteer signup lives here.
   3. Donate. The warm, polled, identified resident is asked to give.
 - **Pages:** Home, Positions, Poll, Donate, Volunteer, Events, Voter Info, About (from the "Who Is Rhonda Hamilton?" material).
+- **ManyChat flow:** automated donation and support inside Instagram DMs and Facebook Messenger. A comment or message triggers the donate link, the volunteer signup, or the answer, with no wait on a person.
 - **Steps:** build on the page's design system (Montserrat, Open Sans, D.C. red, slate, navy, gold); ship the poll-to-donation flow first, then the content pages; add the web app manifest and service worker so it installs to a home screen and loads offline; install analytics and Google Search Console on day one so 5.5 has data; connect the donation processor and the email and SMS provider; link it from every social bio and every clip caption.
 - **Depends on:** 4.1 brand position; 4.4 poll library; candidate sign-off on positions; donation processor and SMS provider accounts.
 - **Done when:** the poll-to-contact-to-donate flow completes end to end on a phone, the app installs to a home screen, analytics reports traffic, and a test donation and a test volunteer signup both complete.
