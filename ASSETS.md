@@ -48,6 +48,11 @@ Status key: `[ ]` not started · `[~]` in progress · `[x]` done
 | 5.3 | Long-form hub (Facebook) | 5 | 90 | [ ] |
 | 5.4 | Neighborhood Conversations | 5 | 70 | [ ] |
 | 5.5 | Funnel tracking setup | 5 | 80 | [ ] |
+| 5.6 | Drive intake + Opus Clip review pipeline | 5 | 90 | [ ] |
+| 5.7 | Volunteer asset library (Drive) | 5 | 90 | [ ] |
+| 5.8 | Daily Posters (recruited volunteers) | 5 | 65 | [ ] |
+| 5.9 | Seeder network (theme, repost, meme pages) | 5 | 55 | [ ] |
+| 5.10 | Winner-to-ads loop | 5 | 70 | [ ] |
 | 6.1 | Paid: top funnel | 6 | 65 | [ ] |
 | 6.2 | Paid: mid funnel | 6 | 65 | [ ] |
 | 6.3 | Paid: bottom funnel | 6 | 65 | [ ] |
@@ -64,7 +69,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 | Weeks 1–2 | Audit insights are in (3.1). Run the first Google Trends pull (3.2) and the Reddit language guide (3.3). | The language and search signals that sharpen the packages. |
 | Week 3 | Phase Two: build 4.2 system, produce 4.3, then one package per audit issue. | Scripts and hooks for production. |
 | Weeks 3–4 | Candidate interview day(s): capture raw material for 2.1, 2.4, 2.5, 2.6, 2.8 in one sitting. The AI briefing video (0.3) is produced in parallel and does not wait on this. | Weeks of clips from one shoot. |
-| Week 4 onward | Phase Three production and posting: 5.2 and 5.3 weekly, 5.1 as podcasts land, 5.4 on a set neighborhood schedule. 5.5 live before first post. | Measured reach and the retargeting pool. |
+| Week 4 onward | Phase Three production and posting: 5.2 and 5.3 weekly, 5.1 as podcasts land, 5.4 on a set neighborhood schedule. 5.5 live before first post. The clipping machine (5.6, 5.7) runs from the first recording; posters (5.8) and seeders (5.9) start once the library has a week of clips. | Measured reach, daily volunteer posting, and the retargeting pool. |
 | When organic winners are proven | Phase Six paid, only on assets with strong watch time, shares, and profile visits. | Scale and conversions. |
 
 ---
@@ -241,10 +246,10 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 ## Phase 5 — The Organic Content System (Phase Three on the page)
 
 ### 5.1 Podcast clipping pipeline — Confidence 70
-**Basis:** The page sets a yield of 15–40 assets per 40-minute interview, which is realistic. The dependency is getting booked: no podcast appearances are scheduled yet.
+**Basis:** The page sets a yield of 15–40 assets per 40-minute interview, which is realistic. The dependency is getting booked: no podcast appearances are scheduled yet. Once recorded, the show runs through the machine in 5.6 and 5.7.
 - **Inputs:** booked appearances, raw audio and video from each.
-- **Steps:** build a target list of D.C.-focused podcasts; pitch; after each recording, log timestamps by position; cut clips with the four hooks (Direct, Accountability, Community, Independent Identity).
-- **Done when:** the first appearance is clipped to at least 15 assets.
+- **Steps:** build a target list of D.C.-focused podcasts; pitch; drop every recording into the Drive intake (5.6) the day it happens; cut the Opus Clip picks with the four hooks (Direct, Accountability, Community, Independent Identity).
+- **Done when:** the first appearance is clipped to at least 15 assets in the library.
 
 ### 5.2 Discovery content (TikTok / Reels) — Confidence 80
 **Basis:** Formats are defined (Direct-to-camera, Street conversations, Issue explainers, Polls, Swipe posts, Myth-vs-Fact). Scripts come from Phases 2 and 4.
@@ -272,6 +277,39 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 - **Depends on:** 0.5 campaign website analytics.
 - **Done when:** all four rows report real numbers for one full week.
 
+### 5.6 Drive intake + Opus Clip review pipeline — Confidence 90
+**Basis:** Tools are off the shelf. Google Drive is free and Opus Clip is a paid subscription with no approval beyond a card. The process is on the page as steps 01 to 03 of the map.
+- **Inputs:** a Google Drive with an `01 Intake` folder, an Opus Clip account, one owner who runs the review within 24 hours of each recording.
+- **Steps:** every podcast show, interview, street conversation, and other content asset uploads to Intake the day it is recorded; download and run through Opus Clip; keep the clips it scores highest; AI review adds hook options and repositioning notes; cut each keeper into Direct, Accountability, Community, and Independent Identity versions.
+- **Done when:** the first recording goes intake to finished clips inside 48 hours.
+
+### 5.7 Volunteer asset library (Drive) — Confidence 90
+**Basis:** A folder structure and a posting rule. Step 04 of the map.
+- **Inputs:** the finished clips from 5.6, a caption and hashtag set per clip.
+- **Steps:** one `02 Ready to Post` folder organized by week; each clip saved with its caption in the filename or a sidecar text file; a one-page posting guide (what to post, when, how to tag the campaign); share link goes to every poster and seeder.
+- **Done when:** a volunteer with only the link can post a clip correctly without asking a question.
+
+### 5.8 Daily Posters (recruited volunteers) — Confidence 65
+**Basis:** The mechanics are simple. Recruiting people who will actually post every day, and keeping them posting, is the hard part. Score reflects the retention risk, not the setup.
+- **Inputs:** a recruitment ask (who we want, what we ask of them, what they get), a signup form on the campaign website (0.5), a group chat for the daily drop.
+- **Steps:** recruit from the candidate's existing supporters, volunteers, and the 91,000 independents audience; each poster commits to one clip a day on their own Instagram or TikTok from the library; daily reminder with that day's clip in the group chat; weekly shoutout for top posters; replace drop-offs continuously.
+- **Depends on:** 5.7 live, 0.5 signup page.
+- **Done when:** a set roster of posters has posted daily for two consecutive weeks. Set the roster size once recruiting starts.
+
+### 5.9 Seeder network (theme, repost, and meme pages) — Confidence 55
+**Basis:** Seeders are page owners the campaign does not control. Some will post for free because the content fits, some will want payment, and paid placements on political content have disclosure rules. The list does not exist yet.
+- **Inputs:** a target list of local and targeted D.C. theme pages, repost pages, and meme pages with follower counts and contact routes; an outreach message; a decision on whether any seeding is paid.
+- **Steps:** build the list from the audit's culture, lifestyle, community, local news, politics, and young-adult page categories; rank by D.C. audience share and engagement; outreach in batches; send seeders the library link and a weekly pick; log every placement.
+- **Depends on:** 5.7. If any placement is paid, confirm disclosure requirements first.
+- **Done when:** the first ten seeders have each posted at least once and placements are logged.
+
+### 5.10 Winner-to-ads loop — Confidence 70
+**Basis:** Step 06 of the map. Measurement is straightforward; the ads side depends on Meta advertiser verification (see Phase 6).
+- **Inputs:** the 5.5 dashboard extended to per-clip tracking across posters and seeders; the six signals from the page: impressions, mentions, word of mouth, saves, reposts, add-to-story.
+- **Steps:** weekly review of every clip's signals; the top performers move to a `03 Winners` folder; each winner becomes a Facebook and Instagram ad in Phase 6 with the same cut and caption that won organically.
+- **Depends on:** 5.5, 6.1 verification.
+- **Done when:** the first organic winner is running as a Meta ad.
+
 ---
 
 ## Phase 6 — The Paid Amplifier (Optional)
@@ -282,7 +320,7 @@ All three tiers share the same score and the same caveats.
 
 ### 6.1 Top funnel: Video-view and Reach ads — Confidence 65
 - **Inputs:** verified ad accounts, budget, proven organic clips.
-- **Steps:** promote only clips with strong organic watch time; geo-target D.C.; broad audiences.
+- **Steps:** promote only the winners from 5.10, on Facebook and Instagram, with the cut and caption that won organically; geo-target D.C.; broad audiences.
 - **Done when:** first flight runs and reach is reported in 5.5.
 
 ### 6.2 Mid funnel: retarget viewers with explainers — Confidence 65
