@@ -47,10 +47,10 @@ Google Trends and Reddit are tracked monthly as signals. They are never treated 
 | Line | Price |
 |---|---|
 | Campaign website and app: web, mobile, and progressive web app, with poll capture to contact capture to donation | $3,940 |
-| Social media 1. Podcast clipping and content asset storage; find the most viral clips; add them to a campaign content folder | Social media pricing to be set |
-| Social media 2. Seeders: owners of local and targeted theme pages, repost pages, and meme pages | Social media pricing to be set |
-| Social media 3. New videos: self-analysis and top-of-funnel | Social media pricing to be set |
-| Social media 4. Facebook fan page setup | Social media pricing to be set |
+| Social media 1. Podcast to social media: clipping and content asset storage; find the most viral clips; add them to a campaign content folder | $2,150 (covers lines 1–4 and Buffer scheduling to Election Day) |
+| Social media 2. Seeders: owners of local and targeted theme pages, repost pages, and meme pages | Included in $2,150 |
+| Social media 3. New videos: self-analysis and top-of-funnel | Included in $2,150 |
+| Social media 4. Facebook fan page setup | Included in $2,150 |
 | Social media 5. Ads | Optional |
 
 ## 4. Deliverables
@@ -95,12 +95,11 @@ Social listening: we monitor social media mentions and sentiment.
 
 ## 8. Decisions still open
 
-1. Social media pricing for lines 1 through 5.
-2. Poster roster size.
-3. Whether any seeding is paid. If yes, disclosure requirements are confirmed first.
-4. Paid budget, if the optional ads line is taken.
-5. Candidate availability for at least one full interview day in Weeks 3–4.
-6. Donation processor and SMS provider accounts for the website and app.
+1. Poster roster size.
+2. Whether any seeding is paid. If yes, disclosure requirements are confirmed first.
+3. Paid budget, if the optional ads line is taken.
+4. Candidate availability for at least one full interview day in Weeks 3–4.
+5. Donation processor and SMS provider accounts for the website and app.
 
 ## 9. Working rules for this project
 

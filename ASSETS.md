@@ -22,13 +22,14 @@ The engagement as you defined it. Each line maps to the assets below.
 | Line | Price | Delivered by |
 |---|---|---|
 | Campaign website and app (web, mobile, progressive web app) with poll capture to contact capture to donation | $3,940 | 0.5 |
-| Social media 1. Podcast clipping and content asset storage, finding the most viral clips, adding them to a campaign content folder | included in social | 5.1, 5.6, 5.7 |
+| Social media 1. Podcast to social media: clipping and content asset storage, finding the most viral clips, adding them to a campaign content folder | $2,150 (covers lines 1–4 and Buffer scheduling) | 5.1, 5.6, 5.7 |
 | Social media 2. Seeders | included in social | 5.9, with 5.8 Daily Posters |
 | Social media 3. New videos: self-analysis and top-of-funnel | included in social | 2.1–2.11 (self-analysis, direct-to-camera), 5.2 (top of funnel), 0.3 (briefing) |
 | Social media 4. Facebook fan page setup | included in social | 5.3 |
+| Buffer schedules content up until the election | included in social | 5.7, 5.11 |
 | Social media 5. Ads (optional) | optional | 5.10, Phase 6 |
 
-Social media pricing is not set yet. Only the website and app carries a number.
+Social media is $2,150. The website and app is $3,940.
 
 ## Scoreboard
 
@@ -327,7 +328,7 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 ### 5.7 Volunteer asset library (Drive) — Confidence 90
 **Basis:** A folder structure and a posting rule. Step 04 of the map.
 - **Inputs:** the finished clips from 5.6, a caption and hashtag set per clip.
-- **Steps:** one `02 Ready to Post` folder organized by week; each clip saved with its caption in the filename or a sidecar text file; a one-page posting guide (what to post, when, how to tag the campaign); share link goes to every poster and seeder.
+- **Steps:** one `02 Ready to Post` folder organized by week; each clip saved with its caption in the filename or a sidecar text file; a one-page posting guide (what to post, when, how to tag the campaign); share link goes to every poster and seeder; the campaign's own posts are queued in Buffer up until the election.
 - **Done when:** a volunteer with only the link can post a clip correctly without asking a question.
 
 ### 5.8 Daily Posters (recruited volunteers) — Confidence 65
