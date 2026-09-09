@@ -21,15 +21,11 @@ The engagement as you defined it. Each line maps to the assets below.
 
 | Line | Price | Delivered by |
 |---|---|---|
-| Campaign website and app (web, mobile, progressive web app) with poll capture to contact capture to donation | $3,940 | 0.5 |
-| Social media 1. Podcast to social media: clipping and content asset storage, finding the most viral clips, adding them to a campaign content folder | $2,150 (covers lines 1–4 and Buffer scheduling) | 5.1, 5.6, 5.7 |
-| Social media 2. Seeders | included in social | 5.9, with 5.8 Daily Posters |
-| Social media 3. New videos: self-analysis and top-of-funnel | included in social | 2.1–2.11 (self-analysis, direct-to-camera), 5.2 (top of funnel), 0.3 (briefing) |
-| Social media 4. Facebook fan page setup | included in social | 5.3 |
-| Buffer schedules content up until the election | included in social | 5.7, 5.11 |
-| Social media 5. Ads (optional) | optional | 5.10, Phase 6 |
-
-Social media is $2,150. The website and app is $3,940.
+| 1. Social media: content, podcast content identifier (finding the viral clips and adding them to the campaign content folder), criticism response video formatting, Buffer scheduling to Election Day | $2,150 | 2.1–2.11, 5.1, 5.6, 5.7, 5.11 |
+| 2. Campaign page: app and website (web, mobile, progressive web app) with poll capture to contact capture to donation | $3,940 | 0.5 |
+| 3. Man-on-the-street content: we help produce it and recruit a videographer | Free | 5.4 |
+| 4. Seeding campaign: we manage it end to end through deployment as volunteers; the seeds themselves are the only cost | Our work free; seeds at cost | 5.8, 5.9, 5.10 |
+| Ads | Optional | Phase 6 |
 
 ## Scoreboard
 

@@ -46,12 +46,11 @@ Google Trends and Reddit are tracked monthly as signals. They are never treated 
 
 | Line | Price |
 |---|---|
-| Campaign website and app: web, mobile, and progressive web app, with poll capture to contact capture to donation | $3,940 |
-| Social media 1. Podcast to social media: clipping and content asset storage; find the most viral clips; add them to a campaign content folder | $2,150 (covers lines 1–4 and Buffer scheduling to Election Day) |
-| Social media 2. Seeders: owners of local and targeted theme pages, repost pages, and meme pages | Included in $2,150 |
-| Social media 3. New videos: self-analysis and top-of-funnel | Included in $2,150 |
-| Social media 4. Facebook fan page setup | Included in $2,150 |
-| Social media 5. Ads | Optional |
+| 1. Social media: content, podcast content identifier (finding the viral clips and adding them to the campaign content folder), criticism response video formatting, Buffer scheduling to Election Day | $2,150 |
+| 2. Campaign page: app and website, web, mobile, and progressive web app, with poll capture to contact capture to donation | $3,940 |
+| 3. Man-on-the-street content: we help produce it and recruit a videographer | Free |
+| 4. Seeding campaign: we manage it end to end through deployment as volunteers; the seeds themselves are the only cost | Our work free; seeds at cost |
+| Ads | Optional |
 
 ## 4. Deliverables
 
