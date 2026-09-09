@@ -109,7 +109,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 ### 0.3 Strategy briefing video (AI-produced) — Confidence 85
 **Basis:** The "Play Briefing" block in the Crucible section is a mock player. The video will be AI-produced, so it does not wait on the candidate's calendar. Script, voice, and visuals all come from material already on the page. Score is not higher only because AI voice and visuals need one round of review before they represent the campaign.
 - **Inputs:** the Crucible section (critiques and responses), the audit insights, the page's brand (Montserrat, Open Sans, D.C. red, slate, gold), the hero photo and progression graphic.
-- **Steps:** script written, see `briefing-video-script.md` [x]; generate an AI narration; build motion graphics from the page's own cards and stats; render a 16:9 MP4 with captions; host it; replace the mock player with the embed.
+- **Steps:** script written, see `briefing-video-script.md` [x]; silent captioned render is on the page [x]; narration comes from NotebookLM using `notebooklm/NotebookLM-Prompt.md` and `notebooklm/NotebookLM-Pitch-Brief.md` [ ]; re-time the video to that audio and re-embed [ ].
 - **Depends on:** nothing outside the repo.
 - **Done when:** the play button plays the video and it has been reviewed once by the campaign.
 
