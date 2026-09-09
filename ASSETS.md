@@ -37,6 +37,7 @@ The engagement as you defined it. Each line maps to the assets below.
 | 0.5 | Campaign website, mobile, and progressive web app ($3,450) | 0 | 80 | [ ] |
 | 0.6 | D.C. Progress timeline graphic | 0 | 100 | [x] |
 | 0.7 | Printable plan (print button + print stylesheet) | 0 | 100 | [x] |
+| 0.8 | The campaign line, converted to domain, Facebook fan page, Instagram account, flyers | 0 | 85 | [ ] |
 | 1.1 | Strategy brief (objective + target outcome) | 1 | 95 | [ ] |
 | 2.1 | "Who Is Rhonda Hamilton?" series | 2 | 80 | [ ] |
 | 2.2 | Serious-candidate proof content | 2 | 65 | [ ] |
@@ -133,6 +134,13 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 ### 0.7 Printable plan — Confidence 100
 **Basis:** A Print Plan button in the nav and a print stylesheet on the page. Dark sections keep their color, cards do not split across pages, and the nav, video mock, and buttons drop out. Done.
 - **Done when:** printing from the browser produces a clean letter-size copy. Done.
+
+### 0.8 The campaign line, converted to domain, Facebook fan page, Instagram account, flyers — Confidence 85
+**Basis:** One line the campaign runs on, converted into the places people find her. Example: "DC! We Just Have To Win." Score reflects domain and handle availability, which is checked, not assumed.
+- **Inputs:** the chosen line (candidate sign-off), domain availability, Facebook and Instagram handle availability, her photo, the poll link for the QR code.
+- **Steps:** confirm the line; register the domain; create the Facebook fan page and Instagram account under the same name and brand; design the flyer set with the line, her photo, the domain, and a QR code to the poll; print for neighborhood shoots and events.
+- **Depends on:** 4.1 brand position; 0.5 for the poll link.
+- **Done when:** domain resolves, both accounts are live and matching, and the first flyer run is printed.
 
 ---
 

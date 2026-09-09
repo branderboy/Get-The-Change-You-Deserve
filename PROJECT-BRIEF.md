@@ -60,7 +60,7 @@ Google Trends and Reddit are tracked monthly as signals. They are never treated 
 
 Full detail, confidence scores, and status for every asset are in `ASSETS.md`. Summary:
 
-**Plan and page assets.** The plan page; hero photo; AI-produced strategy briefing video (script and first render in the repo); campaign website and app; D.C. Progress timeline graphic; printable plan.
+**Plan and page assets.** The plan page; hero photo; strategy briefing video; campaign website and app; D.C. Progress timeline graphic; printable plan; the campaign line converted to a domain, a Facebook fan page, an Instagram account, and flyers (example: "DC! We Just Have To Win.").
 
 **Messaging.** Strategy brief; central brand position; issue content package system with the City Reliability package first; poll question library; swipe-post concept library; eleven content lanes answering the public critiques, from "Who Is Rhonda Hamilton?" to "Proof, Not Slogans" and "Beyond Mental Health."
 
