@@ -149,7 +149,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 
 ## Phase 2 — Confronting The Skepticism (The Crucible)
 
-Each critique on the page gets a content lane. Every lane shares the same production path: gather proof and raw material, write hooks, shoot on interview day, cut for 5.2, archive on 5.3. The scores differ because the inputs differ.
+Each critique on the page gets a content lane. These are the first videos to make. Every lane shares the same production path: the critique is answered on the weekly podcast the campaign already films, the recording goes into the Drive intake (5.6), the answer is clipped and repositioned, cut for 5.2, archived on 5.3. The scores differ because the inputs differ.
 
 ### 2.1 "Who Is Rhonda Hamilton?" origin-story series — Confidence 80
 **Basis:** Scriptable from a sit-down interview. Needs candidate time and a fact-checked bio.
