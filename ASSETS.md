@@ -72,7 +72,7 @@ Social media pricing is not set yet. Only the website and app carries a number.
 | 5.9 | Seeder network (theme, repost, meme pages) | 5 | 55 | [ ] |
 | 5.10 | Winner-to-ads loop | 5 | 70 | [ ] |
 | 5.11 | Monthly publishing calendar | 5 | 90 | [ ] |
-| 5.12 | Social listening tool (we build it) | 5 | 75 | [ ] |
+| 5.12 | Social listening | 5 | 90 | [ ] |
 | 6.1 | Paid: top funnel | 6 | 65 | [ ] |
 | 6.2 | Paid: mid funnel | 6 | 65 | [ ] |
 | 6.3 | Paid: bottom funnel | 6 | 65 | [ ] |
@@ -313,7 +313,7 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 
 ### 5.5 Funnel tracking setup — Confidence 80
 **Basis:** The four stages and their outcomes are defined on the page. "Name searches" and "site visits" come from Google Search Console and site analytics on the campaign website, which 0.5 installs on day one.
-- **Inputs:** platform analytics access, website analytics, Search Console, the social listening tool we build (5.12).
+- **Inputs:** platform analytics access, website analytics, Search Console, social listening (5.12).
 - **Steps:** one dashboard with the four rows (Exposure: impressions and reach; Recognition: repeat viewers and profile visits; Association: shares, saves, name searches; Interest & Handoff: site visits, warm audiences); weekly review.
 - **Depends on:** 0.5 campaign website analytics.
 - **Done when:** all four rows report real numbers for one full week.
@@ -346,7 +346,7 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 
 ### 5.10 Winner-to-ads loop — Confidence 70
 **Basis:** Step 06 of the map. Measurement is straightforward; the ads side depends on Meta advertiser verification (see Phase 6).
-- **Inputs:** the 5.5 dashboard extended to per-clip tracking across posters and seeders; the six signals from the page: impressions, mentions, word of mouth, saves, reposts, add-to-story; the social listening tool we build (5.12) for social media mentions and sentiment.
+- **Inputs:** the 5.5 dashboard extended to per-clip tracking across posters and seeders; the six signals from the page: impressions, mentions, word of mouth, saves, reposts, add-to-story; social listening (5.12) for social media mentions and sentiment.
 - **Steps:** weekly review of every clip's signals; the top performers move to a `03 Winners` folder; each winner becomes a Facebook and Instagram ad in Phase 6 with the same cut and caption that won organically.
 - **Depends on:** 5.5, 6.1 verification.
 - **Done when:** the first organic winner is running as a Meta ad.
@@ -357,10 +357,10 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 - **Steps:** one shared calendar per month: what posts where, which package it belongs to, which poll runs, which seeders get which clip; reviewed in the 3.4 monthly update.
 - **Done when:** the first month is fully scheduled before it starts.
 
-### 5.12 Social listening tool (we build it) — Confidence 75
-**Basis:** Confirmed: we build our own rather than subscribe to a vendor. It monitors mentions of Rhonda Hamilton across social media, news, blogs, and forums and reads the sentiment behind them. Score reflects platform data access: some networks limit what an outside tool can read, so coverage is decided by which platform APIs and feeds we can pull.
-- **Inputs:** the keyword set (candidate name, the content lane names, the top issues), access to platform APIs and public feeds, the 5.5 dashboard.
-- **Steps:** define the keyword set; connect the sources we can read; classify each mention positive, negative, or neutral; roll counts and sentiment into the 5.5 dashboard by day and by clip; review weekly in the Measure and Scale step.
+### 5.12 Social listening — Confidence 90
+**Basis:** A capability we run, not a tool we build. We monitor mentions of Rhonda Hamilton across social media, news, blogs, and forums and read the sentiment behind them. Any social listening tool can do this.
+- **Inputs:** the keyword set (candidate name, the content lane names, the top issues), a social listening tool of our choosing, the 5.5 dashboard.
+- **Steps:** set the keywords; classify mentions positive, negative, or neutral; roll counts and sentiment into the 5.5 dashboard by day and by clip; review weekly in the Measure and Scale step.
 - **Depends on:** 5.5.
 - **Done when:** mentions and sentiment report daily on the dashboard for one full week.
 
