@@ -147,7 +147,7 @@ Work runs in this order because each step feeds the next. Weeks are relative to 
 
 ---
 
-## Phase 2 — Confronting The Skepticism (The Crucible)
+## Phase 2 — Reverse Engineer Criticism By Creating These Videos
 
 Each critique on the page gets a content lane. These are the first videos to make. Every lane shares the same production path: the critique is answered on the weekly podcast the campaign already films, the recording goes into the Drive intake (5.6), the answer is clipped and repositioned, cut for 5.2, archived on 5.3. The scores differ because the inputs differ.
 
