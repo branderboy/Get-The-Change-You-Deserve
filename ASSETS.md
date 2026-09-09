@@ -33,7 +33,7 @@ The engagement as you defined it. Each line maps to the assets below.
 |---|---|---|---|---|
 | 0.1 | Plan page (`index.html`) | 0 | 95 | [x] |
 | 0.2 | Hero photo file | 0 | 100 | [x] |
-| 0.3 | Strategy briefing video | 0 | removed from the page | [ ] |
+| 0.3 | Briefing video: The_Hamilton_Blueprint.pptx slides with the_convo.mp3 | 0 | 100 | [x] |
 | 0.5 | Campaign website, mobile, and progressive web app ($3,450) | 0 | 80 | [ ] |
 | 0.6 | D.C. Progress timeline graphic | 0 | 100 | [x] |
 | 0.7 | Printable plan (print button + print stylesheet) | 0 | 100 | [x] |
