@@ -53,9 +53,7 @@
 
         /* Rule 4: body copy is one size. Every paragraph and list item in the main content is 18px unless it is a
            label (uppercase), a price or number (font-heading), or a control. */
-        main :is(p, li) { font-size: 1.125rem; line-height: 1.65; }
-        main :is(p, li).uppercase, main :is(p, li).font-heading, main .text-\[10px\], main .text-xs { font-size: revert-layer; }
-        main p.uppercase, main li.uppercase, main p.text-xs, main p.text-\[10px\] { font-size: inherit; }
+        main :is(p, li):not(.font-heading):not(.uppercase):not(.text-xs):not(.text-sm):not(.text-\[10px\]) { font-size: 1.125rem; line-height: 1.65; }
 
         /* Editorial lines instead of boxes */
         .editorial-border {
@@ -172,8 +170,8 @@
             </div>
             <span class="font-heading font-black text-base md:text-2xl tracking-tighter text-dcBlack uppercase whitespace-nowrap">Hamilton <span class="text-dcRed">2026</span></span>
         </a>
-        <div class="hidden xl:flex gap-5 2xl:gap-8 font-heading font-bold text-[11px] 2xl:text-xs uppercase tracking-[0.15em] 2xl:tracking-[0.2em] text-gray-800 whitespace-nowrap">
-            <a href="#timeline" class="hover:text-dcRed transition-colors">The Timeline</a>
+        <div class="hidden xl:flex gap-6 2xl:gap-8 font-heading font-bold text-sm 2xl:text-base uppercase tracking-[0.1em] text-gray-800 whitespace-nowrap">
+            <a href="#timeline" class="hover:text-dcRed transition-colors">Timeline</a>
             <a href="#strategy" class="hover:text-dcRed transition-colors">Audit Insights</a>
             <a href="#skepticism" class="hover:text-dcRed transition-colors">Videos</a>
             <a href="#system" class="hover:text-dcRed transition-colors">System</a>
@@ -532,6 +530,7 @@
                             <p class="text-lg text-gray-800 leading-relaxed mb-6">The campaign’s social content center and long-form video library. TikTok and Instagram create discovery. Facebook gives viewers a place to watch, share, comment, and learn more.</p>
                             <ul class="space-y-3 mb-8">
 <li class="text-lg text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">What it publishes.</strong> Podcast clips, street interviews, D.C. issue explainers, polls, your updates, longer videos, and fact-based State of D.C. content.</li>
+<li class="text-lg text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">It can raise money.</strong> Once the page qualifies on likes and watch time, Facebook pays for views, and that revenue can go to the campaign. Short clips get the page qualified faster than full podcast episodes do.</li>
                             </ul>
                             <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcRed hover:text-dcBlack transition-colors" data-title="Facebook Theme Page">Read Full Plan &rarr;</button>
                             <div class="flow-detail hidden mt-6">
