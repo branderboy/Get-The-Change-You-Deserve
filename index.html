@@ -624,6 +624,7 @@
                             <ul class="space-y-3 mb-8">
 <li class="text-lg text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">What is on it.</strong> Your story, the D.C. Progress Bar, issues and fact sheets, events, polls, press kit, volunteer signup, donations, and answers to public questions and misinformation.</li>
 <li class="text-lg text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Where it leads.</strong> Events, polls, press, volunteers, donations.</li>
+<li class="text-lg text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">After launch.</strong> Website management is $200 a month: updates, fixes and a weekly check that the poll, contact and donation path works.</li>
                             </ul>
                             <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcRed hover:text-dcBlack transition-colors" data-title="TheChangeYouDeserveDC.com">Read Full Plan &rarr;</button>
                             <div class="flow-detail hidden mt-6">
@@ -840,6 +841,34 @@
                     </div>
                 </div>
 
+                <!-- Website management, monthly, the last option -->
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-white border-2 border-dcBlack p-8 md:p-12 mt-10">
+                        <div class="flex-1">
+                            <span class="inline-block bg-dcBlack text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 mb-4">After launch</span>
+                            <h4 class="font-heading font-black text-3xl uppercase text-dcBlack mb-5">Website Management</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-dcRed text-2xl leading-none font-black mt-1">✓</span> 
+                                    <span class="text-lg text-gray-800 leading-relaxed"><strong class="text-dcBlack">Kept current:</strong> New events, positions, updates and press added as they happen.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-dcRed text-2xl leading-none font-black mt-1">✓</span> 
+                                    <span class="text-lg text-gray-800 leading-relaxed"><strong class="text-dcBlack">Kept working:</strong> Fixes, security updates, backups, and a check that the poll, contact and donation path works every week.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-dcRed text-2xl leading-none font-black mt-1">✓</span> 
+                                    <span class="text-lg text-gray-800 leading-relaxed"><strong class="text-dcBlack">Monthly, through Election Day:</strong> Billed each month after the site goes live.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shrink-0 text-left md:text-right mt-4 md:mt-0">
+                            <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Investment</p>
+                            <p class="font-heading text-5xl md:text-6xl font-black text-dcBlack">$200<span class="text-2xl font-bold text-gray-500"> a month</span></p>
+                            <button type="button" class="plan-add mt-4 inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Website management" data-price="0" data-monthly="200" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button>
+                        </div>
+                    </div>
+
+
                 <!-- Your plan: the pieces they picked, added up -->
                 <div id="plan-summary" class="bg-white border-2 border-gray-200 border-t-8 border-t-dcBlack p-8 md:p-12 mt-10 scroll-mt-28">
                     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-6">
@@ -850,6 +879,7 @@
                         <div class="text-left md:text-right">
                             <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-1">Fees</p>
                             <p id="plan-total" class="font-heading text-5xl md:text-6xl font-black text-dcBlack">$0</p>
+                            <p id="plan-monthly" class="text-lg font-bold text-dcBlack hidden"></p>
                         </div>
                     </div>
                     <ul id="plan-items" class="divide-y divide-gray-200 mb-4">
@@ -876,16 +906,16 @@
                 var KEY = 'hamilton-plan';
                 var buttons = Array.prototype.slice.call(document.querySelectorAll('.plan-add'));
                 var list = document.getElementById('plan-items'), empty = document.getElementById('plan-empty');
-                var total = document.getElementById('plan-total'), notes = document.getElementById('plan-notes');
+                var total = document.getElementById('plan-total'), notes = document.getElementById('plan-notes'), monthlyEl = document.getElementById('plan-monthly');
                 var send = document.getElementById('plan-send'), bar = document.getElementById('plan-bar');
                 var barCount = document.getElementById('plan-bar-count'), barTotal = document.getElementById('plan-bar-total');
                 var picked = [];
                 var catalog = {};
-                buttons.forEach(function (b) { if (!catalog[b.dataset.item]) catalog[b.dataset.item] = { price: parseInt(b.dataset.price, 10) || 0, note: b.dataset.note || '' }; });
+                buttons.forEach(function (b) { if (!catalog[b.dataset.item]) catalog[b.dataset.item] = { price: parseInt(b.dataset.price, 10) || 0, monthly: parseInt(b.dataset.monthly, 10) || 0, note: b.dataset.note || '' }; });
                 try { picked = JSON.parse(localStorage.getItem(KEY) || '[]').filter(function (i) { return catalog[i]; }); } catch (e) { picked = []; }
                 function money(n) { return '$' + n.toLocaleString('en-US'); }
                 function render() {
-                    var sum = 0, extra = [];
+                    var sum = 0, monthly = 0, extra = [];
                     buttons.forEach(function (b) {
                         var on = picked.indexOf(b.dataset.item) !== -1;
                         b.setAttribute('aria-checked', on ? 'true' : 'false');
@@ -896,21 +926,22 @@
                     });
                     list.querySelectorAll('li[data-item]').forEach(function (li) { li.remove(); });
                     picked.forEach(function (item) {
-                        var c = catalog[item]; sum += c.price; if (c.note) extra.push(c.note);
+                        var c = catalog[item]; sum += c.price; monthly += c.monthly; if (c.note) extra.push(c.note);
                         var li = document.createElement('li'); li.setAttribute('data-item', item);
                         li.className = 'py-3 flex items-center justify-between gap-4 text-lg text-dcBlack';
-                        li.innerHTML = '<span class="font-bold">' + item + '</span><span class="font-heading font-black">' + (c.price ? money(c.price) : 'Free') + '</span>';
+                        li.innerHTML = '<span class="font-bold">' + item + '</span><span class="font-heading font-black">' + (c.monthly ? money(c.monthly) + ' a month' : (c.price ? money(c.price) : 'Free')) + '</span>';
                         list.appendChild(li);
                     });
                     empty.hidden = picked.length > 0;
                     total.textContent = money(sum);
+                    monthlyEl.textContent = monthly ? 'plus ' + money(monthly) + ' a month' : ''; monthlyEl.classList.toggle('hidden', !monthly);
                     notes.textContent = extra.length ? 'Also ' + extra.join(', and ') + '.' : '';
                     notes.classList.toggle('hidden', !extra.length);
-                    var body = 'Hi Kay Ali,%0A%0AHere is the plan I want to go with:%0A' + picked.map(function (i) { var pr = catalog[i].price; return '- ' + i + ' (' + (pr ? money(pr) : 'free') + ')'; }).join('%0A') + '%0A%0AFees: ' + money(sum) + (extra.length ? '%0A' + extra.join('; ') : '') + '%0A%0AThanks';
+                    var body = 'Hi Kay Ali,%0A%0AHere is the plan I want to go with:%0A' + picked.map(function (i) { var pr = catalog[i].price; var mo = catalog[i].monthly; return '- ' + i + ' (' + (mo ? money(mo) + ' a month' : (pr ? money(pr) : 'free')) + ')'; }).join('%0A') + '%0A%0AFees: ' + money(sum) + (monthly ? ' plus ' + money(monthly) + ' a month' : '') + (extra.length ? '%0A' + extra.join('; ') : '') + '%0A%0AThanks';
                     send.href = 'mailto:kawani@digiwaxx.com?subject=' + encodeURIComponent('Hamilton 2026 plan: my picks') + '&body=' + body;
                     send.classList.toggle('opacity-40', !picked.length); send.classList.toggle('pointer-events-none', !picked.length);
                     send.setAttribute('aria-disabled', picked.length ? 'false' : 'true');
-                    bar.classList.toggle('hidden', !picked.length); barCount.textContent = picked.length; barTotal.textContent = money(sum);
+                    bar.classList.toggle('hidden', !picked.length); barCount.textContent = picked.length; barTotal.textContent = money(sum) + (monthly ? ' + ' + money(monthly) + '/mo' : '');
                     try { localStorage.setItem(KEY, JSON.stringify(picked)); } catch (e) {}
                 }
                 buttons.forEach(function (b) {
