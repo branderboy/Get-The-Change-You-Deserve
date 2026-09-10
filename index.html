@@ -56,15 +56,15 @@
 
         .hero-section {
             position: relative;
-            background-image: url('hero_Rhonda.png');
+            background-image: url('hero_Rhonda.webp');
             background-size: cover;
             background-position: center center;
-            aspect-ratio: 1610 / 977;
+            aspect-ratio: 16 / 9;
             display: flex;
             align-items: center;
         }
         @media (max-width: 767px) {
-            .hero-section { aspect-ratio: auto; background-position: 72% center; }
+            .hero-section { aspect-ratio: auto; background-position: left center; }
             .btn-funnel { width: 100%; padding: 1.1rem 1.5rem; font-size: 1rem; letter-spacing: .1em; }
         }
 
@@ -257,21 +257,21 @@
 <body class="font-sans antialiased selection:bg-dcRed selection:text-white bg-pattern-dots bg-dots">
 
     <div class="dc-flag-divider" id="top"></div>
-    <nav class="bg-white/95 backdrop-blur-md py-3 md:py-4 px-4 md:px-12 sticky top-0 z-50 border-b border-gray-200 flex justify-between items-center gap-3 shadow-sm">
-        <a href="#top" class="flex items-center gap-3">
-            <div class="flex gap-1.5 text-dcRed text-2xl md:text-3xl">
+    <nav class="bg-white/95 backdrop-blur-md py-3 md:py-4 px-3 md:px-12 sticky top-0 z-50 border-b border-gray-200 flex justify-between items-center gap-2 md:gap-3 shadow-sm">
+        <a href="#top" class="flex items-center gap-2 md:gap-3 shrink-0">
+            <div class="flex gap-1 md:gap-1.5 text-dcRed text-lg md:text-3xl">
                 <span>★</span><span>★</span><span>★</span>
             </div>
-            <span class="font-heading font-black text-xl md:text-2xl tracking-tighter text-dcBlack uppercase">Hamilton <span class="text-dcRed">2026</span></span>
+            <span class="font-heading font-black text-lg md:text-2xl tracking-tighter text-dcBlack uppercase whitespace-nowrap">Hamilton <span class="text-dcRed">2026</span></span>
         </a>
-        <div class="hidden lg:flex gap-8 font-heading font-bold text-sm uppercase tracking-[0.2em] text-gray-600">
+        <div class="hidden xl:flex gap-6 2xl:gap-8 font-heading font-bold text-xs 2xl:text-sm uppercase tracking-[0.15em] 2xl:tracking-[0.2em] text-gray-600 whitespace-nowrap">
             <a href="#timeline" class="hover:text-dcRed transition-colors">The New Timeline</a>
             <a href="#strategy" class="hover:text-dcRed transition-colors">Audit Insights</a>
             <a href="#skepticism" class="hover:text-dcRed transition-colors">Videos</a>
             <a href="#system" class="hover:text-dcRed transition-colors">System</a>
             <a href="#website" class="hover:text-dcRed transition-colors">Website</a>
         </div>
-        <div class="flex items-center gap-3"><button type="button" onclick="window.print()" class="hidden md:inline-block bg-white border border-dcBlack text-dcBlack px-6 py-3 font-heading font-bold text-xs hover:bg-dcBlack hover:text-white transition-colors uppercase tracking-[0.2em]">Print</button><a href="#cost" class="inline-block bg-dcBlack text-white px-4 md:px-6 py-3 font-heading font-bold text-xs hover:bg-dcRed transition-colors uppercase tracking-[0.2em] whitespace-nowrap">What Is The Cost?</a></div>
+        <div class="flex items-center gap-3 shrink-0"><button type="button" onclick="window.print()" class="hidden md:inline-block bg-white border border-dcBlack text-dcBlack px-6 py-3 font-heading font-bold text-xs hover:bg-dcBlack hover:text-white transition-colors uppercase tracking-[0.2em]">Print</button><a href="#cost" class="inline-block bg-dcBlack text-white px-3 md:px-6 py-2.5 md:py-3 font-heading font-bold text-[10px] md:text-xs hover:bg-dcRed transition-colors uppercase tracking-[0.1em] md:tracking-[0.2em] whitespace-nowrap">What Is The Cost?</a></div>
     </nav>
 
     <header class="hero-section overflow-hidden">
@@ -440,7 +440,7 @@
                 <!-- Central Brand Position Block -->
                 <div class="bg-dcBlack text-white p-8 md:p-20 relative overflow-hidden flex flex-col items-center text-center shadow-2xl">
                     <div class="absolute inset-0 bg-gradient-to-br from-dcBlack via-dcNavy to-black opacity-90"></div>
-                    <div class="absolute inset-0 bg-[url('hero_Rhonda.png')] bg-cover bg-center mix-blend-overlay opacity-10"></div>
+                    <div class="absolute inset-0 bg-[url('hero_Rhonda.webp')] bg-cover bg-center mix-blend-overlay opacity-10"></div>
                     <div class="absolute -right-10 -top-20 text-[20rem] text-white opacity-5 font-serif font-bold pointer-events-none">"</div>
                     
                     <div class="relative z-10 max-w-4xl">
