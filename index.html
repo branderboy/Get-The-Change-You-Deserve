@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS: compiled stylesheet first, runtime script kept for any new classes -->
     <link rel="stylesheet" href="tailwind.css">
@@ -1069,60 +1069,11 @@
                     <span class="inline-block bg-white text-dcBlack font-bold uppercase tracking-[0.15em] text-xs px-3 py-1.5 border-2 border-dcBlack shadow-[3px_3px_0_0_#0F172A] mb-8">Organic first, through Election Day</span>
                     <div class="font-heading font-black text-6xl md:text-8xl leading-none tabular-nums mb-3">$6,350</div>
                     <p class="font-bold text-base md:text-lg mb-6">Plus an ad budget of $2,000 to $3,000 paid to Meta, and seed placements billed at cost.</p>
-                    <p class="text-base md:text-lg leading-relaxed text-white/95 max-w-xl mx-auto">The fees cover the social media system, the campaign website and app, and management of the paid ads. Our work on the street videos and the seeding campaign is free. Signing below starts the work.</p>
+                    <p class="text-base md:text-lg leading-relaxed text-white/95 max-w-xl mx-auto">The fees cover the social media system, the campaign website and app, and management of the paid ads. Our work on the street videos and the seeding campaign is free.</p>
                 </div>
             </div>
         </section>
 
-        <section id="sign" class="bg-dcBlack text-white py-20 md:py-28 px-6">
-            <div class="max-w-5xl mx-auto">
-                <span class="inline-block bg-dcRed text-white font-heading font-bold uppercase tracking-[0.2em] text-xs px-3 py-1.5 mb-6">Project initiation</span>
-                <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter mb-6 leading-none">Review And Sign</h2>
-                <p class="text-lg md:text-xl text-gray-300 font-light max-w-3xl leading-relaxed mb-12">Read the terms, check the box, and type your name to approve the plan.</p>
-
-                <div class="bg-white text-dcBlack border-4 border-dcBlack p-6 md:p-10 max-w-3xl mx-auto shadow-[12px_12px_0_0_#E31837]">
-                    <form id="proposal-form" action="https://formspree.io/f/mkovvjjw" method="POST">
-                        <div class="bg-gray-100 border-2 border-dcBlack p-5 md:p-6 mb-8">
-                            <p class="font-heading font-bold text-lg mb-3">Terms</p>
-                            <p class="text-base text-gray-800 leading-relaxed mb-5">By signing you approve the Hamilton 2026 Digital Campaign plan at $6,350 in fees: $2,150 for social media, $3,450 for the campaign page, app and website, and $750 for paid ads management. The ad budget of $2,000 to $3,000 is paid to Meta and seed placements are billed at cost. The street videos and the seeding campaign carry no fee. Work begins on signature.</p>
-                            <label class="flex items-start gap-3 font-bold cursor-pointer" for="accepted">
-                                <input type="checkbox" id="accepted" name="accepted" required class="mt-1 w-5 h-5 accent-dcRed">
-                                <span>I accept the terms, cost and scope of this plan.</span>
-                            </label>
-                        </div>
-                        <label for="signature" class="block text-xs font-bold uppercase tracking-[0.2em] mb-2">Authorized signature, type your full name</label>
-                        <input type="text" id="signature" name="signature" placeholder="Rhonda Hamilton" required autocomplete="name" class="w-full p-4 text-2xl md:text-3xl border-[3px] border-dcBlack bg-white outline-none focus:border-dcRed focus:shadow-[4px_4px_0_0_#E31837]" style="font-family: 'Shadows Into Light', cursive, sans-serif;">
-                        <input type="hidden" name="_subject" value="Hamilton 2026 Proposal Signed">
-                        <input type="hidden" name="proposal" value="Hamilton 2026 Digital Campaign, $6,350 in fees plus $2,000 to $3,000 ad budget and seeds at cost">
-                        <button type="submit" class="w-full mt-6 bg-dcRed text-white border-2 border-dcBlack px-6 py-5 font-heading font-black text-lg uppercase tracking-[0.15em] hover:bg-dcBlack transition-colors shadow-[6px_6px_0_0_#0F172A] focus:outline-none focus:ring-4 focus:ring-dcRed/40">Sign and approve</button>
-                    </form>
-                    <div id="success-msg" class="hidden bg-green-700 text-white border-2 border-dcBlack p-6 text-center font-bold">
-                        <p class="font-heading text-xl mb-2">Signature accepted.</p>
-                        <p class="text-base font-semibold">Thank you. The acceptance has been sent to Kay Ali, who will follow up with next steps.</p>
-                    </div>
-                    <div id="error-msg" class="hidden bg-dcRed text-white border-2 border-dcBlack p-6 mt-6 text-center font-bold">
-                        The form could not be sent. Please email <a href="mailto:kawani@digiwaxx.com" class="underline">kawani@digiwaxx.com</a> to confirm your acceptance.
-                    </div>
-                </div>
-                <script>
-                    (function () {
-                        var form = document.getElementById('proposal-form');
-                        var ok = document.getElementById('success-msg');
-                        var err = document.getElementById('error-msg');
-                        form.addEventListener('submit', function (e) {
-                            e.preventDefault();
-                            if (!form.reportValidity()) return;
-                            fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-                                .then(function (res) {
-                                    if (res.ok) { form.hidden = true; err.hidden = true; err.classList.add('hidden'); ok.classList.remove('hidden'); }
-                                    else { err.classList.remove('hidden'); }
-                                })
-                                .catch(function () { err.classList.remove('hidden'); });
-                        });
-                    })();
-                </script>
-            </div>
-        </section>
     </main>
 
     <footer class="bg-slate-950 text-center py-12 border-t border-slate-900">
