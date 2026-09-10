@@ -59,12 +59,12 @@
             background-image: url('hero_Rhonda.png');
             background-size: cover;
             background-position: center center;
-            min-height: 90vh;
+            aspect-ratio: 1610 / 977;
             display: flex;
             align-items: center;
         }
         @media (max-width: 767px) {
-            .hero-section { min-height: auto; background-position: 72% center; }
+            .hero-section { aspect-ratio: auto; background-position: 72% center; }
             .btn-funnel { width: 100%; padding: 1.1rem 1.5rem; font-size: 1rem; letter-spacing: .1em; }
         }
 
@@ -233,7 +233,7 @@
             @page { size: letter; margin: 0.5in; }
             html, body { background: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             nav, .video-container, .btn-funnel { display: none !important; }
-            .hero-section { min-height: auto !important; }
+            .hero-section { aspect-ratio: auto !important; }
             section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
             .grid > div, .flex.flex-col.md\:flex-row.items-stretch, .editorial-border { break-inside: avoid; page-break-inside: avoid; }
             .shadow-lg, .shadow-xl, .shadow-2xl, .shadow-sm { box-shadow: none !important; }
