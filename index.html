@@ -817,15 +817,8 @@
                     </div>
                     
                     <div class="flex flex-col md:flex-row gap-8 mt-6">
-                        <!-- Bonus 1 -->
-                        <div class="flex-1 border-b md:border-b-0 md:border-r border-gray-200 pb-8 md:pb-0 md:pr-8">
-                            <h5 class="font-heading font-black text-2xl uppercase text-dcBlack mb-4">Man-on-the-Street Content</h5>
-                            <p class="text-lg text-gray-800 mb-6 leading-relaxed">We help produce the neighborhood conversations and recruit a videographer to capture raw, authentic moments.</p>
-                            <p class="font-heading text-3xl font-black text-dcRed uppercase tracking-tight">Included Free</p>
-                            <button type="button" class="plan-add mt-4 inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Man-on-the-street content" data-price="0" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button>
-                        </div>
                         <!-- Bonus 2 -->
-                        <div class="flex-1 md:pl-4">
+                        <div class="flex-1">
                             <h5 class="font-heading font-black text-2xl uppercase text-dcBlack mb-4">Seeder Outreach</h5>
                             <p class="text-lg text-gray-800 mb-6 leading-relaxed">You are responsible for the pages’ pricing and pay each page its placement price directly. Our outreach, the pitch, working out the price, the publishing schedule, and sending the content are free.</p>
                             <p class="font-heading text-2xl font-black text-dcRed uppercase tracking-tight">Outreach Free</p>
@@ -865,7 +858,7 @@
                     </ul>
                     <p id="plan-notes" class="text-sm text-gray-600 mb-8 hidden"></p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a id="plan-send" href="mailto:kawani@digiwaxx.com" class="btn-funnel text-center opacity-40 pointer-events-none" aria-disabled="true">Send this plan to Kay</a>
+                        <a id="plan-send" href="mailto:kawani@digiwaxx.com" class="btn-funnel text-center opacity-40 pointer-events-none" aria-disabled="true">Send this plan to Kay Ali</a>
                         <button type="button" id="plan-clear" class="font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack hover:text-dcRed transition-colors px-4 py-3">Start over</button>
                     </div>
                 </div>
@@ -914,7 +907,7 @@
                     total.textContent = money(sum);
                     notes.textContent = extra.length ? 'Also ' + extra.join(', and ') + '.' : '';
                     notes.classList.toggle('hidden', !extra.length);
-                    var body = 'Hi Kay,%0A%0AHere is the plan I want to go with:%0A' + picked.map(function (i) { var pr = catalog[i].price; return '- ' + i + ' (' + (pr ? money(pr) : 'free') + ')'; }).join('%0A') + '%0A%0AFees: ' + money(sum) + (extra.length ? '%0A' + extra.join('; ') : '') + '%0A%0AThanks';
+                    var body = 'Hi Kay Ali,%0A%0AHere is the plan I want to go with:%0A' + picked.map(function (i) { var pr = catalog[i].price; return '- ' + i + ' (' + (pr ? money(pr) : 'free') + ')'; }).join('%0A') + '%0A%0AFees: ' + money(sum) + (extra.length ? '%0A' + extra.join('; ') : '') + '%0A%0AThanks';
                     send.href = 'mailto:kawani@digiwaxx.com?subject=' + encodeURIComponent('Hamilton 2026 plan: my picks') + '&body=' + body;
                     send.classList.toggle('opacity-40', !picked.length); send.classList.toggle('pointer-events-none', !picked.length);
                     send.setAttribute('aria-disabled', picked.length ? 'false' : 'true');
