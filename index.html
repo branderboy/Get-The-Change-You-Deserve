@@ -106,6 +106,15 @@
             border-bottom-color: #E31837;
         }
 
+        /* Dark baby blue linen for the pricing section, drawn in CSS so it needs no image */
+        .linen-blue {
+            background-color: #7EA5CC;
+            background-image:
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.14) 0 1px, transparent 1px 3px),
+                repeating-linear-gradient(90deg, rgba(255,255,255,0.14) 0 1px, transparent 1px 3px),
+                repeating-linear-gradient(45deg, rgba(20,40,70,0.06) 0 2px, transparent 2px 7px);
+        }
+
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 */
@@ -586,20 +595,18 @@
             </div>
         </section>
 
-        <section id="cost" class="relative bg-gray-100 py-24 md:py-32 px-6 border-t-2 border-gray-200 overflow-hidden">
+        <section id="cost" class="relative linen-blue py-24 md:py-32 px-6 border-t-2 border-dcBlack overflow-hidden">
             <!-- Civil Rights / Protest Wallpaper Background -->
             <div class="absolute inset-0 z-0 pointer-events-none">
                 <!-- Apply your historical/protest image here. It is set to grayscale, low opacity, and multiplied to blend cleanly into the light gray background -->
                 <div class="absolute inset-0 bg-[url('civil-rights-protest-wallpaper.jpg')] bg-cover bg-center bg-no-repeat opacity-[0.08] grayscale mix-blend-multiply"></div>
-                <!-- Gradient overlay to keep the text area bright and blend the top/bottom edges -->
-                <div class="absolute inset-0 bg-gradient-to-b from-gray-100 via-white/50 to-gray-100"></div>
             </div>
 
             <div class="max-w-7xl mx-auto relative z-10">
                 <div class="text-center mb-16">
                     <div class="flex justify-center gap-3 text-dcRed text-4xl mb-6"><span>★</span><span>★</span><span>★</span></div>
                     <h2 class="font-heading text-5xl md:text-7xl font-black tracking-tighter mb-6 text-dcBlack uppercase">What Is The Cost?</h2>
-                    <p class="text-xl md:text-3xl font-light text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                    <p class="text-xl md:text-3xl font-light text-dcBlack max-w-3xl mx-auto leading-relaxed">
                         The organic content builds the audience. The paid system scales the audience. <br><strong class="text-dcBlack font-black uppercase tracking-tight text-2xl md:text-4xl mt-4 block">The audience wins the election.</strong>
                     </p>
                 </div>
@@ -683,7 +690,7 @@
                 </div>
 
                 <!-- Upsell / Scale block -->
-                <div class="flex flex-col md:flex-row gap-8 items-center bg-gray-50 border-2 border-dcBlack p-8 md:p-10">
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-white border-2 border-dcBlack p-8 md:p-10">
                     <div class="flex-1">
                         <span class="inline-block text-dcBlack text-[10px] font-bold uppercase tracking-[0.2em] border border-dcBlack px-3 py-1 mb-4">Scale Phase</span>
                         <h4 class="font-heading font-black text-3xl uppercase text-dcBlack mb-4">Paid Ads Management</h4>
