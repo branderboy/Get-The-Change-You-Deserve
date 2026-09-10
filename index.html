@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS: compiled stylesheet first, runtime script kept for any new classes -->
     <link rel="stylesheet" href="tailwind.css">
@@ -20,20 +20,12 @@
                 extend: {
                     colors: {
                         dcRed: '#E31837',     /* D.C. Flag Red */
-                        dcBlack: '#14213D',   /* Navy ink for text and lines, never a fill */
-                        dcSky: '#EEF3FB',     /* Light blue tint for alternate sections */
-                        dcNavy: '#081B33',    /* Deep Civic Navy */
+                        dcBlack: '#0F172A',   /* Slate Black */
                         dcGold: '#C9A227',    /* Muted Gold */
-                        dcGray: '#F8FAFC',    /* Clean slate */
                     },
                     fontFamily: {
                         sans: ['"Open Sans"', 'sans-serif'],
                         heading: ['Montserrat', 'sans-serif'],
-                        mono: ['"Space Mono"', 'monospace'],
-                    },
-                    backgroundImage: {
-                        'dots': 'radial-gradient(#cbd5e1 1px, transparent 1px)',
-                        'dots-dark': 'radial-gradient(#334155 1px, transparent 1px)',
                     }
                 }
             }
@@ -43,30 +35,27 @@
     <style>
         html, body { overflow-x: hidden; max-width: 100%; }
         body {
-            background-color: #F8FAFC;
+            background-color: #ffffff; /* Clean stark white for presentation feel */
             -webkit-font-smoothing: antialiased;
             color: #1e293b;
         }
-        
-        .bg-pattern-dots {
-            background-size: 24px 24px;
-        }
 
+        /* Editorial lines instead of boxes */
         .editorial-border {
-            border-top: 4px solid #E31837;
+            border-top: 2px solid #0F172A;
         }
 
         .hero-section {
             position: relative;
-            background-image: url('hero_Rhonda.webp');
+            background-image: url('hero_crowd.webp');
             background-size: cover;
-            background-position: center bottom; /* anchored to the bottom so the top of the photo is what gets trimmed */
-            min-height: 52vw; /* a little shorter than 16:9 so her head sits higher in the frame; grows if the copy needs more room */
+            background-position: center 20%; 
+            min-height: 52vw; 
             display: flex;
             align-items: center;
         }
         @media (max-width: 767px) {
-            .hero-section { min-height: 0; background-position: left center; }
+            .hero-section { min-height: 0; background-position: center; padding-top: 4rem; padding-bottom: 4rem; }
             .btn-funnel { width: 100%; padding: 1.1rem 1.5rem; font-size: 1rem; letter-spacing: .1em; }
         }
 
@@ -74,11 +63,10 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(
-                135deg,
-                rgba(20, 33, 61, 0.98) 0%,
-                rgba(20, 33, 61, 0.85) 40%,
-                rgba(20, 33, 61, 0.45) 65%,
-                rgba(227, 24, 55, 0.18) 100%
+                90deg,
+                rgba(15, 23, 42, 0.95) 0%,
+                rgba(15, 23, 42, 0.8) 40%,
+                rgba(15, 23, 42, 0.3) 100%
             );
             z-index: 1;
         }
@@ -89,6 +77,7 @@
             width: 100%;
         }
 
+        /* High-impact, flat button, no cheap shadows */
         .btn-funnel {
             display: inline-flex;
             align-items: center;
@@ -103,127 +92,28 @@
             letter-spacing: 0.15em;
             transition: background 0.2s ease;
             border: none;
-            box-shadow: 0 10px 25px -5px rgba(227, 24, 55, 0.5), 0 8px 10px -6px rgba(227, 24, 55, 0.2);
-            position: relative;
-            overflow: hidden;
-            border-radius: 2px;
         }
-        
         .btn-funnel:hover {
             background: #c8102e;
         }
 
-        .timeline-container {
-            position: relative;
-            padding: 2rem 0;
+        /* Clean list styling for insights (un-boxing) */
+        .insight-row {
+            border-bottom: 1px solid #e2e8f0;
+            transition: border-color 0.2s ease;
         }
-        
-        .timeline-line {
-            position: absolute;
-            top: 100px;
-            left: 5%;
-            right: 5%;
-            height: 2px;
-            background: #cbd5e1;
-            z-index: 0;
-        }
-        
-        .timeline-progress {
-            position: absolute;
-            top: 100px;
-            left: 5%;
-            width: 75%;
-            height: 2px;
-            background: #64748b;
-            z-index: 0;
+        .insight-row:hover {
+            border-bottom-color: #E31837;
         }
 
-        .timeline-progress-active {
-            position: absolute;
-            top: 99px;
-            left: 78%;
-            width: 17%;
-            height: 4px;
-            background: #E31837;
-            z-index: 0;
-            box-shadow: 0 0 15px rgba(227, 24, 55, 0.6);
-        }
-        
-        .timeline-node {
-            position: relative;
-            z-index: 10;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: all 0.3s ease;
-            filter: grayscale(100%);
-            opacity: 0.7;
-        }
-        
-        .timeline-node:hover {
-            transform: translateY(-5px);
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-        
-        .timeline-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 3px solid #cbd5e1;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            background-color: #f1f5f9;
-            object-fit: cover;
-            margin-bottom: 1.25rem;
-            transition: all 0.3s ease;
-        }
-        
-        .timeline-node.active {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-
-        .timeline-node.active .timeline-image {
-            border-color: #E31837;
-            width: 110px;
-            height: 110px;
-            box-shadow: 0 0 0 6px rgba(227, 24, 55, 0.15), 0 20px 25px -5px rgba(0, 0, 0, 0.2);
-        }
-        
-        @media (max-width: 768px) {
-            .timeline-line, .timeline-progress, .timeline-progress-active {
-                left: 40px;
-                width: 2px;
-                height: 100%;
-                top: 0;
-            }
-            .timeline-node {
-                flex-direction: row;
-                text-align: left;
-                margin-bottom: 3rem;
-            }
-            .timeline-image {
-                margin-bottom: 0;
-                margin-right: 1.5rem;
-            }
-            .timeline-node.active .timeline-image {
-                width: 90px;
-                height: 90px;
-            }
-        }
-        
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 */
             height: 0;
-            background: #14213D;
+            background: #0F172A;
             overflow: hidden;
-            border-radius: 4px;
-            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255,255,255,0.1);
         }
-        .video-container iframe, .video-container .mock-player {
+        .video-container iframe, .video-container video {
             position: absolute;
             top: 0;
             left: 0;
@@ -238,224 +128,164 @@
             nav, .video-container, .btn-funnel { display: none !important; }
             .hero-section { min-height: 0 !important; }
             section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
-            .grid > div, .flex.flex-col.md\:flex-row.items-stretch, .editorial-border { break-inside: avoid; page-break-inside: avoid; }
-            .shadow-lg, .shadow-xl, .shadow-2xl, .shadow-sm { box-shadow: none !important; }
+            .grid > div { break-inside: avoid; page-break-inside: avoid; }
             .insight-body, .flow-detail { display: block !important; }
             .flow-row { display: none !important; }
             .insight-row span[aria-hidden] { display: none; }
         }
-
-        /* Abstract Shape */
-        .shape-accent {
-            position: absolute;
-            background: #E31837;
-            opacity: 0.03;
-            transform: rotate(-15deg);
-            z-index: 0;
-            pointer-events: none;
-        }
     </style>
 </head>
-<body class="font-sans antialiased selection:bg-dcRed selection:text-white bg-pattern-dots bg-dots">
+<body class="font-sans antialiased selection:bg-dcRed selection:text-white">
 
     <div class="dc-flag-divider" id="top"></div>
-    <div class="bg-white border-b-2 border-dcBlack text-center font-mono text-xs font-bold uppercase tracking-[0.1em] text-dcBlack py-2 px-4">Proposal for Rhonda Hamilton 2026 <span class="text-dcRed">//</span> Prepared by Kay Ali</div>
-    <nav class="bg-white py-3 md:py-4 px-3 md:px-12 border-b-2 border-dcBlack flex justify-between items-center gap-2 md:gap-3">
+    <nav class="bg-white/95 backdrop-blur-md py-4 px-4 md:px-12 sticky top-0 z-50 border-b border-gray-200 flex justify-between items-center gap-3">
         <a href="#top" class="flex items-center gap-2 md:gap-3 shrink-0">
-            <div class="flex gap-1 md:gap-1.5 text-dcRed text-lg md:text-3xl">
+            <div class="flex gap-1 text-dcRed text-xl md:text-2xl">
                 <span>★</span><span>★</span><span>★</span>
             </div>
-            <span class="font-heading font-black text-lg md:text-2xl tracking-tighter text-dcBlack uppercase whitespace-nowrap">Hamilton <span class="text-dcRed">2026</span></span>
+            <span class="font-heading font-black text-xl md:text-2xl tracking-tighter text-dcBlack uppercase whitespace-nowrap">Hamilton <span class="text-dcRed">2026</span></span>
         </a>
-        <div class="flex items-center gap-3 shrink-0"><button type="button" onclick="window.print()" class="hidden md:inline-block bg-white border border-dcBlack text-dcBlack px-6 py-3 font-heading font-bold text-xs hover:bg-dcBlack hover:text-white transition-colors uppercase tracking-[0.2em]">Print</button><a href="#cost" class="inline-block bg-dcRed text-white px-3 md:px-6 py-2.5 md:py-3 font-heading font-bold text-[10px] md:text-xs hover:bg-dcBlack transition-colors uppercase tracking-[0.1em] md:tracking-[0.2em] whitespace-nowrap">What Is The Cost?</a></div>
-    </nav>
-    <div class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-4 border-dcBlack px-3 md:px-12 py-3">
-        <div class="flex items-center gap-3 overflow-x-auto md:overflow-visible md:flex-wrap md:justify-center max-w-7xl mx-auto">
-            <span class="hidden md:inline font-mono text-xs font-bold uppercase tracking-[0.1em] text-dcBlack mr-2">The plan <span class="text-dcRed">//</span></span>
-            <a href="#summary" class="shrink-0 flex items-center gap-2 bg-white border-2 border-dcBlack px-3 py-2 font-mono text-xs font-bold uppercase tracking-[0.05em] text-dcBlack shadow-[3px_3px_0_0_#14213D] hover:bg-dcRed hover:text-white transition-colors"><span class="bg-dcRed text-white px-1.5 py-0.5">00</span>Summary</a>
-            <a href="#timeline" class="shrink-0 flex items-center gap-2 bg-white border-2 border-dcBlack px-3 py-2 font-mono text-xs font-bold uppercase tracking-[0.05em] text-dcBlack shadow-[3px_3px_0_0_#14213D] hover:bg-dcRed hover:text-white transition-colors"><span class="bg-dcRed text-white px-1.5 py-0.5">01</span>Timeline</a>
-            <a href="#strategy" class="shrink-0 flex items-center gap-2 bg-white border-2 border-dcBlack px-3 py-2 font-mono text-xs font-bold uppercase tracking-[0.05em] text-dcBlack shadow-[3px_3px_0_0_#14213D] hover:bg-dcRed hover:text-white transition-colors"><span class="bg-dcRed text-white px-1.5 py-0.5">02</span>Audit</a>
-            <a href="#skepticism" class="shrink-0 flex items-center gap-2 bg-white border-2 border-dcBlack px-3 py-2 font-mono text-xs font-bold uppercase tracking-[0.05em] text-dcBlack shadow-[3px_3px_0_0_#14213D] hover:bg-dcRed hover:text-white transition-colors"><span class="bg-dcRed text-white px-1.5 py-0.5">03</span>Videos</a>
-            <a href="#system" class="shrink-0 flex items-center gap-2 bg-white border-2 border-dcBlack px-3 py-2 font-mono text-xs font-bold uppercase tracking-[0.05em] text-dcBlack shadow-[3px_3px_0_0_#14213D] hover:bg-dcRed hover:text-white transition-colors"><span class="bg-dcRed text-white px-1.5 py-0.5">04</span>System</a>
-            <a href="#website" class="shrink-0 flex items-center gap-2 bg-white border-2 border-dcBlack px-3 py-2 font-mono text-xs font-bold uppercase tracking-[0.05em] text-dcBlack shadow-[3px_3px_0_0_#14213D] hover:bg-dcRed hover:text-white transition-colors"><span class="bg-dcRed text-white px-1.5 py-0.5">05</span>Website</a>
-            <a href="#cost" class="shrink-0 flex items-center gap-2 bg-white border-2 border-dcBlack px-3 py-2 font-mono text-xs font-bold uppercase tracking-[0.05em] text-dcBlack shadow-[3px_3px_0_0_#14213D] hover:bg-dcRed hover:text-white transition-colors"><span class="bg-dcRed text-white px-1.5 py-0.5">06</span>Investment</a>
+        <div class="hidden xl:flex gap-8 font-heading font-bold text-xs uppercase tracking-[0.2em] text-gray-800">
+            <a href="#timeline" class="hover:text-dcRed transition-colors">The Timeline</a>
+            <a href="#strategy" class="hover:text-dcRed transition-colors">Audit Insights</a>
+            <a href="#skepticism" class="hover:text-dcRed transition-colors">Videos</a>
+            <a href="#system" class="hover:text-dcRed transition-colors">System</a>
+            <a href="#website" class="hover:text-dcRed transition-colors">Website</a>
         </div>
-    </div>
+        <div class="flex items-center gap-4 shrink-0">
+            <button type="button" onclick="window.print()" class="hidden md:inline-block text-dcBlack font-heading font-bold text-xs hover:text-dcRed transition-colors uppercase tracking-[0.2em]">Print Deck</button>
+            <a href="#cost" class="inline-block bg-dcBlack text-white px-5 py-3 font-heading font-bold text-xs hover:bg-dcRed transition-colors uppercase tracking-[0.2em] whitespace-nowrap">What Is The Cost?</a>
+        </div>
+    </nav>
 
     <header class="hero-section overflow-hidden">
         <div class="hero-overlay"></div>
-        
-        <!-- Faint Star Watermarks for variance -->
-        <div class="hidden md:block absolute top-20 right-10 text-[20rem] text-white opacity-[0.02] font-serif leading-none select-none z-10 pointer-events-none">★</div>
-        <div class="hidden md:block absolute bottom-10 left-10 text-[30rem] text-white opacity-[0.02] font-serif leading-none select-none z-10 pointer-events-none">★</div>
-
-        <div class="relative z-20 w-full max-w-7xl px-4 md:px-12 py-16 md:py-20 flex flex-col md:flex-row items-center">
-            <div class="w-full md:w-3/5 pr-0 md:pr-10">
-                <div class="inline-block bg-dcRed text-white font-heading font-bold uppercase tracking-[0.2em] text-xs px-3 py-1 mb-6">
+        <div class="relative z-20 w-full max-w-7xl px-6 md:px-12 py-16 flex flex-col items-start">
+            <div class="w-full md:w-2/3">
+                <div class="inline-block border border-white text-white font-heading font-bold uppercase tracking-[0.2em] text-[10px] px-3 py-1 mb-8">
                     Digital Social Media Campaign Plan
                 </div>
-                <h1 class="font-heading text-[2.75rem] sm:text-[3.25rem] md:text-[2.75rem] lg:text-[3.375rem] xl:text-[4.5rem] font-black text-white mb-6 leading-[0.85] tracking-tighter uppercase drop-shadow-lg">
+                <!-- Impactful typography, no boxes -->
+                <h1 class="font-heading text-5xl md:text-7xl lg:text-[5.5rem] font-black text-white mb-8 leading-[0.9] tracking-tighter uppercase">
                     Get The Change <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-500">You Deserve.</span>
+                    <span class="text-gray-300">You Deserve.</span>
                 </h1>
                 
-                <div class="border-l-4 border-dcRed pl-6 my-10">
-                    <p class="text-xl md:text-2xl font-light text-gray-200 leading-relaxed max-w-2xl">
+                <div class="border-l-4 border-dcRed pl-6 my-8">
+                    <p class="text-xl md:text-3xl font-light text-white leading-tight max-w-3xl">
                         Build broad visibility, repeated familiarity, and cultural relevance for Rhonda Hamilton. An <strong class="font-bold text-white">organic-first awareness strategy</strong> moving voters from recognition to trust.
                     </p>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row gap-6 mt-10">
+                <div class="mt-12">
                     <a href="#cost" class="btn-funnel">Deploy The Strategy</a>
                 </div>
-                <div class="flex flex-wrap gap-3 mt-10">
-                    <span class="bg-white/90 border-2 border-dcBlack text-dcBlack font-mono text-xs font-bold uppercase tracking-[0.05em] px-3 py-2">Prepared for <span class="text-dcRed">//</span> Rhonda Hamilton</span>
-                    <span class="bg-white/90 border-2 border-dcBlack text-dcBlack font-mono text-xs font-bold uppercase tracking-[0.05em] px-3 py-2">Prepared by <span class="text-dcRed">//</span> Kay Ali</span>
-                    <span class="bg-white/90 border-2 border-dcBlack text-dcBlack font-mono text-xs font-bold uppercase tracking-[0.05em] px-3 py-2">Fees <span class="text-dcRed">//</span> $6,350</span>
-                </div>
             </div>
-            
         </div>
     </header>
 
     <main class="w-full">
         
-        <section id="summary" class="py-20 md:py-24 px-6 bg-white">
-            <div class="max-w-5xl mx-auto">
-                <span class="inline-block font-mono text-xs font-bold uppercase tracking-[0.1em] px-3 py-1.5 border-2 border-dcBlack mb-5 bg-white text-dcBlack shadow-[3px_3px_0_0_#E31837]"><span class="text-dcRed">00</span> // Summary</span>
-                <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter text-dcBlack mb-6 leading-none">The Plan On One Page</h2>
-                <p class="text-lg md:text-xl text-gray-700 font-light max-w-3xl leading-relaxed mb-10">Rhonda Hamilton is running as an independent. Most voters have not met her yet. This plan puts her in front of D.C. every day until Election Day, on the platforms residents already use, and sends everyone who watches to one website where they can answer a poll, leave a contact, volunteer or give.</p>
-                <div class="grid md:grid-cols-3 gap-8 md:gap-12 border-t-4 border-dcBlack pt-8">
-                    <div>
-                        <span class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-dcRed block mb-3">The goal</span>
-                        <p class="font-heading font-bold text-xl text-dcBlack leading-snug">More people searching her name, in Google, in AI assistants, and inside social apps.</p>
-                    </div>
-                    <div>
-                        <span class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-dcRed block mb-3">The target</span>
-                        <p class="font-heading font-bold text-xl text-dcBlack leading-snug">About 91,133 independent and no-party voters, 18.4% of D.C. registration, plus persuadable voters from other parties.</p>
-                    </div>
-                    <div>
-                        <span class="font-mono text-xs font-bold uppercase tracking-[0.1em] text-dcRed block mb-3">The build</span>
-                        <p class="font-heading font-bold text-xl text-dcBlack leading-snug">Social media through Election Day, the campaign website and app, street videos, a seeding campaign, and paid ads. $6,350 in fees.</p>
-                    </div>
+        <section id="timeline" class="py-20 px-6 bg-white relative">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-10">
+                    <h2 class="font-heading text-3xl md:text-5xl font-black tracking-tighter text-dcBlack uppercase">The New Timeline</h2>
                 </div>
+                <img src="progression.png" alt="Timeline of D.C. mayors ending with Rhonda Hamilton" class="w-full h-auto">
             </div>
         </section>
 
-        <div class="dc-flag-divider"></div>
-        <section id="timeline" class="py-24 px-6 bg-dcSky relative overflow-hidden">
-            <div class="shape-accent w-[800px] h-[800px] rounded-full -top-40 -right-40"></div>
-            <div class="max-w-6xl mx-auto relative z-10">
-                <div class="text-center mb-12">
-                    <span class="inline-block font-mono text-xs font-bold uppercase tracking-[0.1em] px-3 py-1.5 border-2 border-dcBlack mb-5 bg-white text-dcBlack shadow-[3px_3px_0_0_#E31837]"><span class="text-dcRed">01</span> // Timeline</span>
-                    <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter text-dcBlack">The New Timeline</h2>
-                </div>
-                <img src="progression.png" alt="D.C. Has Made Progress. The Next Phase Is Proof. Timeline of D.C. mayors ending with Rhonda Hamilton as the next phase." class="w-full h-auto rounded shadow-2xl border border-gray-100">
-            </div>
-        </section>
-
-        <section id="strategy" class="py-24 px-6 bg-white relative">
+        <section id="strategy" class="py-20 px-6 bg-gray-50 border-t border-gray-200">
             <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="inline-block font-mono text-xs font-bold uppercase tracking-[0.1em] px-3 py-1.5 border-2 border-dcBlack mb-5 bg-white text-dcBlack shadow-[3px_3px_0_0_#E31837]"><span class="text-dcRed">02</span> // Audit</span>
-                    <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter text-dcBlack">Audit Insights</h2>
+                <div class="mb-16">
+                    <h2 class="font-heading text-4xl md:text-5xl font-black tracking-tighter text-dcBlack uppercase">Audit Insights</h2>
                 </div>
-                <div class="flex flex-col md:flex-row gap-16 mb-20">
-                    <div class="md:w-1/3">
-                        <h3 class="text-dcRed font-heading font-bold uppercase tracking-[0.2em] text-xs mb-3">The Goal</h3>
-                        <p class="text-lg text-dcBlack font-bold leading-snug mb-8">Increase search volume for Rhonda Hamilton in Google, in LLMs, and across social media search.</p>
-                        <h3 class="text-dcRed font-heading font-bold uppercase tracking-[0.2em] text-xs mb-3">The Target</h3>
-                        <p class="text-base text-dcBlack font-bold leading-snug mb-2">About 91,133 independent and no-party-preference voters in D.C., 18.4% of registered voters, based on the most recently published party-registration breakdown.</p>
-                        <p class="text-base text-gray-700 font-light leading-relaxed mb-2">The public datasets do not provide a verified age-by-party table for D.C., so this plan does not claim exact counts of independent voters aged 18 to 24, 25 to 34, 35 to 44, and so on.</p>
-                        <p class="text-base text-gray-700 font-light leading-relaxed mb-8">The job: win the independents, and persuade some voters from other parties.</p>
-                        <h3 class="font-heading text-2xl md:text-3xl font-black tracking-tighter text-dcBlack mb-4 leading-none">What D.C. Told Us</h3>
-                        <p class="text-lg text-gray-600 font-light leading-relaxed">
-                            The audit is done. Two 2026 citywide polls, the 2025 public safety poll, Board of Elections turnout, voter registration, and 311 data. Every finding is labeled by what it is. These numbers determine the messaging.
+                <div class="flex flex-col md:flex-row gap-12 md:gap-0">
+                    <!-- Left Column: Direct and unboxed -->
+                    <div class="md:w-1/3 md:pr-12 lg:pr-16">
+                        <h3 class="text-dcRed font-heading font-bold uppercase tracking-[0.2em] text-[10px] mb-2">The Goal</h3>
+                        <p class="text-xl text-dcBlack font-bold leading-tight mb-10">Increase search volume for Rhonda Hamilton in Google, LLMs, and across social media search.</p>
+                        
+                        <h3 class="text-dcRed font-heading font-bold uppercase tracking-[0.2em] text-[10px] mb-2">The Target</h3>
+                        <p class="text-lg text-dcBlack font-bold leading-tight mb-3">~91,133 independent voters in D.C. (18.4% of registered voters).</p>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed mb-6">The job: win the independents, and persuade some voters from other parties.</p>
+                        
+                        <h3 class="font-heading text-2xl font-black tracking-tighter text-dcBlack mb-3 uppercase">What D.C. Told Us</h3>
+                        <p class="text-base text-gray-700 font-light leading-relaxed">
+                            The audit is complete: Two 2026 citywide polls, the 2025 public safety poll, Board of Elections turnout, voter registration, and 311 data. <strong class="font-bold">These numbers determine the messaging.</strong>
                         </p>
                     </div>
                     
-                    <div class="md:w-2/3">
-                        <div class="space-y-6">
-                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="The Top Three Concerns" data-body="77% of residents call cost of living very important. 73% say public safety. 71% say housing. Every content package starts from one of these three." data-src="Representative polling · City Cast DC / TrueDot · May 2026 · 735 adults · ±3.7">
-                                <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">01</div>
+                    <!-- Right Column: Clean list, no card backgrounds -->
+                    <div class="md:w-2/3 md:border-l-2 border-gray-200 md:pl-12 lg:pl-16">
+                        <div class="flex flex-col">
+                            <button type="button" class="insight-row w-full text-left py-6 flex gap-6 items-start focus:outline-none group" data-title="The Top Three Concerns" data-body="77% of residents call cost of living very important. 73% say public safety. 71% say housing. Every content package starts from one of these three." data-src="Representative polling · City Cast DC / TrueDot · May 2026">
+                                <div class="font-heading text-3xl font-black text-gray-300 group-hover:text-dcRed transition-colors">01</div>
                                 <div class="flex-1">
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">The Top Three Concerns</strong>
-                                    <div class="insight-body hidden mt-2">
-                                        <p class="text-base text-gray-700 font-light">77% of residents call cost of living very important. 73% say public safety. 71% say housing. Every content package starts from one of these three.</p>
-                                        <p class="text-xs text-gray-500 uppercase tracking-wider mt-2">Representative polling · City Cast DC / TrueDot · May 2026 · 735 adults · ±3.7</p>
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight mb-2">The Top Three Concerns</strong>
+                                    <div class="insight-body hidden">
+                                        <p class="text-base text-gray-700 font-light leading-relaxed">77% of residents call cost of living very important. 73% say public safety. 71% say housing. Every content package starts from one of these three.</p>
+                                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-3">City Cast DC / TrueDot · May 2026</p>
                                     </div>
                                 </div>
-                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
                             </button>
-                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="Residents Want A New Direction" data-body="More than half say D.C. is on the wrong track. Nearly half want a mayor who represents a new direction. More than half say D.C. is unaffordable for them." data-src="Representative polling · Washington Post / Schar School · June 2026">
-                                <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">02</div>
+
+                            <button type="button" class="insight-row w-full text-left py-6 flex gap-6 items-start focus:outline-none group" data-title="Residents Want A New Direction" data-body="More than half say D.C. is on the wrong track. Nearly half want a mayor who represents a new direction." data-src="Representative polling · Washington Post / Schar School · June 2026">
+                                <div class="font-heading text-3xl font-black text-gray-300 group-hover:text-dcRed transition-colors">02</div>
                                 <div class="flex-1">
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">Residents Want A New Direction</strong>
-                                    <div class="insight-body hidden mt-2">
-                                        <p class="text-base text-gray-700 font-light">More than half say D.C. is on the wrong track. Nearly half want a mayor who represents a new direction. More than half say D.C. is unaffordable for them.</p>
-                                        <p class="text-xs text-gray-500 uppercase tracking-wider mt-2">Representative polling · Washington Post / Schar School · June 2026</p>
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight mb-2">Residents Want A New Direction</strong>
+                                    <div class="insight-body hidden">
+                                        <p class="text-base text-gray-700 font-light leading-relaxed">More than half say D.C. is on the wrong track. Nearly half want a mayor who represents a new direction. More than half say D.C. is unaffordable.</p>
+                                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-3">Washington Post / Schar School · June 2026</p>
                                     </div>
                                 </div>
-                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
                             </button>
-                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="Safety Concern Is Not Support For Federal Control" data-body="79% oppose the federal takeover of D.C. police. 78% feel safe in their neighborhood. 54% think crime is improving, while 31% still call it extremely or very serious. Safety content has to hold both." data-src="Representative polling · Washington Post / Schar School · Aug 2025 · 604 residents">
-                                <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">03</div>
+
+                            <button type="button" class="insight-row w-full text-left py-6 flex gap-6 items-start focus:outline-none group" data-title="Safety Concern Is Not Support For Federal Control" data-body="79% oppose the federal takeover of D.C. police. 78% feel safe in their neighborhood." data-src="Representative polling · Washington Post / Schar School · Aug 2025">
+                                <div class="font-heading text-3xl font-black text-gray-300 group-hover:text-dcRed transition-colors">03</div>
                                 <div class="flex-1">
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">Safety Concern Is Not Support For Federal Control</strong>
-                                    <div class="insight-body hidden mt-2">
-                                        <p class="text-base text-gray-700 font-light">79% oppose the federal takeover of D.C. police. 78% feel safe in their neighborhood. 54% think crime is improving, while 31% still call it extremely or very serious. Safety content has to hold both.</p>
-                                        <p class="text-xs text-gray-500 uppercase tracking-wider mt-2">Representative polling · Washington Post / Schar School · Aug 2025 · 604 residents</p>
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight mb-2">Safety Concern ≠ Federal Control</strong>
+                                    <div class="insight-body hidden">
+                                        <p class="text-base text-gray-700 font-light leading-relaxed">79% oppose the federal takeover of D.C. police. 78% feel safe in their neighborhood. Safety content must hold both truths.</p>
+                                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-3">Washington Post / Schar School · Aug 2025</p>
                                     </div>
                                 </div>
-                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
                             </button>
-                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="The Votes Are Up For Grabs" data-body="Over 40% of voters east of the Anacostia were undecided shortly before the primary. Only 32% of registered voters turned out for it. About 91,133 independents, 18.4% of the electorate, could not vote in it at all." data-src="Polling and election behavior · Post / Schar · DC Board of Elections 2026">
-                                <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">04</div>
+
+                            <button type="button" class="insight-row w-full text-left py-6 flex gap-6 items-start focus:outline-none group" data-title="The Votes Are Up For Grabs" data-body="Over 40% of voters east of the Anacostia were undecided shortly before the primary. About 91,133 independents could not vote in it at all." data-src="Polling and election behavior · Post / Schar · DC Board of Elections 2026">
+                                <div class="font-heading text-3xl font-black text-gray-300 group-hover:text-dcRed transition-colors">04</div>
                                 <div class="flex-1">
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">The Votes Are Up For Grabs</strong>
-                                    <div class="insight-body hidden mt-2">
-                                        <p class="text-base text-gray-700 font-light">Over 40% of voters east of the Anacostia were undecided shortly before the primary. Only 32% of registered voters turned out for it. About 91,133 independents, 18.4% of the electorate, could not vote in it at all.</p>
-                                        <p class="text-xs text-gray-500 uppercase tracking-wider mt-2">Polling and election behavior · Post / Schar · DC Board of Elections 2026</p>
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight mb-2">The Votes Are Up For Grabs</strong>
+                                    <div class="insight-body hidden">
+                                        <p class="text-base text-gray-700 font-light leading-relaxed">Over 40% of voters east of the Anacostia were undecided shortly before the primary. 91,133 independents were locked out.</p>
+                                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-3">DC Board of Elections 2026</p>
                                     </div>
                                 </div>
-                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
                             </button>
-                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="What Residents Actually Report" data-body="Trash and parking enforcement were the highest-volume 311 categories in July 2026, with rodents in Glover Park, trash-cart repairs across Ward 5, and dockless vehicles around Shaw. These are the City Reliability stories, neighborhood by neighborhood." data-src="Government service data · DC Open Data · City Cast July 2026">
-                                <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">05</div>
+                            
+                            <button type="button" class="insight-row w-full text-left py-6 flex gap-6 items-start focus:outline-none group" data-title="What Residents Actually Report" data-body="Trash and parking enforcement were the highest-volume 311 categories in July 2026. These are the City Reliability stories." data-src="Government service data · DC Open Data · City Cast July 2026">
+                                <div class="font-heading text-3xl font-black text-gray-300 group-hover:text-dcRed transition-colors">05</div>
                                 <div class="flex-1">
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">What Residents Actually Report</strong>
-                                    <div class="insight-body hidden mt-2">
-                                        <p class="text-base text-gray-700 font-light">Trash and parking enforcement were the highest-volume 311 categories in July 2026, with rodents in Glover Park, trash-cart repairs across Ward 5, and dockless vehicles around Shaw. These are the City Reliability stories, neighborhood by neighborhood.</p>
-                                        <p class="text-xs text-gray-500 uppercase tracking-wider mt-2">Government service data · DC Open Data · City Cast July 2026</p>
+                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight mb-2">What Residents Actually Report</strong>
+                                    <div class="insight-body hidden">
+                                        <p class="text-base text-gray-700 font-light leading-relaxed">Trash and parking enforcement were the highest-volume 311 categories. These become our City Reliability stories.</p>
+                                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-3">DC Open Data · July 2026</p>
                                     </div>
                                 </div>
-                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
-                            </button>
-                            <button type="button" class="insight-row w-full text-left flex gap-4 md:gap-6 items-center p-5 md:p-6 bg-gray-50 hover:bg-gray-100 transition-colors border-l-2 border-transparent hover:border-dcBlack focus:outline-none focus:border-dcRed" data-title="Live Signals, Refreshed Monthly" data-body="Google Trends for candidate names, rent, Pepco bills, federal layoffs, curfews, and police. Reddit and ward groups for the exact language residents use. Social listening for social media mentions and sentiment. All are labeled as signals and checked against polling before they shape a script." data-src="Search behavior and online sentiment · Google Trends · r/washingtondc · social listening">
-                                <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">06</div>
-                                <div class="flex-1">
-                                    <strong class="block font-heading font-bold text-xl text-dcBlack uppercase tracking-tight">Live Signals, Refreshed Monthly</strong>
-                                    <div class="insight-body hidden mt-2">
-                                        <p class="text-base text-gray-700 font-light">Google Trends for candidate names, rent, Pepco bills, federal layoffs, curfews, and police. Reddit and ward groups for the exact language residents use. Social listening for social media mentions and sentiment. All are labeled as signals and checked against polling before they shape a script.</p>
-                                        <p class="text-xs text-gray-500 uppercase tracking-wider mt-2">Search behavior and online sentiment · Google Trends · r/washingtondc · social listening</p>
-                                    </div>
-                                </div>
-                                <span class="text-dcRed font-heading font-black text-2xl" aria-hidden="true">+</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Insight popup -->
-                <dialog id="insight-dialog" class="p-0 bg-transparent backdrop:bg-dcBlack/80 max-w-2xl w-[92vw]">
-                    <div class="bg-white border-t-4 border-dcRed shadow-2xl p-8 md:p-10">
-                        <div class="flex justify-between items-start gap-6 mb-4">
-                            <div class="flex gap-1 text-dcRed text-lg"><span>★</span><span>★</span><span>★</span></div>
-                            <button type="button" id="insight-close" class="font-heading font-bold text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-dcRed" aria-label="Close">Close ✕</button>
+                <dialog id="insight-dialog" class="p-0 bg-transparent backdrop:bg-dcBlack/90 max-w-2xl w-[92vw]">
+                    <div class="bg-white p-10 md:p-14 border-t-4 border-dcRed">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex gap-1 text-dcRed text-xl"><span>★</span><span>★</span><span>★</span></div>
+                            <button type="button" id="insight-close" class="font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack hover:text-dcRed">Close ✕</button>
                         </div>
-                        <h4 id="insight-title" class="font-heading font-black text-2xl md:text-3xl uppercase tracking-tight text-dcBlack mb-4"></h4>
-                        <p id="insight-text" class="text-base md:text-lg text-gray-700 font-light leading-relaxed mb-6"></p>
-                        <p id="insight-src" class="text-xs text-gray-500 uppercase tracking-wider"></p>
+                        <h4 id="insight-title" class="font-heading font-black text-3xl uppercase tracking-tight text-dcBlack mb-4"></h4>
+                        <p id="insight-text" class="text-xl text-gray-800 font-light leading-relaxed mb-6"></p>
+                        <p id="insight-src" class="text-xs text-gray-500 uppercase tracking-widest font-bold"></p>
                     </div>
                 </dialog>
                 <script>
@@ -475,173 +305,135 @@
                     })();
                 </script>
 
-                <!-- Central Brand Position Block -->
-                <div class="bg-dcRed text-white p-8 md:p-20 relative overflow-hidden flex flex-col items-center text-center border-4 border-dcBlack shadow-[12px_12px_0_0_#14213D]">
-                    <div class="absolute inset-0 bg-[url('hero_Rhonda.webp')] bg-cover bg-center mix-blend-multiply opacity-15"></div>
-                    <div class="absolute -right-10 -top-20 text-[20rem] text-white opacity-5 font-serif font-bold pointer-events-none">"</div>
-                    
-                    <div class="relative z-10 max-w-4xl">
-                        <p class="font-mono uppercase tracking-[0.2em] text-xs font-bold text-white/90 mb-6">Central Brand Position</p>
-                        <h3 class="font-heading text-3xl md:text-6xl font-black leading-tight uppercase tracking-tighter text-white">
+                <div class="bg-dcBlack text-white py-24 px-6 md:px-12 my-24 border-t-8 border-dcRed flex flex-col items-start text-left">
+                    <div class="max-w-4xl">
+                        <p class="uppercase tracking-[0.3em] text-[10px] font-bold text-dcRed mb-6">Central Brand Position</p>
+                        <h3 class="font-heading text-4xl md:text-7xl font-black leading-[0.9] uppercase tracking-tighter text-white">
                             Promises are easy.<br>
-                            <span class="text-white">Follow-through is the proof.</span>
+                            <span class="text-gray-400">Follow-through is the proof.</span>
                         </h3>
                     </div>
                 </div>
                 
-                <!-- Repeatable Content Package Example -->
-                <div class="mt-20 max-w-5xl mx-auto">
-                    <h4 class="font-heading font-black text-3xl md:text-5xl mb-4 uppercase tracking-tighter text-center text-dcBlack">Repeatable Content Package Example</h4>
-                    <p class="text-lg md:text-xl text-gray-700 text-center mb-12 font-light max-w-3xl mx-auto">Every priority issue from the audit becomes a package like this. Every package becomes the videos in the next section.</p>
+                <!-- Repeatable Content Package Example - Clean Typography instead of boxes -->
+                <div class="max-w-6xl mx-auto">
+                    <div class="mb-10">
+                        <h4 class="font-heading font-black text-3xl md:text-4xl uppercase tracking-tighter text-dcBlack">Repeatable Content Package Example</h4>
+                        <p class="text-lg text-gray-600 font-light mt-2">Every priority issue becomes a package like this. Packages become videos.</p>
+                    </div>
                     
-                    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
-                        <div class="relative bg-white border-2 border-dcBlack p-7 md:p-8 shadow-[8px_8px_0_0_#E31837] flex flex-col">
-                            <span class="font-heading font-black text-5xl leading-none text-dcRed mb-5">01</span>
-                            <p class="text-xs text-dcBlack font-bold uppercase tracking-[0.2em] mb-4 pb-3 border-b-2 border-dcRed">Public Question</p>
-                            <p class="font-heading text-xl md:text-2xl font-bold text-dcBlack leading-snug tracking-tight">"Why does it feel like residents have to fight for basic city services?"</p>
+                    <div class="grid md:grid-cols-4 gap-8 md:gap-12">
+                        <div>
+                            <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-2 border-b border-gray-300 pb-2">Public Question</p>
+                            <p class="text-base font-bold text-dcBlack leading-snug">"Why does it feel like residents have to fight for basic city services?"</p>
                         </div>
-                        <div class="relative bg-white border-2 border-dcBlack p-7 md:p-8 shadow-[8px_8px_0_0_#E31837] flex flex-col">
-                            <span class="font-heading font-black text-5xl leading-none text-dcRed mb-5">02</span>
-                            <p class="text-xs text-dcBlack font-bold uppercase tracking-[0.2em] mb-4 pb-3 border-b-2 border-dcRed">Hamilton Perspective</p>
-                            <p class="font-heading text-xl md:text-2xl font-bold text-dcBlack leading-snug tracking-tight">"Government should not make residents chase the same problem... the city should show the timeline and result."</p>
+                        <div>
+                            <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.2em] mb-2 border-b border-dcRed pb-2">Hamilton Perspective</p>
+                            <p class="text-base text-gray-800 leading-snug">"Government should not make residents chase the same problem... the city should show the timeline and result."</p>
                         </div>
-                        <div class="relative bg-white border-2 border-dcBlack p-7 md:p-8 shadow-[8px_8px_0_0_#E31837] flex flex-col">
-                            <span class="font-heading font-black text-5xl leading-none text-dcRed mb-5">03</span>
-                            <p class="text-xs text-dcBlack font-bold uppercase tracking-[0.2em] mb-4 pb-3 border-b-2 border-dcRed">Short-Form Hook</p>
-                            <p class="font-heading text-xl md:text-2xl font-bold text-dcBlack leading-snug tracking-tight">"How long should it take D.C. to fix a basic problem?"</p>
+                        <div>
+                            <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-2 border-b border-gray-300 pb-2">Short-Form Hook</p>
+                            <p class="text-base font-bold text-dcBlack leading-snug">"How long should it take D.C. to fix a basic problem?"</p>
                         </div>
-                        <div class="relative bg-white border-2 border-dcBlack p-7 md:p-8 shadow-[8px_8px_0_0_#E31837] flex flex-col">
-                            <span class="font-heading font-black text-5xl leading-none text-dcRed mb-5">04</span>
-                            <p class="text-xs text-dcBlack font-bold uppercase tracking-[0.2em] mb-4 pb-3 border-b-2 border-dcRed">Swipe Post Concept</p>
-                            <p class="font-heading text-xl md:text-2xl font-bold text-dcBlack leading-snug tracking-tight">"Five city services residents should be able to track publicly."</p>
+                        <div>
+                            <p class="text-[10px] text-dcBlack font-bold uppercase tracking-[0.2em] mb-2 border-b border-dcBlack pb-2">Swipe Post Concept</p>
+                            <p class="text-base font-bold text-dcBlack leading-snug">"Five city services residents should be able to track publicly."</p>
                         </div>
                     </div>
                 </div>
 
-
                 <!-- The Campaign Line -->
-                <div class="mt-20 max-w-5xl mx-auto">
-                    <div class="bg-white p-6 md:p-8 border-t-4 border-dcRed shadow-lg">
-                        <div class="flex gap-4 md:gap-6 items-start">
-                            <div class="font-heading text-4xl md:text-5xl font-black text-gray-200">★</div>
-                            <div class="flex-1 min-w-0">
-                                <p class="text-xs text-dcRed font-bold uppercase tracking-[0.2em] mb-2">Idea</p>
-                                <h4 class="font-heading font-bold text-xl md:text-2xl mb-3 text-dcBlack uppercase tracking-tight">The Campaign Line</h4>
-                                <p class="text-lg md:text-xl text-gray-800 font-light leading-relaxed mb-5">We determine one line the campaign runs on, then convert it into the places people find her. Example: <strong class="font-bold text-dcBlack">DC! We Just Have To Win.</strong></p>
-                                <div class="space-y-3 mb-5">
-                                    <p class="text-base md:text-lg text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack">Domain.</strong> The line becomes the web address, so what people hear is what they type.</p>
-                                    <p class="text-base md:text-lg text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack">Facebook fan page.</strong> Named and branded on the line. The long-form library from the content system lives here.</p>
-                                    <p class="text-base md:text-lg text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack">Instagram account.</strong> Same name, same line, same brand as the page and the site, so search on any platform lands in one place.</p>
-                                    <p class="text-base md:text-lg text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack">Flyers.</strong> The line, her photo, the domain, and a QR code to the poll, printed for the neighborhood shoots and events.</p>
-                                </div>
-                                <p class="text-base text-gray-500 italic">Deliverables: the campaign line, domain, Facebook fan page, Instagram account, flyer set.</p>
-                            </div>
+                <div class="mt-24 max-w-6xl mx-auto border-t-2 border-dcBlack pt-12">
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+                        <div class="font-heading text-5xl md:text-6xl font-black text-dcRed">★</div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-xs text-dcRed font-bold uppercase tracking-[0.2em] mb-2">Idea</p>
+                            <h4 class="font-heading font-black text-3xl md:text-4xl mb-4 text-dcBlack uppercase tracking-tight">The Campaign Line</h4>
+                            <p class="text-xl md:text-2xl text-gray-800 font-light leading-relaxed mb-8">We determine one line the campaign runs on, then convert it into the places people find her. Example: <strong class="font-bold text-dcBlack">DC! We Just Have To Win.</strong></p>
+                            
+                            <!-- Clean list instead of paragraph block -->
+                            <ul class="space-y-4 mb-8">
+                                <li class="text-lg text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack uppercase text-sm tracking-wider mr-2">Domain.</strong> The line becomes the web address.</li>
+                                <li class="text-lg text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack uppercase text-sm tracking-wider mr-2">Facebook Page.</strong> Named and branded on the line.</li>
+                                <li class="text-lg text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack uppercase text-sm tracking-wider mr-2">Instagram.</strong> Same name, same brand.</li>
+                                <li class="text-lg text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack uppercase text-sm tracking-wider mr-2">Flyers.</strong> The line, photo, domain, and QR code.</li>
+                            </ul>
+                            <p class="text-sm text-gray-500 font-bold uppercase tracking-widest border-l-2 border-gray-300 pl-4">Deliverables: Line, Domain, FB, IG, Flyers.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="dc-flag-divider"></div>
-        <section id="skepticism" class="py-24 px-6 bg-dcSky text-dcBlack relative">
+        <section id="skepticism" class="py-24 px-6 bg-dcBlack text-white">
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col lg:flex-row gap-16 mb-16">
                     <div class="lg:w-1/3">
-                        <span class="inline-block font-mono text-xs font-bold uppercase tracking-[0.1em] px-3 py-1.5 border-2 border-dcBlack mb-5 bg-white text-dcBlack shadow-[3px_3px_0_0_#E31837]"><span class="text-dcRed">03</span> // Videos</span>
-                        <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter mb-6 leading-none">
-                            Reverse Engineer<br>Criticism By<br>Creating These<br>Videos
+                        <h3 class="text-dcRed font-heading font-bold uppercase tracking-[0.2em] text-[10px] mb-4">Task</h3>
+                        <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-[0.9] uppercase">
+                            Reverse Engineer Criticism
                         </h2>
-                        <p class="text-lg text-gray-700 font-light mb-8">
-                            Take every public critique and build the video that answers it. These are the first videos to make: each critique gets answered on the podcast the campaign already films weekly, then the answers are clipped and seeded through the process below.
+                        <p class="text-xl text-gray-300 font-light mb-8 leading-relaxed">
+                            Take every public critique and build the video that answers it. These are the first videos to make.
                         </p>
-
-                        <!-- The_Hamilton_Blueprint.pptx slides with the_convo.mp3 -->
-                        <div class="video-container rounded shadow-2xl mt-8">
-                            <video controls preload="metadata" playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;background:#14213D;">
+                        
+                        <div class="video-container border border-gray-700">
+                            <video controls preload="metadata" playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;background:#0F172A;">
                                 <source src="blueprint-with-the-convo.mp4" type="video/mp4">
                             </video>
                         </div>
-
-
-
-                        
                     </div>
 
                     <div class="lg:w-2/3">
-                        <!-- High-End Grid replacing the Table -->
-                        <div class="grid md:grid-cols-2 gap-4">
+                        <!-- Text-based grid, no boxes -->
+                        <div class="grid md:grid-cols-2 gap-x-12 gap-y-16">
                             
-                            <!-- Card 1 -->
-                            <div class="bg-white text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
-                                <div class="flex gap-2 text-dcRed text-3xl mb-4"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
-                                <h4 class="font-heading font-bold text-xl mb-4">"Who is Rhonda Hamilton?"</h4>
-                                <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
-                                <p class="text-xs text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Video We Make</p>
-                                <p class="text-sm text-gray-700 font-light">A recurring candidate-origin-story series: <em>“Who Is Rhonda Hamilton?”</em></p>
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Critique 01</p>
+                                <h4 class="font-heading font-black text-2xl text-white mb-3">"Who is Rhonda Hamilton?"</h4>
+                                <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.2em] mb-2 mt-4">The Response Video</p>
+                                <p class="text-base text-gray-300 font-light">A recurring candidate-origin-story series: <em>“Who Is Rhonda Hamilton?”</em></p>
                             </div>
 
-                            <!-- Card 2 -->
-                            <div class="bg-white text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
-                                <div class="flex gap-2 text-dcRed text-3xl mb-4"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
-                                <h4 class="font-heading font-bold text-xl mb-4">"Is she a serious citywide candidate?"</h4>
-                                <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
-                                <p class="text-xs text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Video We Make</p>
-                                <p class="text-sm text-gray-700 font-light">Content showing consistent activity, resident conversations, issue fluency, community proof, events, and organization.</p>
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Critique 02</p>
+                                <h4 class="font-heading font-black text-2xl text-white mb-3">"Is she a serious citywide candidate?"</h4>
+                                <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.2em] mb-2 mt-4">The Response Video</p>
+                                <p class="text-base text-gray-300 font-light">Content showing consistent activity, conversations, issue fluency, and organization.</p>
                             </div>
 
-                            <!-- Card 3 -->
-                            <div class="bg-white text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
-                                <div class="flex gap-2 text-dcRed text-3xl mb-4"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
-                                <h4 class="font-heading font-bold text-xl mb-4">"What does independent mean?"</h4>
-                                <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
-                                <p class="text-xs text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Video We Make</p>
-                                <p class="text-sm text-gray-700 font-light">An <em>“Independent, Explained”</em> content pillar that frames independence as resident accountability—not isolation.</p>
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Critique 03</p>
+                                <h4 class="font-heading font-black text-2xl text-white mb-3">"What does independent mean?"</h4>
+                                <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.2em] mb-2 mt-4">The Response Video</p>
+                                <p class="text-base text-gray-300 font-light">An <em>“Independent, Explained”</em> content pillar framing independence as accountability.</p>
                             </div>
 
-                            <!-- Card 4 -->
-                            <div class="bg-white text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
-                                <div class="flex gap-2 text-dcRed text-3xl mb-4"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
-                                <h4 class="font-heading font-bold text-xl mb-4">"What has she actually done?"</h4>
-                                <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
-                                <p class="text-xs text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Video We Make</p>
-                                <p class="text-sm text-gray-700 font-light">A <em>“Proof, Not Slogans”</em> content pillar covering ANC service, nonprofit leadership, mental-health advocacy, and business experience.</p>
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Critique 04</p>
+                                <h4 class="font-heading font-black text-2xl text-white mb-3">"What has she actually done?"</h4>
+                                <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.2em] mb-2 mt-4">The Response Video</p>
+                                <p class="text-base text-gray-300 font-light">A <em>“Proof, Not Slogans”</em> pillar covering ANC service, nonprofit, and business experience.</p>
                             </div>
 
-                             <!-- Card 5 -->
-                             <div class="bg-white text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
-                                <div class="flex gap-2 text-dcRed text-3xl mb-4"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
-                                <h4 class="font-heading font-bold text-xl mb-4">"She lost in 2022—why run again?"</h4>
-                                <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
-                                <p class="text-xs text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Video We Make</p>
-                                <p class="text-sm text-gray-700 font-light">A <em>“Why I Ran Again”</em> response: she did not disappear after the prior election and continued her work in the community.</p>
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Critique 05</p>
+                                <h4 class="font-heading font-black text-2xl text-white mb-3">"She lost in 2022—why run again?"</h4>
+                                <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.2em] mb-2 mt-4">The Response Video</p>
+                                <p class="text-base text-gray-300 font-light">A <em>“Why I Ran Again”</em> response: she did not disappear after the election.</p>
                             </div>
 
-                            <!-- Card 6 -->
-                            <div class="bg-white text-dcBlack p-6 border-l-4 border-gray-300 hover:border-dcRed transition-colors">
-                                <div class="flex gap-2 text-dcRed text-3xl mb-4"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">Public Critique</p>
-                                <h4 class="font-heading font-bold text-xl mb-4">"Is she only a mental-health candidate?"</h4>
-                                <div class="w-8 h-[1px] bg-gray-600 mb-4"></div>
-                                <p class="text-xs text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Video We Make</p>
-                                <p class="text-sm text-gray-700 font-light">A <em>“Beyond Mental Health”</em> lane connecting mental health to housing, safety, schools, jobs, and city services.</p>
+                            <div>
+                                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Critique 06</p>
+                                <h4 class="font-heading font-black text-2xl text-white mb-3">"Is she only a mental-health candidate?"</h4>
+                                <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.2em] mb-2 mt-4">The Response Video</p>
+                                <p class="text-base text-gray-300 font-light">A <em>“Beyond Mental Health”</em> lane connecting mental health to housing, safety, and jobs.</p>
                             </div>
                             
-                            <!-- Card 7 (Spans 2 cols on md) -->
-                            <div class="md:col-span-2 bg-white text-dcBlack p-6 border-l-4 border-dcRed flex flex-col md:flex-row gap-6 items-start">
-                                <div class="md:w-1/2">
-                                    <div class="flex gap-2 text-dcRed text-3xl mb-4"><span>★</span><span>★</span><span>★</span></div>
-                                    <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-2">The Ultimate Critique</p>
-                                    <h4 class="font-heading font-bold text-2xl">"Her campaign may not look organized or polished."</h4>
-                                </div>
-                                <div class="md:w-1/2 border-t md:border-t-0 md:border-l border-gray-600 pt-4 md:pt-0 md:pl-6">
-                                    <p class="text-xs text-dcRed font-bold uppercase tracking-[0.1em] mb-1">The Video We Make</p>
-                                    <p class="text-sm text-gray-700 font-light leading-relaxed">The plan says not to debate this publicly; instead, show disciplined, consistent content, professional presentation, schedules, neighborhood activity, and real proof.</p>
-                                </div>
+                            <div class="md:col-span-2 border-t border-gray-700 pt-10 mt-4">
+                                <p class="text-[10px] text-dcRed font-bold uppercase tracking-[0.2em] mb-2">The Ultimate Critique</p>
+                                <h4 class="font-heading font-black text-3xl md:text-4xl text-white mb-4">"Her campaign may not look organized or polished."</h4>
+                                <p class="text-lg text-gray-300 font-light leading-relaxed max-w-3xl">The plan says <strong class="font-bold text-white">not to debate this publicly</strong>; instead, show disciplined, consistent content, professional presentation, schedules, and real proof.</p>
                             </div>
 
                         </div>
@@ -652,476 +444,280 @@
 
         <section id="system" class="py-24 px-6 bg-white">
             <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="inline-block font-mono text-xs font-bold uppercase tracking-[0.1em] px-3 py-1.5 border-2 border-dcBlack mb-5 bg-white text-dcBlack shadow-[3px_3px_0_0_#E31837]"><span class="text-dcRed">04</span> // System</span>
-                    <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter text-dcBlack mb-6">The Organic Content System</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-                        The machine that turns the videos above into search volume. Each asset feeds the next: recordings become clips, clips fill the content folder, the folder feeds daily posters and seeders, and every view hands off to the campaign website and app. The winners become ads.
+                <div class="mb-20">
+                    <h3 class="text-dcRed font-heading font-bold uppercase tracking-[0.2em] text-[10px] mb-2">Phase Three</h3>
+                    <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter text-dcBlack mb-6 uppercase">The Organic Content System</h2>
+                    <p class="text-2xl text-gray-800 font-light leading-relaxed max-w-4xl">
+                        Each asset feeds the next: recordings become clips, clips fill the folder, the folder feeds posters, and views hand off to the website. <strong class="font-bold text-dcBlack">The winners become ads.</strong>
                     </p>
-                    <div class="max-w-3xl mx-auto mt-10 bg-white border-l-4 border-dcRed p-6 md:p-8 shadow-lg text-left">
-                        <p class="text-xs text-dcRed font-bold uppercase tracking-[0.2em] mb-3">A note on search numbers</p>
-                        <p class="text-base md:text-lg text-gray-800 leading-relaxed">
-                            Search interest is a signal, not a scoreboard. When people in D.C. search one candidate's name more than the others in the weeks before an election, that often lines up with how the vote goes. But being the most searched does not mean winning. A search only shows that someone was curious. It does not tell us whether they liked what they found, whether they can vote here, or whether they will show up on Election Day. That is why every view in this system hands off to the website and the app, where curiosity can become a contact, a supporter, or a donation.
-                        </p>
-                    </div>
                 </div>
                 
-                <div class="max-w-5xl mx-auto space-y-4 mb-20">
-                    <div class="bg-white p-6 md:p-8 border-l-4 border-dcRed shadow-xl">
-                        <div class="flex gap-4 md:gap-6 items-start">
-                            <div class="font-heading text-4xl md:text-5xl font-black text-dcRed">01</div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex gap-2 text-dcRed text-2xl mb-2"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Asset we implement</p>
-                                <h4 class="font-heading font-black text-2xl md:text-3xl mb-3 text-dcBlack uppercase tracking-tight">Podcast Clipping Campaign</h4>
-                                <p class="text-lg text-gray-800 font-light leading-relaxed mb-5">Every podcast appearance, interview, speech, and long-form recording becomes a library, not a post. One 40-minute interview yields 15 to 40 usable assets.</p>
-                                <div class="space-y-3 mb-6"><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Position-based clips.</strong> Each clip carries one clear idea from 13 core categories, from “Who is Rhonda Hamilton?” to “What promise she would refuse to make.”</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Four hooks per moment.</strong> Every source clip ships as Direct, Accountability, Community, and Independent Identity versions, each with its own opening hook, caption, on-screen text, cover frame, and comment prompt.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Platform cuts.</strong> Lengths and edits made per platform, so one moment lands on TikTok, Reels, and Facebook without a reshoot.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Tools.</strong> Google Drive intake. Opus Clip finds the moments. The campaign content folder receives the output.</p></div>
-                                <div class="bg-gray-50 border-l-4 border-dcRed p-5 mb-5">
-                                    <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1 block">What you get</span>
-                                    <span class="text-base font-bold text-dcBlack">clip library of 15 to 40 assets per recording, four hook versions per moment, captions and cover frames.</span>
-                                </div>
-                                <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack border border-dcBlack px-4 py-2 hover:bg-dcBlack hover:text-white transition-colors" data-title="Podcast Clipping Campaign">Full plan +</button>
-                                <div class="flow-detail hidden mt-6"><p class="text-base text-gray-700 font-light leading-relaxed mb-3">Hamilton’s podcast appearances, interviews, recorded conversations, speeches, and long-form discussions will be divided into short, position-based clips.</p><p class="text-base text-gray-700 font-light leading-relaxed mb-3">Each clip will focus on one clear idea.</p><h5 class="font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcRed mt-6 mb-2">Core categories include</h5><ul class="list-disc pl-5 space-y-1 text-base text-gray-700 font-light"><li>Who is Rhonda Hamilton?</li><li>Why is she running?</li><li>What does being independent mean?</li><li>What has she seen in the D.C. community?</li><li>What do residents deserve from local government?</li><li>Why does accountability matter?</li><li>Why do promises often fail?</li><li>What does follow-through look like?</li><li>Her position on major D.C. issues</li><li>What she believes current leadership is missing</li><li>What she would do differently</li><li>What promise she would refuse to make</li><li>What residents should demand before trusting another political promise</li></ul><h5 class="font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcRed mt-6 mb-2">Each source clip will be repackaged with different</h5><ul class="list-disc pl-5 space-y-1 text-base text-gray-700 font-light"><li>Opening hooks</li><li>Captions</li><li>On-screen text</li><li>Cover frames</li><li>Questions</li><li>Comment prompts</li><li>Visual cutdowns</li><li>Video lengths</li><li>Platform-specific edits</li></ul><div class="mt-4"></div><p class="text-base text-gray-700 font-light leading-relaxed mb-3">The goal is to make one long-form recording produce multiple audience-entry points.</p><p class="text-base text-gray-700 font-light leading-relaxed mb-3">A 40-minute interview should not become one post. It should become a library of 15 to 40 usable assets.</p><h5 class="font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcRed mt-6 mb-2">Example clip versions</h5><div class="bg-gray-50 p-5 border-l-4 border-dcBlack mb-3"><p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-1">Original message</p><p class="text-sm text-gray-800 italic">“D.C. residents are tired of hearing promises without a way to measure whether the work was actually done.”</p></div><div class="grid md:grid-cols-2 gap-3"><div class="bg-gray-50 p-4 border-t-2 border-dcRed"><p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-1">Version One: Direct hook</p><p class="text-sm text-gray-800 italic">“Why should anyone trust another D.C. politician?”</p></div><div class="bg-gray-50 p-4 border-t-2 border-dcRed"><p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-1">Version Two: Accountability hook</p><p class="text-sm text-gray-800 italic">“Every campaign makes promises. Here is what should happen after Election Day.”</p></div><div class="bg-gray-50 p-4 border-t-2 border-dcRed"><p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-1">Version Three: Community hook</p><p class="text-sm text-gray-800 italic">“If your neighborhood keeps reporting the same problems, the system is not working.”</p></div><div class="bg-gray-50 p-4 border-t-2 border-dcRed"><p class="text-xs text-gray-500 font-bold uppercase tracking-[0.1em] mb-1">Version Four: Independent identity hook</p><p class="text-sm text-gray-800 italic">“Being independent means I do not need permission to tell residents the truth.”</p></div></div></div>
+                <!-- Un-boxed editorial flow -->
+                <div class="max-w-5xl mx-auto space-y-20 mb-24">
+                    
+                    <div class="flex flex-col md:flex-row gap-8 items-start border-t-2 border-dcBlack pt-12">
+                        <div class="font-heading text-6xl font-black text-dcRed md:w-1/4">01</div>
+                        <div class="md:w-3/4">
+                            <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">Podcast Clipping Campaign</h4>
+                            <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">Every podcast appearance, interview, and speech becomes a library. One 40-minute interview yields 15 to 40 usable assets.</p>
+                            <ul class="space-y-4 mb-8">
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Position Clips.</strong> Based on 13 core categories.</li>
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Four Hooks.</strong> Direct, Accountability, Community, Independent.</li>
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Tools.</strong> Google Drive + Opus Clip.</li>
+                            </ul>
+                            <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcRed hover:text-dcBlack transition-colors" data-title="Podcast Clipping Campaign">Read Full Plan &rarr;</button>
+                            <div class="flow-detail hidden">
+                                <p class="text-base text-gray-700 font-light leading-relaxed mb-4">Hamilton’s podcast appearances, interviews, recorded conversations, speeches, and long-form discussions will be divided into short, position-based clips.</p>
+                                <p class="text-base text-gray-700 font-light leading-relaxed font-bold">The goal is to make one long-form recording produce multiple audience-entry points.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-6 md:p-8 border-l-4 border-dcRed shadow-xl">
-                        <div class="flex gap-4 md:gap-6 items-start">
-                            <div class="font-heading text-4xl md:text-5xl font-black text-dcRed">02</div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex gap-2 text-dcRed text-2xl mb-2"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Asset we implement</p>
-                                <h4 class="font-heading font-black text-2xl md:text-3xl mb-3 text-dcBlack uppercase tracking-tight">Content Folder</h4>
-                                <p class="text-lg text-gray-800 font-light leading-relaxed mb-5">One shared folder is the distribution engine: every clipper and volunteer downloads from it and posts daily.</p>
-                                <div class="space-y-3 mb-6"><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Organized by week.</strong> Finished clips with caption and hashtags attached, so a post takes minutes.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">One link.</strong> Anyone with the link can post without asking a question.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Feeds both networks.</strong> Daily Posters and Seeders draw from the same source.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Scheduled to Election Day.</strong> Buffer schedules the campaign’s own posts from the folder, queued up until the election.</p></div>
-                                <div class="bg-gray-50 border-l-4 border-dcRed p-5 mb-5">
-                                    <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1 block">What you get</span>
-                                    <span class="text-base font-bold text-dcBlack">the Google Drive content folder, weekly drops, one-page posting guide, Buffer schedule through Election Day.</span>
-                                </div>
-                                <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack border border-dcBlack px-4 py-2 hover:bg-dcBlack hover:text-white transition-colors" data-title="Content Folder">Full plan +</button>
-                                <div class="flow-detail hidden mt-6"><p class="text-base text-gray-700 font-light leading-relaxed mb-3">A content folder that all the clippers and volunteers can download from and make a post daily.</p></div>
+
+                    <div class="flex flex-col md:flex-row gap-8 items-start border-t border-gray-300 pt-12">
+                        <div class="font-heading text-6xl font-black text-dcBlack md:w-1/4">02</div>
+                        <div class="md:w-3/4">
+                            <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">Content Folder</h4>
+                            <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">One shared folder is the distribution engine: every clipper and volunteer downloads from it and posts daily.</p>
+                            <ul class="space-y-4 mb-8">
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">One Link.</strong> Anyone with the link can post without asking.</li>
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Scheduled.</strong> Buffer schedules posts up until the election.</li>
+                            </ul>
+                            <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcRed hover:text-dcBlack transition-colors" data-title="Content Folder">Read Full Plan &rarr;</button>
+                            <div class="flow-detail hidden">
+                                <p class="text-base text-gray-700 font-light leading-relaxed">A central repository for all assets. Organized by week with captions and tags included.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-6 md:p-8 border-l-4 border-dcRed shadow-xl">
-                        <div class="flex gap-4 md:gap-6 items-start">
-                            <div class="font-heading text-4xl md:text-5xl font-black text-dcRed">03</div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex gap-2 text-dcRed text-2xl mb-2"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Asset we implement</p>
-                                <h4 class="font-heading font-black text-2xl md:text-3xl mb-3 text-dcBlack uppercase tracking-tight">TikTok and Instagram Reels Discovery Content</h4>
-                                <p class="text-lg text-gray-800 font-light leading-relaxed mb-5">The top of the funnel. One question or tension per clip, curiosity in the first one to three seconds. Never a speech, a commercial, or a press release.</p>
-                                <div class="space-y-3 mb-6"><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">13 core questions.</strong> From “Why is she running for mayor?” to “What does accountability look like after an election?”</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Ten organic formats.</strong> Direct-to-camera, podcast clip, street conversation, issue explainer, poll, swipe post, local reaction, community response, day-in-the-life, myth-versus-fact.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Direct voice.</strong> It feels like Rhonda Hamilton speaking to one person with a real question about D.C.</p></div>
-                                <div class="bg-gray-50 border-l-4 border-dcRed p-5 mb-5">
-                                    <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1 block">What you get</span>
-                                    <span class="text-base font-bold text-dcBlack">the TikTok and Reels series, the ten-format library, first month scheduled.</span>
-                                </div>
-                                <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack border border-dcBlack px-4 py-2 hover:bg-dcBlack hover:text-white transition-colors" data-title="TikTok and Instagram Reels Discovery Content">Full plan +</button>
-                                <div class="flow-detail hidden mt-6"><p class="text-base text-gray-700 font-light leading-relaxed mb-3">TikTok and Instagram Reels will serve as the primary top-of-funnel discovery platforms.</p><p class="text-base text-gray-700 font-light leading-relaxed mb-3">The content will be direct, conversational, understandable, visual, and built around one question or tension at a time.</p><p class="text-base text-gray-700 font-light leading-relaxed mb-3">The first one to three seconds must create immediate curiosity.</p><h5 class="font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcRed mt-6 mb-2">Core content categories include</h5><ul class="list-disc pl-5 space-y-1 text-base text-gray-700 font-light"><li>Who is Rhonda Hamilton?</li><li>Why is she running for mayor?</li><li>What does being independent mean in D.C.?</li><li>What should residents expect from a mayor?</li><li>Why do politicians make promises they do not fulfill?</li><li>What does reliable leadership actually look like?</li><li>What should residents demand before believing another promise?</li><li>What D.C. issue do residents feel is ignored?</li><li>Why do city problems keep returning?</li><li>What should be fixed first in D.C.?</li><li>What is one thing people misunderstand about D.C. government?</li><li>What does accountability look like after an election?</li><li>What does Rhonda Hamilton believe D.C. can do better?</li></ul><div class="mt-4"></div><p class="text-base text-gray-700 font-light leading-relaxed mb-3">Content should avoid sounding like a speech, commercial, or press release.</p><p class="text-base text-gray-700 font-light leading-relaxed mb-3">It should feel like Rhonda Hamilton is speaking directly to a person who has a real question about D.C.</p><h5 class="font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcRed mt-6 mb-2">Organic content formats</h5><div class="flex flex-col space-y-2"><div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 bg-gray-50"><div class="p-4 md:w-1/4 bg-gray-100 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Format</span><h5 class="font-heading font-black text-base uppercase">Direct-to-camera response</h5></div><div class="p-4 md:w-2/5 flex items-center"><p class="text-base text-gray-700 font-light">Establishes voice and point of view</p></div><div class="p-4 md:w-[35%] bg-white flex flex-col justify-center border-l border-gray-100"><span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Example</span><span class="text-sm font-bold text-dcBlack">“Here is what I mean by follow-through.”</span></div></div><div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 bg-gray-50"><div class="p-4 md:w-1/4 bg-gray-100 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Format</span><h5 class="font-heading font-black text-base uppercase">Podcast clip</h5></div><div class="p-4 md:w-2/5 flex items-center"><p class="text-base text-gray-700 font-light">Uses existing credibility and long-form content</p></div><div class="p-4 md:w-[35%] bg-white flex flex-col justify-center border-l border-gray-100"><span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Example</span><span class="text-sm font-bold text-dcBlack">“Why politicians lose trust after Election Day.”</span></div></div><div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 bg-gray-50"><div class="p-4 md:w-1/4 bg-gray-100 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Format</span><h5 class="font-heading font-black text-base uppercase">Street conversation</h5></div><div class="p-4 md:w-2/5 flex items-center"><p class="text-base text-gray-700 font-light">Shows personality and spontaneity</p></div><div class="p-4 md:w-[35%] bg-white flex flex-col justify-center border-l border-gray-100"><span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Example</span><span class="text-sm font-bold text-dcBlack">“What is one thing D.C. leaders keep getting wrong?”</span></div></div><div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 bg-gray-50"><div class="p-4 md:w-1/4 bg-gray-100 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Format</span><h5 class="font-heading font-black text-base uppercase">Issue explainer</h5></div><div class="p-4 md:w-2/5 flex items-center"><p class="text-base text-gray-700 font-light">Makes a complicated subject understandable</p></div><div class="p-4 md:w-[35%] bg-white flex flex-col justify-center border-l border-gray-100"><span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Example</span><span class="text-sm font-bold text-dcBlack">“What can a mayor actually control?”</span></div></div><div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 bg-gray-50"><div class="p-4 md:w-1/4 bg-gray-100 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Format</span><h5 class="font-heading font-black text-base uppercase">Poll or question post</h5></div><div class="p-4 md:w-2/5 flex items-center"><p class="text-base text-gray-700 font-light">Encourages lightweight engagement</p></div><div class="p-4 md:w-[35%] bg-white flex flex-col justify-center border-l border-gray-100"><span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Example</span><span class="text-sm font-bold text-dcBlack">“What is the biggest issue in your neighborhood?”</span></div></div><div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 bg-gray-50"><div class="p-4 md:w-1/4 bg-gray-100 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Format</span><h5 class="font-heading font-black text-base uppercase">Swipe post</h5></div><div class="p-4 md:w-2/5 flex items-center"><p class="text-base text-gray-700 font-light">Creates saves and shares</p></div><div class="p-4 md:w-[35%] bg-white flex flex-col justify-center border-l border-gray-100"><span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Example</span><span class="text-sm font-bold text-dcBlack">“Five questions every mayoral candidate should answer.”</span></div></div><div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 bg-gray-50"><div class="p-4 md:w-1/4 bg-gray-100 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Format</span><h5 class="font-heading font-black text-base uppercase">Local reaction clip</h5></div><div class="p-4 md:w-2/5 flex items-center"><p class="text-base text-gray-700 font-light">Connects to a current D.C. conversation</p></div><div class="p-4 md:w-[35%] bg-white flex flex-col justify-center border-l border-gray-100"><span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Example</span><span class="text-sm font-bold text-dcBlack">“Here is what this latest city issue means for residents.”</span></div></div><div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 bg-gray-50"><div class="p-4 md:w-1/4 bg-gray-100 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Format</span><h5 class="font-heading font-black text-base uppercase">Community response</h5></div><div class="p-4 md:w-2/5 flex items-center"><p class="text-base text-gray-700 font-light">Shows Hamilton listening</p></div><div class="p-4 md:w-[35%] bg-white flex flex-col justify-center border-l border-gray-100"><span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Example</span><span class="text-sm font-bold text-dcBlack">“D.C. residents told us what they are dealing with.”</span></div></div><div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 bg-gray-50"><div class="p-4 md:w-1/4 bg-gray-100 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Format</span><h5 class="font-heading font-black text-base uppercase">Day-in-the-life content</h5></div><div class="p-4 md:w-2/5 flex items-center"><p class="text-base text-gray-700 font-light">Makes the candidate feel human</p></div><div class="p-4 md:w-[35%] bg-white flex flex-col justify-center border-l border-gray-100"><span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Example</span><span class="text-sm font-bold text-dcBlack">“A day meeting residents across D.C.”</span></div></div><div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 bg-gray-50"><div class="p-4 md:w-1/4 bg-gray-100 flex flex-col justify-center"><span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Format</span><h5 class="font-heading font-black text-base uppercase">Myth-versus-fact content</h5></div><div class="p-4 md:w-2/5 flex items-center"><p class="text-base text-gray-700 font-light">Clarifies confusion</p></div><div class="p-4 md:w-[35%] bg-white flex flex-col justify-center border-l border-gray-100"><span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Example</span><span class="text-sm font-bold text-dcBlack">“What being independent does—and does not—mean.”</span></div></div></div></div>
+
+                    <div class="flex flex-col md:flex-row gap-8 items-start border-t border-gray-300 pt-12">
+                        <div class="font-heading text-6xl font-black text-dcRed md:w-1/4">03</div>
+                        <div class="md:w-3/4">
+                            <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">TikTok & Reels Discovery</h4>
+                            <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">The top of the funnel. One question or tension per clip, curiosity in the first 3 seconds. Never a speech or commercial.</p>
+                            <ul class="space-y-4 mb-8">
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">13 Core Questions.</strong> Addressing the actual concerns discovered in the audit.</li>
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">10 Organic Formats.</strong> Direct-to-camera, street interviews, explainers, swipe posts, etc.</li>
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Direct Voice.</strong> It feels like Rhonda Hamilton speaking to one person with a real question about D.C.</li>
+                            </ul>
+                            <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcRed hover:text-dcBlack transition-colors" data-title="TikTok & Reels Discovery">Read Full Plan &rarr;</button>
+                            <div class="flow-detail hidden">
+                                <p class="text-base text-gray-700 font-light leading-relaxed">TikTok and Instagram Reels will serve as the primary top-of-funnel discovery platforms. The content will be direct, conversational, understandable, visual, and built around one question or tension at a time.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-6 md:p-8 border-l-4 border-dcRed shadow-xl">
-                        <div class="flex gap-4 md:gap-6 items-start">
-                            <div class="font-heading text-4xl md:text-5xl font-black text-dcRed">04</div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex gap-2 text-dcRed text-2xl mb-2"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Asset we implement</p>
-                                <h4 class="font-heading font-black text-2xl md:text-3xl mb-3 text-dcBlack uppercase tracking-tight">Facebook Campaign Content Hub</h4>
-                                <p class="text-lg text-gray-800 font-light leading-relaxed mb-5">The long-form social library and community-response channel. Residents watch longer content, revisit a topic, comment in detail, and share inside family and neighborhood networks.</p>
-                                <div class="space-y-3 mb-6"><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">What it holds.</strong> Podcast clips, longer interviews, street conversations, explainers, polls, community feedback, updates, events, announcements, local-news reactions, behind-the-scenes, and reposts from TikTok and Instagram.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Where it sends people.</strong> The campaign website and app stays the owned destination for positions, signups, events, donations, and voter information.</p></div>
-                                <div class="bg-gray-50 border-l-4 border-dcRed p-5 mb-5">
-                                    <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1 block">What you get</span>
-                                    <span class="text-base font-bold text-dcBlack">Facebook fan page setup, content library structure, weekly long-form posts.</span>
-                                </div>
-                                <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack border border-dcBlack px-4 py-2 hover:bg-dcBlack hover:text-white transition-colors" data-title="Facebook Campaign Content Hub">Full plan +</button>
-                                <div class="flow-detail hidden mt-6"><p class="text-base text-gray-700 font-light leading-relaxed mb-3">Facebook will serve as the campaign’s long-form social library and community-response channel.</p><h5 class="font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcRed mt-6 mb-2">It will organize</h5><ul class="list-disc pl-5 space-y-1 text-base text-gray-700 font-light"><li>Podcast clips</li><li>Longer interviews</li><li>Street conversations</li><li>Informational videos</li><li>Polls</li><li>Issue explainers</li><li>Community feedback</li><li>Candidate updates</li><li>Event content</li><li>Campaign announcements</li><li>Local-news reactions</li><li>Behind-the-scenes content</li><li>Reposted content from TikTok and Instagram</li></ul><div class="mt-4"></div><p class="text-base text-gray-700 font-light leading-relaxed mb-3">Facebook’s role is not limited to viral discovery. It gives residents a place to watch longer content, revisit a topic, comment in more detail, and share content inside family, neighborhood, and community networks.</p><p class="text-base text-gray-700 font-light leading-relaxed mb-3">The campaign website should remain the primary owned destination for official positions, signups, events, donations, and voter information. Facebook is the social library and community layer that feeds viewers toward that owned campaign infrastructure.</p></div>
+
+                    <div class="flex flex-col md:flex-row gap-8 items-start border-t border-gray-300 pt-12">
+                        <div class="font-heading text-6xl font-black text-dcBlack md:w-1/4">04</div>
+                        <div class="md:w-3/4">
+                            <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">FB Campaign Content Hub</h4>
+                            <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">The long-form social library. Residents watch longer content, revisit a topic, comment in detail, and share inside family networks.</p>
+                            <ul class="space-y-4 mb-8">
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">What It Holds.</strong> Podcast clips, longer interviews, explainers, polls, feedback, updates, events, and reposts.</li>
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Where It Sends People.</strong> The campaign website remains the owned destination for positions, signups, and donations.</li>
+                            </ul>
+                            <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcRed hover:text-dcBlack transition-colors" data-title="FB Campaign Content Hub">Read Full Plan &rarr;</button>
+                            <div class="flow-detail hidden">
+                                <p class="text-base text-gray-700 font-light leading-relaxed">Facebook’s role is not limited to viral discovery. It gives residents a place to watch longer content, revisit a topic, comment in more detail, and share content inside family, neighborhood, and community networks.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-6 md:p-8 border-l-4 border-dcRed shadow-xl">
-                        <div class="flex gap-4 md:gap-6 items-start">
-                            <div class="font-heading text-4xl md:text-5xl font-black text-dcRed">05</div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex gap-2 text-dcRed text-2xl mb-2"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Asset we implement</p>
-                                <h4 class="font-heading font-black text-2xl md:text-3xl mb-3 text-dcBlack uppercase tracking-tight">Local Theme-Page Distribution</h4>
-                                <p class="text-lg text-gray-800 font-light leading-relaxed mb-5">Clips placed inside the D.C. pages residents already spend attention on: music, culture, lifestyle, neighborhood news, Black D.C. culture, young professionals, food and nightlife, comedy, small business, events, civic discussion.</p>
-                                <div class="space-y-3 mb-6"><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Selection rule.</strong> Local audience quality over follower count. D.C. reach over broad DMV reach. Real engagement over inflated likes. Pages whose style fits Hamilton’s brand and hold a credible audience relationship.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Native, not forced.</strong> Posts feel like the page, not political advertising.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Disclosure.</strong> Every paid placement disclosed per platform and campaign-finance requirements.</p></div>
-                                <div class="bg-gray-50 border-l-4 border-dcRed p-5 mb-5">
-                                    <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1 block">What you get</span>
-                                    <span class="text-base font-bold text-dcBlack">seeder list by category, outreach, placement log.</span>
-                                </div>
-                                <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack border border-dcBlack px-4 py-2 hover:bg-dcBlack hover:text-white transition-colors" data-title="Local Theme-Page Distribution">Full plan +</button>
-                                <div class="flow-detail hidden mt-6"><p class="text-base text-gray-700 font-light leading-relaxed mb-3">Selected clips will be distributed through established D.C. pages that already reach local audiences through music, culture, lifestyle, community, neighborhood news, politics, entertainment, and young-adult life in D.C.</p><h5 class="font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcRed mt-6 mb-2">Potential page categories include</h5><ul class="list-disc pl-5 space-y-1 text-base text-gray-700 font-light"><li>D.C. music pages</li><li>Local culture pages</li><li>Lifestyle pages</li><li>Neighborhood pages</li><li>Community news pages</li><li>Black D.C. culture pages</li><li>Young professional pages</li><li>D.C. food and nightlife pages</li><li>Local comedy and humor pages</li><li>Small-business pages</li><li>D.C. event pages</li><li>Civic and political discussion pages</li></ul><div class="mt-4"></div><p class="text-base text-gray-700 font-light leading-relaxed mb-3">The purpose is to introduce Hamilton inside content environments where residents already spend attention.</p><p class="text-base text-gray-700 font-light leading-relaxed mb-3">This expands her visibility beyond traditional campaign pages and formal political media.</p><h5 class="font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcRed mt-6 mb-2">The strategy should prioritize</h5><ul class="list-disc pl-5 space-y-1 text-base text-gray-700 font-light"><li>Local audience quality over follower count</li><li>D.C. reach over broad DMV reach</li><li>Real engagement over inflated likes</li><li>Pages whose content style aligns with Hamilton’s brand</li><li>Pages with a credible audience relationship</li><li>Posts that feel native to the page instead of forced political advertising</li></ul><div class="mt-4"></div><p class="text-base text-gray-700 font-light leading-relaxed mb-3">Every paid placement should be clearly disclosed in accordance with platform and campaign-finance requirements.</p></div>
+
+                    <div class="flex flex-col md:flex-row gap-8 items-start border-t border-gray-300 pt-12">
+                        <div class="font-heading text-6xl font-black text-dcRed md:w-1/4">05</div>
+                        <div class="md:w-3/4">
+                            <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">Local Theme-Page Distribution</h4>
+                            <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">Clips placed inside the D.C. pages residents already spend attention on: music, culture, lifestyle, neighborhood news, and civic discussion.</p>
+                            <ul class="space-y-4 mb-8">
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Selection Rule.</strong> Local audience quality over follower count. Real engagement over inflated likes.</li>
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Native, Not Forced.</strong> Posts feel like the page, not political advertising.</li>
+                            </ul>
+                            <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcRed hover:text-dcBlack transition-colors" data-title="Local Theme-Page Distribution">Read Full Plan &rarr;</button>
+                            <div class="flow-detail hidden">
+                                <p class="text-base text-gray-700 font-light leading-relaxed">The purpose is to introduce Hamilton inside content environments where residents already spend attention, expanding visibility beyond traditional campaign pages.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white p-6 md:p-8 border-l-4 border-dcRed shadow-xl">
-                        <div class="flex gap-4 md:gap-6 items-start">
-                            <div class="font-heading text-4xl md:text-5xl font-black text-dcRed">06</div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex gap-2 text-dcRed text-2xl mb-2"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Asset we implement</p>
-                                <h4 class="font-heading font-black text-2xl md:text-3xl mb-3 text-dcBlack uppercase tracking-tight">Man-on-the-Street and Neighborhood Conversations</h4>
-                                <p class="text-lg text-gray-800 font-light leading-relaxed mb-5">Hamilton outside the podium, the studio, and the press release: answering real residents on location. Loose, human, clear, watchable.</p>
-                                <div class="space-y-3 mb-6"><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Formats.</strong> Host Q&A, neighborhood walk-throughs, resident questions, rapid-response rounds, on-location responses, “What would you fix first?”, “What do you want city hall to understand?”</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Ten questions.</strong> From “Why are you running for mayor?” to “What is one thing D.C. residents should not have to accept?”</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">The test.</strong> Prepared but not over-rehearsed. Viewers see how she thinks, how she listens, and whether she answers without political language.</p></div>
-                                <div class="bg-gray-50 border-l-4 border-dcRed p-5 mb-5">
-                                    <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1 block">What you get</span>
-                                    <span class="text-base font-bold text-dcBlack">neighborhood shoot schedule by ward, rapid-response clips.</span>
-                                </div>
-                                <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack border border-dcBlack px-4 py-2 hover:bg-dcBlack hover:text-white transition-colors" data-title="Man-on-the-Street and Neighborhood Conversations">Full plan +</button>
-                                <div class="flow-detail hidden mt-6"><p class="text-base text-gray-700 font-light leading-relaxed mb-3">Man-on-the-street content will give viewers a chance to see Hamilton outside a podium, press release, studio, or formal campaign setting.</p><p class="text-base text-gray-700 font-light leading-relaxed mb-3">The objective is not to make a staged political commercial. The objective is to show that she can talk naturally, answer questions directly, and engage with real D.C. residents.</p><h5 class="font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcRed mt-6 mb-2">The format can include</h5><ul class="list-disc pl-5 space-y-1 text-base text-gray-700 font-light"><li>A host asking Hamilton direct questions</li><li>Hamilton walking through a neighborhood</li><li>Residents asking real questions</li><li>Short “rapid response” question rounds</li><li>Community members describing a concern</li><li>Hamilton responding to a local issue on location</li><li>A “what would you fix first?” format</li><li>A “what do you want city hall to understand?” format</li></ul><h5 class="font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcRed mt-6 mb-2">Questions can include</h5><ul class="list-disc pl-5 space-y-1 text-base text-gray-700 font-light"><li>Why are you running for mayor?</li><li>What does independent actually mean?</li><li>Why should anyone trust another politician?</li><li>What have D.C. leaders been getting wrong?</li><li>What promise would you refuse to make?</li><li>What should residents be able to hold a mayor accountable for?</li><li>What does follow-through mean to you?</li><li>What issue do you hear about most from residents?</li><li>What should government explain more clearly?</li><li>What is one thing D.C. residents should not have to accept?</li></ul><div class="mt-4"></div><p class="text-base text-gray-700 font-light leading-relaxed mb-3">The tone should feel loose, human, clear, and watchable.</p><p class="text-base text-gray-700 font-light leading-relaxed mb-3">Hamilton should sound prepared but not over-rehearsed. Viewers should see how she thinks, how she listens, and whether she can answer a question without hiding behind political language.</p></div>
+
+                    <div class="flex flex-col md:flex-row gap-8 items-start border-t border-gray-300 pt-12">
+                        <div class="font-heading text-6xl font-black text-dcBlack md:w-1/4">06</div>
+                        <div class="md:w-3/4">
+                            <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">Neighborhood Conversations</h4>
+                            <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">Hamilton outside the podium, the studio, and the press release: answering real residents on location. Loose, human, clear, watchable.</p>
+                            <ul class="space-y-4 mb-8">
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Formats.</strong> Walk-throughs, resident questions, rapid-response rounds.</li>
+                                <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">The Test.</strong> Prepared but not over-rehearsed. Answering without political language.</li>
+                            </ul>
+                            <button type="button" class="flow-row font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcRed hover:text-dcBlack transition-colors" data-title="Neighborhood Conversations">Read Full Plan &rarr;</button>
+                            <div class="flow-detail hidden">
+                                <p class="text-base text-gray-700 font-light leading-relaxed">The tone should feel loose, human, clear, and watchable. Hamilton should sound prepared but not over-rehearsed, answering questions without hiding behind political language.</p>
                             </div>
                         </div>
                     </div>
+
                 </div>
-
-                <dialog id="flow-dialog" class="p-0 bg-transparent backdrop:bg-dcBlack/80 max-w-4xl w-[94vw]">
-                    <div class="bg-white border-t-4 border-dcRed shadow-2xl p-6 md:p-10 max-h-[85vh] overflow-y-auto">
-                        <div class="flex justify-between items-start gap-6 mb-4">
-                            <div class="flex gap-1 text-dcRed text-lg"><span>★</span><span>★</span><span>★</span></div>
-                            <button type="button" id="flow-close" class="font-heading font-bold text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-dcRed" aria-label="Close">Close ✕</button>
-                        </div>
-                        <h4 id="flow-title" class="font-heading font-black text-2xl md:text-3xl uppercase tracking-tight text-dcBlack mb-6"></h4>
-                        <div id="flow-body"></div>
-                    </div>
-                </dialog>
-                <script>
-                    (function () {
-                        var dlg = document.getElementById('flow-dialog');
-                        if (!dlg) return;
-                        document.querySelectorAll('.flow-row').forEach(function (btn) {
-                            btn.addEventListener('click', function () {
-                                document.getElementById('flow-title').textContent = btn.dataset.title;
-                                document.getElementById('flow-body').innerHTML = btn.parentNode.querySelector('.flow-detail').innerHTML;
-                                if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
-                            });
-                        });
-                        document.getElementById('flow-close').addEventListener('click', function () { dlg.close(); });
-                        dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
-                    })();
-                </script>
-
-                <!-- Funnel Visual -->
-                <div class="max-w-5xl mx-auto">
-                    <h4 class="font-heading font-black text-3xl md:text-5xl mb-4 uppercase tracking-tighter text-center text-dcBlack">How A Viewer Becomes A Supporter</h4>
-                    <p class="text-lg md:text-xl text-gray-700 text-center mb-12 font-light max-w-3xl mx-auto">Four steps, in order. Each one has a number we report every month.</p>
-
-                    <div class="flex flex-col gap-8">
-                        <div class="flex flex-col md:flex-row items-stretch bg-white border-2 border-dcBlack shadow-[8px_8px_0_0_#E31837]">
-                            <div class="p-6 md:p-8 md:w-1/4 flex flex-col justify-center border-b-2 md:border-b-0 md:border-r-2 border-dcBlack">
-                                <span class="font-heading font-black text-5xl leading-none text-dcRed mb-3">01</span>
-                                <h5 class="font-heading font-bold text-xl md:text-2xl text-dcBlack leading-tight tracking-tight">She shows up in their feed.</h5>
-                            </div>
-                            <div class="p-6 md:p-8 md:w-1/2 flex items-center">
-                                <p class="text-lg text-gray-800 leading-relaxed">Short videos of Rhonda on Instagram, TikTok and Facebook, plus the street interviews, reach people in D.C. who were not looking for her.</p>
-                            </div>
-                            <div class="p-6 md:p-8 md:w-1/4 bg-gray-50 flex flex-col justify-center border-t-2 md:border-t-0 md:border-l-2 border-dcBlack">
-                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-dcRed mb-2">We count</span>
-                                <span class="text-lg font-bold text-dcBlack leading-snug">How many people in D.C. saw a video.</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row items-stretch bg-white border-2 border-dcBlack shadow-[8px_8px_0_0_#E31837]">
-                            <div class="p-6 md:p-8 md:w-1/4 flex flex-col justify-center border-b-2 md:border-b-0 md:border-r-2 border-dcBlack">
-                                <span class="font-heading font-black text-5xl leading-none text-dcRed mb-3">02</span>
-                                <h5 class="font-heading font-bold text-xl md:text-2xl text-dcBlack leading-tight tracking-tight">They start to recognize her.</h5>
-                            </div>
-                            <div class="p-6 md:p-8 md:w-1/2 flex items-center">
-                                <p class="text-lg text-gray-800 leading-relaxed">The same face, the same name and the same independent line in every clip. After a few videos a resident knows who she is before she says a word.</p>
-                            </div>
-                            <div class="p-6 md:p-8 md:w-1/4 bg-gray-50 flex flex-col justify-center border-t-2 md:border-t-0 md:border-l-2 border-dcBlack">
-                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-dcRed mb-2">We count</span>
-                                <span class="text-lg font-bold text-dcBlack leading-snug">How many people come back to watch a second and third video.</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row items-stretch bg-white border-2 border-dcBlack shadow-[8px_8px_0_0_#E31837]">
-                            <div class="p-6 md:p-8 md:w-1/4 flex flex-col justify-center border-b-2 md:border-b-0 md:border-r-2 border-dcBlack">
-                                <span class="font-heading font-black text-5xl leading-none text-dcRed mb-3">03</span>
-                                <h5 class="font-heading font-bold text-xl md:text-2xl text-dcBlack leading-tight tracking-tight">Her name starts to mean something.</h5>
-                            </div>
-                            <div class="p-6 md:p-8 md:w-1/2 flex items-center">
-                                <p class="text-lg text-gray-800 leading-relaxed">Short explainers on one city problem at a time, the problems the audit found residents care about most. Each one ends with what she would do and when. Her name gets tied to follow-through.</p>
-                            </div>
-                            <div class="p-6 md:p-8 md:w-1/4 bg-gray-50 flex flex-col justify-center border-t-2 md:border-t-0 md:border-l-2 border-dcBlack">
-                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-dcRed mb-2">We count</span>
-                                <span class="text-lg font-bold text-dcBlack leading-snug">Shares, saves and people searching her name.</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row items-stretch bg-white border-2 border-dcBlack shadow-[8px_8px_0_0_#E31837]">
-                            <div class="p-6 md:p-8 md:w-1/4 flex flex-col justify-center border-b-2 md:border-b-0 md:border-r-2 border-dcBlack">
-                                <span class="font-heading font-black text-5xl leading-none text-dcRed mb-3">04</span>
-                                <h5 class="font-heading font-bold text-xl md:text-2xl text-dcBlack leading-tight tracking-tight">They land somewhere useful.</h5>
-                            </div>
-                            <div class="p-6 md:p-8 md:w-1/2 flex items-center">
-                                <p class="text-lg text-gray-800 leading-relaxed">Anyone who watched, clicked or visited is sent to the website and app. Take the poll, leave a phone number or email, sign up to volunteer, give. Those names are the list the paid ads go to later.</p>
-                            </div>
-                            <div class="p-6 md:p-8 md:w-1/4 bg-gray-50 flex flex-col justify-center border-t-2 md:border-t-0 md:border-l-2 border-dcBlack">
-                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-dcRed mb-2">We count</span>
-                                <span class="text-lg font-bold text-dcBlack leading-snug">Names on the list, and donations.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Clipping & Seeding Process -->
-                <div class="max-w-5xl mx-auto bg-white p-5 md:p-10 shadow-xl border border-gray-100 mt-12">
-                    <h4 class="font-heading font-black text-2xl mb-2 uppercase tracking-tighter text-center">Clipping & Seeding Process</h4>
-                    <p class="text-sm text-gray-500 text-center mb-8 font-light">Massive impressions, mentions, word of mouth, saves, reposts, and add-to-story. The winners become Facebook and Instagram ads.</p>
-                    <div class="flex flex-col space-y-4">
-                        <div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-300 hover:border-dcRed transition-colors bg-gray-50">
-                            <div class="p-6 md:w-1/4 bg-gray-100 flex flex-col justify-center">
-                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Step 01</span>
-                                <h5 class="font-heading font-black text-xl uppercase">Collect</h5>
-                            </div>
-                            <div class="p-6 md:w-1/2 flex items-center">
-                                <p class="text-base text-gray-700 font-light">Podcast shows, interviews, street conversations, and every other content asset go into one shared Google Drive the day they are recorded.</p>
-                            </div>
-                            <div class="p-6 md:w-1/4 bg-white flex flex-col justify-center border-l border-gray-100">
-                                <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Key Outcome</span>
-                                <span class="text-sm font-bold text-dcBlack">Everything in one place</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-400 hover:border-dcRed transition-colors bg-gray-50">
-                            <div class="p-6 md:w-1/4 bg-gray-100 flex flex-col justify-center">
-                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Step 02</span>
-                                <h5 class="font-heading font-black text-xl uppercase">Review</h5>
-                            </div>
-                            <div class="p-6 md:w-1/2 flex items-center">
-                                <p class="text-base text-gray-700 font-light">Download each recording and run it through Opus Clip. AI review finds the clips with viral potential and flags the repositioning.</p>
-                            </div>
-                            <div class="p-6 md:w-1/4 bg-white flex flex-col justify-center border-l border-gray-100">
-                                <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Key Outcome</span>
-                                <span class="text-sm font-bold text-dcBlack">The viral clips, ranked</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-400 hover:border-dcRed transition-colors bg-gray-50">
-                            <div class="p-6 md:w-1/4 bg-gray-100 flex flex-col justify-center">
-                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Step 03</span>
-                                <h5 class="font-heading font-black text-xl uppercase">Reposition</h5>
-                            </div>
-                            <div class="p-6 md:w-1/2 flex items-center">
-                                <p class="text-base text-gray-700 font-light">Each winning moment is cut with multiple hooks, captions, and opening frames: direct, accountability, community, independent identity.</p>
-                            </div>
-                            <div class="p-6 md:w-1/4 bg-white flex flex-col justify-center border-l border-gray-100">
-                                <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Key Outcome</span>
-                                <span class="text-sm font-bold text-dcBlack">15 to 40 assets per interview</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-500 hover:border-dcRed transition-colors bg-gray-50">
-                            <div class="p-6 md:w-1/4 bg-gray-100 flex flex-col justify-center">
-                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Step 04</span>
-                                <h5 class="font-heading font-black text-xl uppercase">Campaign Content Folder</h5>
-                            </div>
-                            <div class="p-6 md:w-1/2 flex items-center">
-                                <p class="text-base text-gray-700 font-light">Finished clips are stored in one Drive folder with captions and hashtags, ready for every volunteer to post to their Instagram or TikTok. Buffer schedules the campaign’s own posts up until the election.</p>
-                            </div>
-                            <div class="p-6 md:w-1/4 bg-white flex flex-col justify-center border-l border-gray-100">
-                                <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Key Outcome</span>
-                                <span class="text-sm font-bold text-dcBlack">One link, no questions</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row items-stretch border-l-4 border-gray-500 hover:border-dcRed transition-colors bg-gray-50">
-                            <div class="p-6 md:w-1/4 bg-gray-100 flex flex-col justify-center">
-                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Step 05</span>
-                                <h5 class="font-heading font-black text-xl uppercase">Post & Seed</h5>
-                            </div>
-                            <div class="p-6 md:w-1/2 flex items-center">
-                                <p class="text-base text-gray-700 font-light">Daily Posters: recruited volunteers who post one clip a day from the folder. Seeders: owners of local and targeted theme pages, repost pages, and meme pages who push clips into audiences we do not own.</p>
-                            </div>
-                            <div class="p-6 md:w-1/4 bg-white flex flex-col justify-center border-l border-gray-100">
-                                <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Key Outcome</span>
-                                <span class="text-sm font-bold text-dcBlack">Daily posting across D.C.</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-col md:flex-row items-stretch border-l-4 border-dcRed bg-white text-dcBlack shadow-lg z-10">
-                            <div class="p-6 md:w-1/4 bg-dcSky flex flex-col justify-center">
-                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-dcRed">Step 06</span>
-                                <h5 class="font-heading font-black text-2xl uppercase text-dcBlack">Measure & Scale</h5>
-                            </div>
-                            <div class="p-6 md:w-1/2 flex items-center">
-                                <p class="text-base text-gray-800 font-light leading-relaxed">Track impressions, mentions, word of mouth, saves, reposts, and add-to-story on every clip. <strong class="text-dcBlack font-bold">Social listening,</strong> with tools such as Brandwatch or others: we monitor mentions of Rhonda Hamilton across social media, news, blogs, and forums, and read the sentiment behind them, positive, negative, or neutral. The high performers get turned into Facebook and Instagram ads.</p>
-                            </div>
-                            <div class="p-6 md:w-1/4 bg-dcSky flex flex-col justify-center border-l border-dcBlack/10">
-                                <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1">Key Outcome</span>
-                                <span class="text-lg font-bold text-dcBlack">Winners become ads</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-        <section id="website" class="py-24 px-6 bg-dcSky">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-12">
-                    <span class="inline-block font-mono text-xs font-bold uppercase tracking-[0.1em] px-3 py-1.5 border-2 border-dcBlack mb-5 bg-white text-dcBlack shadow-[3px_3px_0_0_#E31837]"><span class="text-dcRed">05</span> // Website</span>
-                    <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter text-dcBlack mb-6">Campaign Website & Progressive App</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+        <section id="website" class="py-24 px-6 bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20">
+                    <h3 class="text-dcRed font-heading font-bold uppercase tracking-[0.2em] text-[10px] mb-2">The Destination</h3>
+                    <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter text-dcBlack mb-6 uppercase">Campaign Website & Progressive App</h2>
+                    <p class="text-2xl text-gray-800 font-light leading-relaxed max-w-4xl">
                         Everything above sends people somewhere. This is where they land, and where attention turns into a poll answer, a contact, and a donation.
                     </p>
                 </div>
 
-                <div class="bg-white p-6 md:p-8 border-l-4 border-dcRed shadow-xl">
-                        <div class="flex gap-4 md:gap-6 items-start">
-                            <div class="font-heading text-4xl md:text-5xl font-black text-dcRed">07</div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex gap-2 text-dcRed text-2xl mb-2"><span>★</span><span>★</span><span>★</span></div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-[0.2em] mb-2">Asset we implement</p>
-                                <h4 class="font-heading font-black text-2xl md:text-3xl mb-3 text-dcBlack uppercase tracking-tight">Website, Mobile, and Progressive Web App</h4>
-                                <p class="text-lg text-gray-800 font-light leading-relaxed mb-5">One build delivered three ways: a website, a mobile experience, and an app residents install from the browser. The flow is capture the poll, capture the contact, then donate.</p>
-                                <div class="space-y-3 mb-6"><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Better quality.</strong> A site that looks like the campaign, not a template: her photo, her positions, her voice, built on the same brand as this proposal. Fast on a phone, installable to the home screen as a progressive web app.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Messaging.</strong> The brand position and the content packages live here as official positions, so every clip, seeder post, and ad lands on a page that says the same thing the video said.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Data capture for polling.</strong> The poll questions from the content packages run on the site. One tap, no login. Each answer is captured with the resident’s email or text opt-in, so the campaign learns what its audience cares about and can reach them again.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">Raising money.</strong> A polled, identified, warm resident is asked to give. Donate, volunteer, events, and voter information sit alongside the positions.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">ManyChat flow.</strong> Donations and support handled automatically inside Instagram DMs and Facebook Messenger: a resident who comments or messages gets the donate link, the volunteer signup, or the answer to their question without waiting on a person.</p><p class="text-base text-gray-800 leading-relaxed"><strong class="font-bold text-dcBlack">What it feeds.</strong> Every capture flows into the campaign’s list. Every donation is measured back to the clip that brought the visitor.</p></div>
-                                <div class="bg-gray-50 border-l-4 border-dcRed p-5 mb-5">
-                                    <span class="text-xs font-bold uppercase tracking-widest text-dcRed mb-1 block">What you get</span>
-                                    <span class="text-base font-bold text-dcBlack">Home, Positions, Poll, Donate, Volunteer, Events, Voter Info, and About pages; poll-to-contact-to-donate flow; home-screen install; ManyChat donation and support flow for DMs and Messenger; analytics wired to every clip. Investment: $3,450.</span>
-                                </div>
-                        </div>
+                <div class="max-w-5xl mx-auto">
+                    <!-- Un-boxed editorial flow perfectly aligned with Points 01-06 -->
+                    <div class="flex flex-col md:flex-row gap-8 items-start border-t-2 border-dcBlack pt-12">
+                        <div class="font-heading text-6xl font-black text-dcRed md:w-1/4">07</div>
+                        <div class="md:w-3/4">
+                            <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">Website, Mobile, & PWA</h4>
+                            <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">One build delivered three ways: a website, a mobile experience, and an app residents install from the browser. The flow is capture the poll, capture the contact, then donate.</p>
+                        <ul class="space-y-4">
+                            <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Better Quality.</strong> A site that looks like the campaign, not a template. Fast on a phone, installable to the home screen.</li>
+                            <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Messaging Match.</strong> Every clip and ad lands on a page that reinforces the exact same message.</li>
+                            <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Data Capture.</strong> One-tap polling with email/SMS opt-in to build the retargeting list.</li>
+                            <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">ManyChat Flow.</strong> Automated donations and support handled inside IG DMs and FB Messenger.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="dc-flag-divider"></div>
-        <section id="cost" class="bg-white py-20 md:py-28 px-6">
-            <div class="max-w-5xl mx-auto">
-                <span class="inline-block font-mono text-xs font-bold uppercase tracking-[0.1em] px-3 py-1.5 border-2 border-dcBlack mb-5 bg-white text-dcBlack shadow-[3px_3px_0_0_#E31837]"><span class="text-dcRed">06</span> // Investment</span>
-                <h2 class="font-heading text-4xl md:text-6xl font-black tracking-tighter text-dcBlack mb-6 leading-none">What Is The Cost?</h2>
-                <p class="text-lg md:text-xl text-gray-700 font-light max-w-3xl leading-relaxed mb-12">Five lines. Two carry a fee, one carries a management fee on top of the ad budget, and two are free.</p>
+        <section id="cost" class="relative bg-gray-100 py-24 md:py-32 px-6 border-t-2 border-gray-200 overflow-hidden">
+            <!-- Civil Rights / Protest Wallpaper Background -->
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <!-- Apply your historical/protest image here. It is set to grayscale, low opacity, and multiplied to blend cleanly into the light gray background -->
+                <div class="absolute inset-0 bg-[url('civil-rights-protest-wallpaper.jpg')] bg-cover bg-center bg-no-repeat opacity-[0.08] grayscale mix-blend-multiply"></div>
+                <!-- Gradient overlay to keep the text area bright and blend the top/bottom edges -->
+                <div class="absolute inset-0 bg-gradient-to-b from-gray-100 via-white/50 to-gray-100"></div>
+            </div>
 
-                <div class="bg-white border-2 border-dcBlack p-5 md:p-8 shadow-[12px_12px_0_0_#14213D] mb-16 overflow-x-auto">
-                    <table class="w-full min-w-[640px] border-collapse">
-                        <thead>
-                            <tr class="border-b-4 border-dcBlack text-left">
-                                <th class="pb-3 text-xs font-bold uppercase tracking-[0.2em] text-gray-600" colspan="2">Line</th>
-                                <th class="pb-3 text-xs font-bold uppercase tracking-[0.2em] text-gray-600">What we do</th>
-                                <th class="pb-3 text-xs font-bold uppercase tracking-[0.2em] text-gray-600 text-right">Cost</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b-2 border-dcBlack align-top">
-                                <td class="py-6 pr-4 font-heading font-black text-3xl text-dcRed w-14">1</td>
-                                <td class="py-6 pr-6 w-1/4"><span class="font-heading font-bold text-xl text-dcBlack leading-tight block">Social Media</span></td>
-                                <td class="py-6 pr-6 text-base md:text-lg text-gray-800 leading-relaxed">Content. The podcast content identifier, finding the viral clips in every recording and adding them to the campaign content folder. Criticism response videos, cut and formatted for every platform. Buffer schedules everything through Election Day.</td>
-                                <td class="py-6 text-right whitespace-nowrap w-40"><span class="font-heading font-black text-3xl text-dcBlack tabular-nums">$2,150</span></td>
-                            </tr>
-                            <tr class="border-b-2 border-dcBlack align-top">
-                                <td class="py-6 pr-4 font-heading font-black text-3xl text-dcRed w-14">2</td>
-                                <td class="py-6 pr-6 w-1/4"><span class="font-heading font-bold text-xl text-dcBlack leading-tight block">Campaign Page, App and Website</span></td>
-                                <td class="py-6 pr-6 text-base md:text-lg text-gray-800 leading-relaxed">Web, mobile and progressive web app. Capture the poll, capture the contact, then donate. Positions, volunteer signup, events and voter information. A ManyChat flow handles donations and support through Instagram DMs and Facebook Messenger.</td>
-                                <td class="py-6 text-right whitespace-nowrap w-40"><span class="font-heading font-black text-3xl text-dcBlack tabular-nums">$3,450</span></td>
-                            </tr>
-                            <tr class="border-b-2 border-dcBlack align-top">
-                                <td class="py-6 pr-4 font-heading font-black text-3xl text-dcRed w-14">3</td>
-                                <td class="py-6 pr-6 w-1/4"><span class="font-heading font-bold text-xl text-dcBlack leading-tight block">Man-on-the-Street Content</span></td>
-                                <td class="py-6 pr-6 text-base md:text-lg text-gray-800 leading-relaxed">We help produce it and recruit a videographer.</td>
-                                <td class="py-6 text-right whitespace-nowrap w-40"><span class="font-heading font-black text-3xl text-dcBlack tabular-nums">Free</span></td>
-                            </tr>
-                            <tr class="border-b-2 border-dcBlack align-top">
-                                <td class="py-6 pr-4 font-heading font-black text-3xl text-dcRed w-14">4</td>
-                                <td class="py-6 pr-6 w-1/4"><span class="font-heading font-bold text-xl text-dcBlack leading-tight block">Seeding Campaign</span></td>
-                                <td class="py-6 pr-6 text-base md:text-lg text-gray-800 leading-relaxed">We manage the campaign end to end, through deployment, as volunteers. The seeds themselves, the placements on local theme, repost and meme pages, are the only cost.</td>
-                                <td class="py-6 text-right whitespace-nowrap w-40"><span class="font-heading font-black text-3xl text-dcBlack tabular-nums">Free</span><span class="block text-sm font-semibold text-gray-600 mt-1">Seeds billed at cost</span></td>
-                            </tr>
-                            <tr class="border-b-2 border-dcBlack align-top">
-                                <td class="py-6 pr-4 font-heading font-black text-3xl text-dcRed w-14">5</td>
-                                <td class="py-6 pr-6 w-1/4"><span class="font-heading font-bold text-xl text-dcBlack leading-tight block">Paid Ads</span></td>
-                                <td class="py-6 pr-6 text-base md:text-lg text-gray-800 leading-relaxed">We manage the ads. The best performing videos from the organic run become Facebook and Instagram ads to bring in donations, volunteers and RSVPs.</td>
-                                <td class="py-6 text-right whitespace-nowrap w-40"><span class="font-heading font-black text-3xl text-dcBlack tabular-nums">$750</span><span class="block text-sm font-semibold text-gray-600 mt-1">Ad budget of $2,000 to $3,000 paid to Meta</span></td>
-                            </tr>
-                            <tr class="align-top">
-                                <td class="pt-6" colspan="2"><span class="font-heading font-black text-2xl text-dcBlack uppercase tracking-tight">Total fees</span></td>
-                                <td class="pt-6 text-base md:text-lg text-gray-800 leading-relaxed">Plus the ad budget of $2,000 to $3,000 paid to Meta, and seed placements billed at cost.</td>
-                                <td class="pt-6 text-right whitespace-nowrap"><span class="font-heading font-black text-4xl text-dcRed tabular-nums">$6,350</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <div class="flex justify-center gap-2 text-dcRed text-2xl mb-4"><span>★</span><span>★</span><span>★</span></div>
+                    <h2 class="font-heading text-5xl md:text-7xl font-black tracking-tighter mb-6 text-dcBlack uppercase">What Is The Cost?</h2>
+                    <p class="text-xl md:text-3xl font-light text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                        The organic content builds the audience. The paid system scales the audience. <br><strong class="text-dcBlack font-black uppercase tracking-tight text-2xl md:text-4xl mt-4 block">The audience wins the election.</strong>
+                    </p>
                 </div>
 
-                <h3 class="font-heading text-2xl md:text-3xl font-black tracking-tighter text-dcBlack mb-6 uppercase">Everything included</h3>
-                <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Podcast clipping campaign, 15 to 40 clips per recording</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Four hook versions per moment, with captions and cover frames</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Criticism response videos, formatted for every platform</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Google Drive content folder with weekly drops</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">One page posting guide and Buffer schedule through Election Day</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">TikTok and Instagram Reels series, ten format library</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Facebook fan page and weekly long form posts</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Seeder list by category, outreach and placement log</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Neighborhood shoot schedule by ward and rapid response clips</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Website, mobile and progressive web app</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Poll to contact to donate flow, with volunteer signup</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">ManyChat donation and support flow for DMs and Messenger</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Analytics wired to every clip</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Facebook and Instagram ads managed through Election Day</span>
-                        </li>
-                        <li class="flex gap-3 items-start bg-white border-2 border-dcBlack p-4">
-                            <span class="shrink-0 w-6 h-6 bg-dcRed text-white font-bold text-sm flex items-center justify-center" aria-hidden="true">&#10003;</span>
-                            <span class="text-base font-semibold text-dcBlack leading-snug">Monthly report on every number in the four steps above</span>
-                        </li>
-                </ul>
+                <!-- Click Funnel Value Stack -->
+                <div class="bg-white border-t-8 border-dcRed shadow-[0_20px_50px_rgba(0,0,0,0.08)] p-8 md:p-14 mb-10">
+                    
+                    <!-- Item 1 -->
+                    <div class="flex flex-col md:flex-row gap-8 border-b border-gray-200 pb-10 mb-10 items-start md:items-center">
+                        <div class="flex-1">
+                            <span class="inline-block bg-dcBlack text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 mb-4">Phase 1</span>
+                            <h4 class="font-heading font-black text-3xl uppercase text-dcBlack mb-5">Social Media Engine</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-dcRed text-2xl leading-none font-black mt-1">✓</span> 
+                                    <span class="text-base text-gray-700 leading-relaxed"><strong class="text-dcBlack">Content Identification:</strong> Finding the viral clips in every recording and adding them to the campaign content folder.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-dcRed text-2xl leading-none font-black mt-1">✓</span> 
+                                    <span class="text-base text-gray-700 leading-relaxed"><strong class="text-dcBlack">Criticism Response Videos:</strong> The videos that answer each public critique, cut and formatted for every platform.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-dcRed text-2xl leading-none font-black mt-1">✓</span> 
+                                    <span class="text-base text-gray-700 leading-relaxed"><strong class="text-dcBlack">Automated Distribution:</strong> Buffer schedules the content seamlessly up until the election.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shrink-0 text-left md:text-right mt-4 md:mt-0">
+                            <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Investment</p>
+                            <p class="font-heading text-5xl md:text-6xl font-black text-dcBlack">$2,150</p>
+                        </div>
+                    </div>
 
-                <div class="bg-dcRed text-white border-4 border-dcBlack p-8 md:p-12 text-center shadow-[12px_12px_0_0_#14213D] max-w-3xl mx-auto">
-                    <span class="inline-block bg-white text-dcRed font-mono font-bold uppercase tracking-[0.1em] text-xs px-3 py-1.5 mb-6 border-2 border-dcBlack">Project investment</span>
-                    <h3 class="font-heading text-3xl md:text-5xl font-black tracking-tighter uppercase leading-none mb-4">Hamilton 2026 Digital Campaign</h3>
-                    <span class="inline-block bg-white text-dcBlack font-bold uppercase tracking-[0.15em] text-xs px-3 py-1.5 border-2 border-dcBlack shadow-[3px_3px_0_0_#14213D] mb-8">Organic first, through Election Day</span>
-                    <div class="font-heading font-black text-6xl md:text-8xl leading-none tabular-nums mb-3">$6,350</div>
-                    <p class="font-bold text-base md:text-lg mb-6">Plus an ad budget of $2,000 to $3,000 paid to Meta, and seed placements billed at cost.</p>
-                    <p class="text-base md:text-lg leading-relaxed text-white/95 max-w-xl mx-auto">The fees cover the social media system, the campaign website and app, and management of the paid ads. Our work on the street videos and the seeding campaign is free.</p>
+                    <!-- Item 2 -->
+                    <div class="flex flex-col md:flex-row gap-8 items-start md:items-center">
+                        <div class="flex-1">
+                            <span class="inline-block bg-dcBlack text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 mb-4">Phase 2</span>
+                            <h4 class="font-heading font-black text-3xl uppercase text-dcBlack mb-5">Campaign Web & App Flow</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-dcRed text-2xl leading-none font-black mt-1">✓</span> 
+                                    <span class="text-base text-gray-700 leading-relaxed"><strong class="text-dcBlack">Full Infrastructure:</strong> Web, mobile, and Progressive Web App setup.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-dcRed text-2xl leading-none font-black mt-1">✓</span> 
+                                    <span class="text-base text-gray-700 leading-relaxed"><strong class="text-dcBlack">Conversion Funnel:</strong> Capture the poll, capture the contact, then donate. Includes positions, volunteer signup, events, and voter info.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-dcRed text-2xl leading-none font-black mt-1">✓</span> 
+                                    <span class="text-base text-gray-700 leading-relaxed"><strong class="text-dcBlack">ManyChat Automation:</strong> Automates donations and support through Instagram DMs and Facebook Messenger instantly.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shrink-0 text-left md:text-right mt-4 md:mt-0">
+                            <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Investment</p>
+                            <p class="font-heading text-5xl md:text-6xl font-black text-dcBlack">$3,450</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Click Funnel Style Bonuses -->
+                <div class="bg-white border border-gray-200 p-8 md:p-12 mb-10 relative shadow-sm">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dcRed text-white font-heading font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] px-6 py-2 shadow-md whitespace-nowrap">
+                        ★ Included Bonuses ★
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row gap-8 mt-6">
+                        <!-- Bonus 1 -->
+                        <div class="flex-1 border-b md:border-b-0 md:border-r border-gray-200 pb-8 md:pb-0 md:pr-8">
+                            <h5 class="font-heading font-black text-2xl uppercase text-dcBlack mb-4">Man-on-the-Street Content</h5>
+                            <p class="text-base text-gray-700 mb-6 leading-relaxed">We help produce the neighborhood conversations and recruit a videographer to capture raw, authentic moments.</p>
+                            <p class="font-heading text-3xl font-black text-dcRed uppercase tracking-tight">Included Free</p>
+                        </div>
+                        <!-- Bonus 2 -->
+                        <div class="flex-1 md:pl-4">
+                            <h5 class="font-heading font-black text-2xl uppercase text-dcBlack mb-4">Seeding Campaign Mgt</h5>
+                            <p class="text-base text-gray-700 mb-6 leading-relaxed">We manage the campaign end to end as volunteers. You only pay hard costs for the actual placements on local pages.</p>
+                            <p class="font-heading text-2xl font-black text-dcRed uppercase tracking-tight">Management Free</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upsell / Scale block -->
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-gray-50 border-2 border-dcBlack p-8 md:p-10">
+                    <div class="flex-1">
+                        <span class="inline-block text-dcBlack text-[10px] font-bold uppercase tracking-[0.2em] border border-dcBlack px-3 py-1 mb-4">Scale Phase</span>
+                        <h4 class="font-heading font-black text-3xl uppercase text-dcBlack mb-4">Paid Ads Management</h4>
+                        <p class="text-base text-gray-700 leading-relaxed">We manage the ads: the best-performing videos from the organic run become Facebook and Instagram ads to aggressively activate the audience, donations, volunteers, and RSVPs.</p>
+                    </div>
+                    <div class="shrink-0 text-left md:text-right mt-4 md:mt-0">
+                        <p class="font-heading text-5xl font-black text-dcBlack">$750</p>
+                        <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-2 border-t border-gray-300 pt-2">+ $2K-$3K Ad Budget</p>
+                    </div>
+                </div>
+
             </div>
         </section>
-
     </main>
 
-    <footer class="bg-white text-center py-12 border-t-4 border-dcRed">
-        <div class="flex justify-center gap-2 text-dcRed text-2xl mb-6">
+    <script>
+        (function () {
+            document.querySelectorAll('.flow-row').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var detail = btn.nextElementSibling;
+                    if (!detail || !detail.classList.contains('flow-detail')) return;
+                    var open = detail.classList.toggle('hidden') === false;
+                    btn.innerHTML = open ? 'Close &uarr;' : 'Read Full Plan &rarr;';
+                });
+            });
+        })();
+    </script>
+
+    <footer class="bg-white text-center py-16 border-t border-gray-200">
+        <div class="flex justify-center gap-2 text-dcRed text-xl mb-6">
             <span>★</span><span>★</span><span>★</span>
         </div>
-        <p class="font-mono uppercase tracking-[0.2em] text-xs font-bold text-dcBlack mb-3">Rhonda Hamilton for Mayor 2026</p>
-        <p class="text-xs text-gray-600 uppercase tracking-widest mb-6">Digital Strategy Proposal Confidentiality Notice</p>
-        <a href="#top" class="inline-block font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack hover:text-dcRed transition-colors">&uarr; Back to top</a>
+        <p class="font-heading font-bold text-xs uppercase tracking-[0.3em] text-dcBlack mb-2">Rhonda Hamilton for Mayor 2026</p>
+        <p class="text-[10px] text-gray-500 uppercase tracking-widest">Digital Strategy Proposal Confidentiality Notice</p>
     </footer>
 
 </body>
