@@ -106,6 +106,15 @@
             border-bottom-color: #E31837;
         }
 
+        /* Dark baby blue linen for the pricing section, drawn in CSS so it needs no image */
+        .linen-blue {
+            background-color: #7EA5CC;
+            background-image:
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.14) 0 1px, transparent 1px 3px),
+                repeating-linear-gradient(90deg, rgba(255,255,255,0.14) 0 1px, transparent 1px 3px),
+                repeating-linear-gradient(45deg, rgba(20,40,70,0.06) 0 2px, transparent 2px 7px);
+        }
+
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 */
@@ -125,7 +134,7 @@
         @media print {
             @page { size: letter; margin: 0.5in; }
             html, body { background: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-            nav, .video-container, .btn-funnel { display: none !important; }
+            nav, .video-container, .btn-funnel, .plan-add, #plan-bar { display: none !important; }
             .hero-section { min-height: 0 !important; }
             section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
             .grid > div { break-inside: avoid; page-break-inside: avoid; }
@@ -459,6 +468,7 @@
                         <div class="font-heading text-6xl font-black text-dcRed md:w-1/4">01</div>
                         <div class="md:w-3/4">
                             <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">Podcast Clipping Campaign</h4>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mb-6 pb-4 border-b border-gray-200"><span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">Part of <span class="text-dcBlack">Social Media</span></span><span class="font-heading font-black text-xl text-dcBlack">$2,150</span><button type="button" class="plan-add  inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Social media" data-price="2150" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button></div>
                             <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">Every podcast appearance, interview, and speech becomes a library. One 40-minute interview yields 15 to 40 usable assets.</p>
                             <ul class="space-y-4 mb-8">
                                 <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Position Clips.</strong> Based on 13 core categories.</li>
@@ -477,6 +487,7 @@
                         <div class="font-heading text-6xl font-black text-dcBlack md:w-1/4">02</div>
                         <div class="md:w-3/4">
                             <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">Content Folder</h4>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mb-6 pb-4 border-b border-gray-200"><span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">Part of <span class="text-dcBlack">Social Media</span></span><span class="font-heading font-black text-xl text-dcBlack">$2,150</span><button type="button" class="plan-add  inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Social media" data-price="2150" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button></div>
                             <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">One shared folder is the distribution engine: every clipper and volunteer downloads from it and posts daily.</p>
                             <ul class="space-y-4 mb-8">
                                 <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">One Link.</strong> Anyone with the link can post without asking.</li>
@@ -493,6 +504,7 @@
                         <div class="font-heading text-6xl font-black text-dcRed md:w-1/4">03</div>
                         <div class="md:w-3/4">
                             <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">TikTok & Reels Discovery</h4>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mb-6 pb-4 border-b border-gray-200"><span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">Part of <span class="text-dcBlack">Social Media</span></span><span class="font-heading font-black text-xl text-dcBlack">$2,150</span><button type="button" class="plan-add  inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Social media" data-price="2150" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button></div>
                             <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">The top of the funnel. One question or tension per clip, curiosity in the first 3 seconds. Never a speech or commercial.</p>
                             <ul class="space-y-4 mb-8">
                                 <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">13 Core Questions.</strong> Addressing the actual concerns discovered in the audit.</li>
@@ -510,6 +522,7 @@
                         <div class="font-heading text-6xl font-black text-dcBlack md:w-1/4">04</div>
                         <div class="md:w-3/4">
                             <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">FB Campaign Content Hub</h4>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mb-6 pb-4 border-b border-gray-200"><span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">Part of <span class="text-dcBlack">Social Media</span></span><span class="font-heading font-black text-xl text-dcBlack">$2,150</span><button type="button" class="plan-add  inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Social media" data-price="2150" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button></div>
                             <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">The long-form social library. Residents watch longer content, revisit a topic, comment in detail, and share inside family networks.</p>
                             <ul class="space-y-4 mb-8">
                                 <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">What It Holds.</strong> Podcast clips, longer interviews, explainers, polls, feedback, updates, events, and reposts.</li>
@@ -526,6 +539,7 @@
                         <div class="font-heading text-6xl font-black text-dcRed md:w-1/4">05</div>
                         <div class="md:w-3/4">
                             <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">Local Theme-Page Distribution</h4>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mb-6 pb-4 border-b border-gray-200"><span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">Part of <span class="text-dcBlack">Seeding Campaign</span></span><span class="font-heading font-black text-xl text-dcRed">Free</span><button type="button" class="plan-add  inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Seeding campaign" data-price="0" data-note="seed placements billed at cost" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button></div>
                             <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">Clips placed inside the D.C. pages residents already spend attention on: music, culture, lifestyle, neighborhood news, and civic discussion.</p>
                             <ul class="space-y-4 mb-8">
                                 <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Selection Rule.</strong> Local audience quality over follower count. Real engagement over inflated likes.</li>
@@ -542,6 +556,7 @@
                         <div class="font-heading text-6xl font-black text-dcBlack md:w-1/4">06</div>
                         <div class="md:w-3/4">
                             <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">Neighborhood Conversations</h4>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mb-6 pb-4 border-b border-gray-200"><span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">Part of <span class="text-dcBlack">Man-on-the-Street Content</span></span><span class="font-heading font-black text-xl text-dcRed">Free</span><button type="button" class="plan-add  inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Man-on-the-street content" data-price="0" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button></div>
                             <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">Hamilton outside the podium, the studio, and the press release: answering real residents on location. Loose, human, clear, watchable.</p>
                             <ul class="space-y-4 mb-8">
                                 <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Formats.</strong> Walk-throughs, resident questions, rapid-response rounds.</li>
@@ -574,6 +589,7 @@
                         <div class="font-heading text-6xl font-black text-dcRed md:w-1/4">07</div>
                         <div class="md:w-3/4">
                             <h4 class="font-heading font-black text-3xl mb-4 text-dcBlack uppercase tracking-tight">Website, Phone, and Home Screen App</h4>
+                            <div class="flex flex-wrap items-center gap-x-6 gap-y-3 mb-6 pb-4 border-b border-gray-200"><span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">Part of <span class="text-dcBlack">Campaign Website and App</span></span><span class="font-heading font-black text-xl text-dcBlack">$3,450</span><button type="button" class="plan-add  inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Campaign website and app" data-price="3450" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button></div>
                             <p class="text-xl text-gray-800 font-light leading-relaxed mb-6">We build the campaign site once and it works everywhere. On a computer it is the website. On a phone it fits the screen. And residents can add it to their phone’s home screen like an app, with no app store. Every visit follows the same path: answer the poll, leave a phone number or email, then donate.</p>
                         <ul class="space-y-4">
                             <li class="text-base text-gray-700 leading-relaxed"><strong class="font-bold text-dcBlack uppercase tracking-wider text-xs mr-2">Looks like her campaign.</strong> Built for Rhonda, not a template. Fast on a phone.</li>
@@ -586,20 +602,18 @@
             </div>
         </section>
 
-        <section id="cost" class="relative bg-gray-100 py-24 md:py-32 px-6 border-t-2 border-gray-200 overflow-hidden">
+        <section id="cost" class="relative linen-blue py-24 md:py-32 px-6 border-t-2 border-dcBlack overflow-hidden">
             <!-- Civil Rights / Protest Wallpaper Background -->
             <div class="absolute inset-0 z-0 pointer-events-none">
                 <!-- Apply your historical/protest image here. It is set to grayscale, low opacity, and multiplied to blend cleanly into the light gray background -->
                 <div class="absolute inset-0 bg-[url('civil-rights-protest-wallpaper.jpg')] bg-cover bg-center bg-no-repeat opacity-[0.08] grayscale mix-blend-multiply"></div>
-                <!-- Gradient overlay to keep the text area bright and blend the top/bottom edges -->
-                <div class="absolute inset-0 bg-gradient-to-b from-gray-100 via-white/50 to-gray-100"></div>
             </div>
 
             <div class="max-w-7xl mx-auto relative z-10">
                 <div class="text-center mb-16">
                     <div class="flex justify-center gap-3 text-dcRed text-4xl mb-6"><span>★</span><span>★</span><span>★</span></div>
                     <h2 class="font-heading text-5xl md:text-7xl font-black tracking-tighter mb-6 text-dcBlack uppercase">What Is The Cost?</h2>
-                    <p class="text-xl md:text-3xl font-light text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                    <p class="text-xl md:text-3xl font-light text-dcBlack max-w-3xl mx-auto leading-relaxed">
                         The organic content builds the audience. The paid system scales the audience. <br><strong class="text-dcBlack font-black uppercase tracking-tight text-2xl md:text-4xl mt-4 block">The audience wins the election.</strong>
                     </p>
                 </div>
@@ -630,6 +644,7 @@
                         <div class="shrink-0 text-left md:text-right mt-4 md:mt-0">
                             <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Investment</p>
                             <p class="font-heading text-5xl md:text-6xl font-black text-dcBlack">$2,150</p>
+                            <button type="button" class="plan-add mt-4 inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Social media" data-price="2150" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button>
                         </div>
                     </div>
 
@@ -656,6 +671,7 @@
                         <div class="shrink-0 text-left md:text-right mt-4 md:mt-0">
                             <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2">Investment</p>
                             <p class="font-heading text-5xl md:text-6xl font-black text-dcBlack">$3,450</p>
+                            <button type="button" class="plan-add mt-4 inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Campaign website and app" data-price="3450" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button>
                         </div>
                     </div>
                 </div>
@@ -672,18 +688,20 @@
                             <h5 class="font-heading font-black text-2xl uppercase text-dcBlack mb-4">Man-on-the-Street Content</h5>
                             <p class="text-base text-gray-700 mb-6 leading-relaxed">We help produce the neighborhood conversations and recruit a videographer to capture raw, authentic moments.</p>
                             <p class="font-heading text-3xl font-black text-dcRed uppercase tracking-tight">Included Free</p>
+                            <button type="button" class="plan-add mt-4 inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Man-on-the-street content" data-price="0" data-note="" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button>
                         </div>
                         <!-- Bonus 2 -->
                         <div class="flex-1 md:pl-4">
                             <h5 class="font-heading font-black text-2xl uppercase text-dcBlack mb-4">Seeding Campaign Mgt</h5>
                             <p class="text-base text-gray-700 mb-6 leading-relaxed">We manage the campaign end to end as volunteers. You only pay hard costs for the actual placements on local pages.</p>
                             <p class="font-heading text-2xl font-black text-dcRed uppercase tracking-tight">Management Free</p>
+                            <button type="button" class="plan-add mt-4 inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Seeding campaign" data-price="0" data-note="seed placements billed at cost" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Upsell / Scale block -->
-                <div class="flex flex-col md:flex-row gap-8 items-center bg-gray-50 border-2 border-dcBlack p-8 md:p-10">
+                <div class="flex flex-col md:flex-row gap-8 items-center bg-white border-2 border-dcBlack p-8 md:p-10">
                     <div class="flex-1">
                         <span class="inline-block text-dcBlack text-[10px] font-bold uppercase tracking-[0.2em] border border-dcBlack px-3 py-1 mb-4">Scale Phase</span>
                         <h4 class="font-heading font-black text-3xl uppercase text-dcBlack mb-4">Paid Ads Management</h4>
@@ -692,11 +710,94 @@
                     <div class="shrink-0 text-left md:text-right mt-4 md:mt-0">
                         <p class="font-heading text-5xl font-black text-dcBlack">$750</p>
                         <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-2 border-t border-gray-300 pt-2">+ $2K-$3K Ad Budget</p>
+                        <button type="button" class="plan-add mt-4 inline-flex items-center gap-3 font-heading font-bold text-xs uppercase tracking-[0.15em] text-dcBlack group" data-item="Paid ads management" data-price="750" data-note="plus an ad budget of $2,000 to $3,000 paid to Meta" role="checkbox" aria-checked="false"><span class="plan-box w-8 h-8 shrink-0 border-2 border-dcBlack bg-white group-hover:border-dcRed flex items-center justify-center text-white text-lg leading-none transition-colors" aria-hidden="true"></span><span class="plan-label">Add to my plan</span></button>
                     </div>
                 </div>
 
+                <!-- Your plan: the pieces they picked, added up -->
+                <div id="plan-summary" class="bg-white border-t-8 border-dcBlack p-8 md:p-12 mt-10 scroll-mt-28">
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-6">
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-2">Your plan</p>
+                            <h4 class="font-heading font-black text-3xl uppercase text-dcBlack">Pick what fits. This adds it up.</h4>
+                        </div>
+                        <div class="text-left md:text-right">
+                            <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-1">Fees</p>
+                            <p id="plan-total" class="font-heading text-5xl md:text-6xl font-black text-dcBlack">$0</p>
+                        </div>
+                    </div>
+                    <ul id="plan-items" class="divide-y divide-gray-200 mb-4">
+                        <li id="plan-empty" class="py-3 text-base text-gray-600">Nothing added yet. Tap Add to my plan on the pieces that fit the campaign. The free pieces count too.</li>
+                    </ul>
+                    <p id="plan-notes" class="text-sm text-gray-600 mb-8 hidden"></p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a id="plan-send" href="mailto:kawani@digiwaxx.com" class="btn-funnel text-center opacity-40 pointer-events-none" aria-disabled="true">Send this plan to Kay</a>
+                        <button type="button" id="plan-clear" class="font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack hover:text-dcRed transition-colors px-4 py-3">Start over</button>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <div id="plan-bar" class="hidden fixed bottom-0 inset-x-0 z-40 bg-dcBlack text-white px-4 md:px-12 py-3 border-t-4 border-dcRed">
+            <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+                <p class="font-heading font-bold text-sm md:text-base"><span id="plan-bar-count">0</span> in your plan <span class="text-dcRed mx-2">//</span> <span id="plan-bar-total">$0</span> in fees</p>
+                <a href="#plan-summary" class="bg-dcRed text-white px-4 py-2 font-heading font-bold text-xs uppercase tracking-[0.15em] hover:bg-white hover:text-dcBlack transition-colors whitespace-nowrap">View my plan</a>
+            </div>
+        </div>
+
+        <script>
+            (function () {
+                var KEY = 'hamilton-plan';
+                var buttons = Array.prototype.slice.call(document.querySelectorAll('.plan-add'));
+                var list = document.getElementById('plan-items'), empty = document.getElementById('plan-empty');
+                var total = document.getElementById('plan-total'), notes = document.getElementById('plan-notes');
+                var send = document.getElementById('plan-send'), bar = document.getElementById('plan-bar');
+                var barCount = document.getElementById('plan-bar-count'), barTotal = document.getElementById('plan-bar-total');
+                var picked = [];
+                var catalog = {};
+                buttons.forEach(function (b) { if (!catalog[b.dataset.item]) catalog[b.dataset.item] = { price: parseInt(b.dataset.price, 10) || 0, note: b.dataset.note || '' }; });
+                try { picked = JSON.parse(localStorage.getItem(KEY) || '[]').filter(function (i) { return catalog[i]; }); } catch (e) { picked = []; }
+                function money(n) { return '$' + n.toLocaleString('en-US'); }
+                function render() {
+                    var sum = 0, extra = [];
+                    buttons.forEach(function (b) {
+                        var on = picked.indexOf(b.dataset.item) !== -1;
+                        b.setAttribute('aria-checked', on ? 'true' : 'false');
+                        var box = b.querySelector('.plan-box'), label = b.querySelector('.plan-label');
+                        box.textContent = on ? '\u2713' : '';
+                        box.classList.toggle('bg-dcRed', on); box.classList.toggle('border-dcRed', on); box.classList.toggle('bg-white', !on);
+                        label.textContent = on ? 'In my plan' : 'Add to my plan';
+                    });
+                    list.querySelectorAll('li[data-item]').forEach(function (li) { li.remove(); });
+                    picked.forEach(function (item) {
+                        var c = catalog[item]; sum += c.price; if (c.note) extra.push(c.note);
+                        var li = document.createElement('li'); li.setAttribute('data-item', item);
+                        li.className = 'py-3 flex items-center justify-between gap-4 text-base text-dcBlack';
+                        li.innerHTML = '<span class="font-bold">' + item + '</span><span class="font-heading font-black">' + (c.price ? money(c.price) : 'Free') + '</span>';
+                        list.appendChild(li);
+                    });
+                    empty.hidden = picked.length > 0;
+                    total.textContent = money(sum);
+                    notes.textContent = extra.length ? 'Also ' + extra.join(', and ') + '.' : '';
+                    notes.classList.toggle('hidden', !extra.length);
+                    var body = 'Hi Kay,%0A%0AHere is the plan I want to go with:%0A' + picked.map(function (i) { var pr = catalog[i].price; return '- ' + i + ' (' + (pr ? money(pr) : 'free') + ')'; }).join('%0A') + '%0A%0AFees: ' + money(sum) + (extra.length ? '%0A' + extra.join('; ') : '') + '%0A%0AThanks';
+                    send.href = 'mailto:kawani@digiwaxx.com?subject=' + encodeURIComponent('Hamilton 2026 plan: my picks') + '&body=' + body;
+                    send.classList.toggle('opacity-40', !picked.length); send.classList.toggle('pointer-events-none', !picked.length);
+                    send.setAttribute('aria-disabled', picked.length ? 'false' : 'true');
+                    bar.classList.toggle('hidden', !picked.length); barCount.textContent = picked.length; barTotal.textContent = money(sum);
+                    try { localStorage.setItem(KEY, JSON.stringify(picked)); } catch (e) {}
+                }
+                buttons.forEach(function (b) {
+                    b.addEventListener('click', function () {
+                        var i = picked.indexOf(b.dataset.item);
+                        if (i === -1) picked.push(b.dataset.item); else picked.splice(i, 1);
+                        render();
+                    });
+                });
+                document.getElementById('plan-clear').addEventListener('click', function () { picked = []; render(); });
+                render();
+            })();
+        </script>
     </main>
 
     <script>
