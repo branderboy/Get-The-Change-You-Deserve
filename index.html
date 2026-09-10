@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rhonda Hamilton 2026 | Digital Campaign Proposal</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +49,8 @@
         :root { --page-max: 80rem; --gutter: 1.5rem; }
         @media (min-width: 768px) { :root { --gutter: 3rem; } }
         .page { width: 100%; max-width: var(--page-max); margin-left: auto; margin-right: auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+        /* The nav keeps the logo on the page's left edge but lets the links and buttons run to the right screen edge. */
+        .nav-page { width: 100%; padding-left: max(var(--gutter), calc((100vw - var(--page-max)) / 2 + var(--gutter))); padding-right: var(--gutter); }
 
         /* Alignment rules, in addition to .page above:
            1. Section content starts at the page edge. No inner containers narrower than .page.
@@ -163,14 +169,14 @@
 
     <div class="dc-flag-divider" id="top"></div>
     <nav class="bg-white/95 backdrop-blur-md py-4 sticky top-0 z-50 border-b border-gray-200">
-        <div class="page flex justify-between items-center gap-2 md:gap-3">
+        <div class="nav-page flex justify-between items-center gap-2 md:gap-3">
         <a href="#top" class="flex items-center gap-2 md:gap-3 shrink-0">
             <div class="flex gap-1 md:gap-1.5 text-dcRed text-xl md:text-4xl">
                 <span>★</span><span>★</span><span>★</span>
             </div>
             <span class="font-heading font-black text-base md:text-2xl tracking-tighter text-dcBlack uppercase whitespace-nowrap">Hamilton <span class="text-dcRed">2026</span></span>
         </a>
-        <div class="hidden xl:flex gap-6 2xl:gap-8 font-heading font-bold text-sm 2xl:text-base uppercase tracking-[0.1em] text-gray-800 whitespace-nowrap">
+        <div class="hidden xl:flex gap-6 2xl:gap-8 font-heading font-bold text-sm 2xl:text-base uppercase tracking-[0.1em] text-gray-800 whitespace-nowrap ml-auto mr-6 2xl:mr-10">
             <a href="#timeline" class="hover:text-dcRed transition-colors">Timeline</a>
             <a href="#strategy" class="hover:text-dcRed transition-colors">Audit Insights</a>
             <a href="#skepticism" class="hover:text-dcRed transition-colors">Videos</a>
