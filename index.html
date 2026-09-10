@@ -858,7 +858,7 @@
                     </ul>
                     <p id="plan-notes" class="text-sm text-gray-600 mb-8 hidden"></p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a id="plan-send" href="mailto:kawani@digiwaxx.com" class="btn-funnel text-center opacity-40 pointer-events-none" aria-disabled="true">Send this plan to Kay</a>
+                        <a id="plan-send" href="mailto:kawani@digiwaxx.com" class="btn-funnel text-center opacity-40 pointer-events-none" aria-disabled="true">Send this plan to Kay Ali</a>
                         <button type="button" id="plan-clear" class="font-heading font-bold text-xs uppercase tracking-[0.2em] text-dcBlack hover:text-dcRed transition-colors px-4 py-3">Start over</button>
                     </div>
                 </div>
@@ -907,7 +907,7 @@
                     total.textContent = money(sum);
                     notes.textContent = extra.length ? 'Also ' + extra.join(', and ') + '.' : '';
                     notes.classList.toggle('hidden', !extra.length);
-                    var body = 'Hi Kay,%0A%0AHere is the plan I want to go with:%0A' + picked.map(function (i) { var pr = catalog[i].price; return '- ' + i + ' (' + (pr ? money(pr) : 'free') + ')'; }).join('%0A') + '%0A%0AFees: ' + money(sum) + (extra.length ? '%0A' + extra.join('; ') : '') + '%0A%0AThanks';
+                    var body = 'Hi Kay Ali,%0A%0AHere is the plan I want to go with:%0A' + picked.map(function (i) { var pr = catalog[i].price; return '- ' + i + ' (' + (pr ? money(pr) : 'free') + ')'; }).join('%0A') + '%0A%0AFees: ' + money(sum) + (extra.length ? '%0A' + extra.join('; ') : '') + '%0A%0AThanks';
                     send.href = 'mailto:kawani@digiwaxx.com?subject=' + encodeURIComponent('Hamilton 2026 plan: my picks') + '&body=' + body;
                     send.classList.toggle('opacity-40', !picked.length); send.classList.toggle('pointer-events-none', !picked.length);
                     send.setAttribute('aria-disabled', picked.length ? 'false' : 'true');
