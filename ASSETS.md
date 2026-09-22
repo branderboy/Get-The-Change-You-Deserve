@@ -235,7 +235,7 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 
 ### 3.1 Audit insights on the page — Confidence 100
 **Basis:** Complete. Eight insight cards and three messaging takeaways, each labeled by source type. Done.
-- **Sources used:** City Cast DC / TrueDot 2026 mayoral poll (735 adults, May 12–17 2026, ±3.7); Washington Post / Schar School 2026 mayoral poll; Washington Post / Schar School August 2025 public safety poll (604 residents); DC Board of Elections 2026 primary and 2022 general turnout; DCBOE 2026 voter registration (about 91,133 independent and no-party-preference voters, 18.4% of registered voters; no verified age-by-party table exists, so no age-band counts are claimed); DC Open Data 311 and City Cast's July 2026 analysis.
+- **Sources used:** City Cast DC / TrueDot 2026 mayoral poll (735 adults, May 12–17 2026, ±3.7); Washington Post / Schar School 2026 mayoral poll; Washington Post / Schar School August 2025 public safety poll (604 residents); DC Board of Elections 2026 primary and 2022 general turnout; DCBOE voter registration as of August 31, 2026 (77,286 no-party voters, 17.2% of 449,417 registered; no verified age-by-party table exists, so no age-band counts are claimed); DC Open Data 311 and City Cast's July 2026 analysis.
 - **Rule carried into all content:** every finding is labeled representative polling, election behavior, government service data, search behavior, or anecdotal online sentiment. A Reddit thread is never treated as a poll.
 - **Done when:** the section is live. Done.
 
@@ -339,7 +339,7 @@ The audit is done. Its findings are on the page as the "What D.C. Already Told U
 ### 5.8 Daily Posters (recruited volunteers) — Confidence 65
 **Basis:** The mechanics are simple. Recruiting people who will actually post every day, and keeping them posting, is the hard part. Score reflects the retention risk, not the setup.
 - **Inputs:** a recruitment ask (who we want, what we ask of them, what they get), a signup form on the campaign website (0.5), a group chat for the daily drop.
-- **Steps:** recruit from the candidate's existing supporters, volunteers, and the 91,000 independents audience; each poster commits to one clip a day on their own Instagram or TikTok from the library; daily reminder with that day's clip in the group chat; weekly shoutout for top posters; replace drop-offs continuously.
+- **Steps:** recruit from the candidate's existing supporters, volunteers, and the 77,286 no-party audience; each poster commits to one clip a day on their own Instagram or TikTok from the library; daily reminder with that day's clip in the group chat; weekly shoutout for top posters; replace drop-offs continuously.
 - **Depends on:** 5.7 live, 0.5 signup page.
 - **Done when:** a set roster of posters has posted daily for two consecutive weeks. Set the roster size once recruiting starts.
 

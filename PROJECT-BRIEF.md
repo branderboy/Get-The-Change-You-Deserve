@@ -21,7 +21,7 @@ Central brand position: **Promises are easy. Follow-through is the proof.**
 
 ## 2. The target
 
-About 91,133 independent and no-party-preference voters in D.C., 18.4% of registered voters, based on the most recently published party-registration breakdown. The public datasets do not provide a verified age-by-party table for D.C., so this plan does not claim exact counts of independent voters by age band (18 to 24, 25 to 34, 35 to 44, and so on). The job: win the independents, and persuade some voters from other parties.
+There are 77,286 voters registered with no party in D.C., 17.2% of the 449,417 registered, per the Board of Elections monthly report as of August 31, 2026. The public datasets do not provide a verified age-by-party table for D.C., so this plan does not claim exact counts of independent voters by age band (18 to 24, 25 to 34, 35 to 44, and so on). The job: win the independents, and persuade some voters from other parties.
 
 ## 3. What the audit found
 
@@ -39,12 +39,12 @@ The audit is complete. Sources: City Cast DC / TrueDot 2026 mayoral poll (735 ad
 | Call crime extremely or very serious | 31% | Representative polling |
 | Voters east of the Anacostia undecided before the primary | Over 40% | Representative polling |
 | 2026 primary turnout | 32% (about 155,940 of 485,398) | Election behavior |
-| Independent or no-party-preference voters locked out of the closed primary | About 91,133 (18.4%) | Election behavior |
+| No-party voters locked out of the closed primary | 77,286 (17.2%) | DCBOE registration, Aug 31 2026 |
 | Highest-volume 311 categories, July 2026 | Trash, parking enforcement | Government service data |
 
 Google Trends and Reddit are tracked monthly as signals. They are never treated as polling.
 
-**What it means for messaging:** lead with cost of living, safety, and housing. Talk safety the way residents feel it, most feel safe and oppose federal control while a third still call crime serious. The audience is the two thirds who sat out the primary, the 91,000 independents who could not vote in it, and the undecided east of the river.
+**What it means for messaging:** lead with cost of living, safety, and housing. Talk safety the way residents feel it, most feel safe and oppose federal control while a third still call crime serious. The audience is the two thirds who sat out the primary, the 77,286 no-party voters who could not vote in it, and the undecided east of the river.
 
 ## 4. Scope and pricing
 
