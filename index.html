@@ -136,26 +136,12 @@
                 repeating-linear-gradient(45deg, rgba(20,40,70,0.06) 0 2px, transparent 2px 7px);
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
-            background: #0F172A;
-            overflow: hidden;
-        }
-        .video-container iframe, .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
 
         /* Print */
         @media print {
             @page { size: letter; margin: 0.5in; }
             html, body { background: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-            nav, .video-container, .btn-funnel, .plan-add, #plan-bar { display: none !important; }
+            nav, .btn-funnel, .plan-add, #plan-bar { display: none !important; }
             .hero-section { min-height: 0 !important; }
             section { padding-top: 2rem !important; padding-bottom: 2rem !important; }
             .grid > div { break-inside: avoid; page-break-inside: avoid; }
@@ -424,12 +410,6 @@
                         <p class="text-lg text-gray-300 mb-8 leading-relaxed">
                             Take every public critique and build the video that answers it. These are the first videos to make.
                         </p>
-                        
-                        <div class="video-container border border-gray-700">
-                            <video controls preload="metadata" playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;background:#0F172A;">
-                                <source src="blueprint-with-the-convo.mp4" type="video/mp4">
-                            </video>
-                        </div>
                     </div>
 
                     <div class="lg:w-2/3">
@@ -747,6 +727,18 @@
 
                 </div>
 
+                <div class="bg-white border-2 border-dcBlack p-8 md:p-12 mb-16">
+                    <span class="inline-block bg-dcRed text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 mb-4">Start Here</span>
+                    <h4 class="font-heading font-black text-3xl uppercase text-dcBlack mb-6">The Plan In Five Lines</h4>
+                    <ul class="divide-y divide-gray-200">
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg"><span class="font-heading font-black uppercase text-dcRed shrink-0 md:w-1/5">The deadline</span><span class="text-gray-800 flex-1">Ballots mail September 28, not November 3</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg"><span class="font-heading font-black uppercase text-dcRed shrink-0 md:w-1/5">The audience</span><span class="text-gray-800 flex-1">Independents 18 to 34, the 77,286 with no party</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg"><span class="font-heading font-black uppercase text-dcRed shrink-0 md:w-1/5">The map</span><span class="text-gray-800 flex-1">Wards ranked by no-party share and by turnout gap</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg"><span class="font-heading font-black uppercase text-dcRed shrink-0 md:w-1/5">The reach</span><span class="text-gray-800 flex-1">Buy the list, or build the audience inside Meta</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg"><span class="font-heading font-black uppercase text-dcRed shrink-0 md:w-1/5">The proof</span><span class="text-gray-800 flex-1">Baseline, targets, a weekly report, written stop rules</span></li>
+                    </ul>
+                </div>
+
                 <p class="font-heading font-black text-xl uppercase tracking-[0.2em] text-dcBlack mb-6 inline-block border-t-4 border-dcRed pt-2">The Calendar</p>
 
                 <div class="bg-white border-2 border-dcBlack p-8 md:p-12 mb-10">
@@ -796,11 +788,7 @@
                             <span class="text-dcRed text-2xl leading-none font-black mt-1">&#10003;</span>
                             <span class="text-lg text-gray-800 leading-relaxed"><strong class="text-dcBlack">The two cuts point at the same people.</strong> The District does not publish a table crossing age with party, so the exact D.C. count is not something anyone can quote. It does not need to be. The no-party wards and the 18 to 34 band overlap heavily by the nature of who registers independent, so the ward map finds the geography and the age setting finds the people inside it.</span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-dcRed text-2xl leading-none font-black mt-1">&#10003;</span>
-                            <span class="text-lg text-gray-800 leading-relaxed"><strong class="text-dcBlack">Posters follow the same map.</strong> The street crew works a routed list of blocks inside those same wards, weighted to where younger residents actually are: transit stops, campuses and the corridors where they eat, shop and go out. A resident sees the poster on their corner and the video in their feed in the same week, and that repetition is what makes a name stick.</span>
-                        </li>
-                    </ul>
+                        >
                     <p class="text-lg text-gray-800 leading-relaxed">The audit is delivered as the eight wards ranked, with the ad geographies and the poster route already built from it, so every dollar after that is aimed.</p>
                         
                 </div>
@@ -870,6 +858,22 @@
                     </ul>
                     <p class="text-lg text-gray-800 leading-relaxed"><strong class="text-dcBlack">Before either one: authorization.</strong> Nothing runs without the political authorization and the paid-for disclaimer, and approval takes days this calendar does not have spare.</p>
                 </div>
+
+                <div class="bg-white border-2 border-dcBlack p-8 md:p-12 mb-16">
+                    <span class="inline-block text-dcBlack text-[10px] font-bold uppercase tracking-[0.2em] border border-dcBlack px-3 py-1 mb-4">The Ad Math</span>
+                    <h4 class="font-heading font-black text-3xl uppercase text-dcBlack mb-5">How The Ad Budget Gets Set</h4>
+                                            <p class="text-lg text-gray-800 leading-relaxed mb-6">Meta charges by CPM, the price of 1,000 impressions. Nobody can tell you this campaign&rsquo;s CPM before it runs. It moves with the audience, the creative and whoever else is bidding for the same feed that week, and published averages are somebody else&rsquo;s campaign, not this one. The first week of spending establishes the real number. A person who sees the ad three times is three impressions, all of them paid for, so reach and frequency trade against each other on whatever the budget is.</p>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-2">Reach &times; frequency = impressions. Impressions &times; CPM = budget</p>
+                    <p class="text-lg text-gray-800 leading-relaxed mb-4">Start from the number of residents you want to reach, decide how many times each one should see the ad, and that gives the impressions you have to buy. Multiply those by the rate and you have the budget. Worked below at a $12 CPM purely to show the shape of it, showing the ad twice to each person. That rate is an assumption, not a quote, and it gets replaced with the measured number after the first week:</p>
+                    <ul class="divide-y divide-gray-200 mb-6">
+                        <li class="py-3 flex items-center justify-between gap-4 text-lg text-dcBlack"><span class="font-bold">150,000 residents, twice each</span><span class="font-heading font-black">300,000 impressions &middot; $3,600</span></li>
+                        <li class="py-3 flex items-center justify-between gap-4 text-lg text-dcBlack"><span class="font-bold">250,000 residents, twice each</span><span class="font-heading font-black">500,000 impressions &middot; $6,000</span></li>
+                        <li class="py-3 flex items-center justify-between gap-4 text-lg text-dcBlack"><span class="font-bold">500,000 residents, twice each</span><span class="font-heading font-black">1,000,000 impressions &middot; $12,000</span></li>
+                        <li class="py-3 flex items-center justify-between gap-4 text-lg text-dcBlack"><span class="font-bold">1,000,000 residents, twice each</span><span class="font-heading font-black">2,000,000 impressions &middot; $24,000</span></li>
+                    </ul>
+                    <p class="text-lg text-gray-800 leading-relaxed mb-6">Once the test returns a real CPM, the same arithmetic says exactly what the $3,200 to $5,000 in this plan buys, and we bring you that number instead of a forecast. What is certain either way: raising the frequency to three views buys the same money fewer people, because every extra view is another impression to pay for.</p>
+                    <p class="text-lg text-gray-800 leading-relaxed">Anyone who quotes you a reach figure before the first dollar is spent is guessing, and a big reach paired with a high frequency on a small budget is a guess that the arithmetic above does not support. We would rather show you the method now than a report that misses later.</p>
+                    </div>
 
                 <p class="font-heading font-black text-xl uppercase tracking-[0.2em] text-dcBlack mb-6 inline-block border-t-4 border-dcRed pt-2">The Promotional Plan</p>
 
@@ -964,6 +968,24 @@
                     <p class="text-lg text-dcBlack max-w-3xl mx-auto leading-relaxed">
                         Social media makes people look her up. The website is what they find. <br><strong class="text-dcBlack font-black uppercase tracking-tight text-2xl md:text-4xl mt-4 block">One creates the search. The other answers it.</strong>
                     </p>
+                </div>
+
+                <div class="bg-white border-2 border-dcBlack p-8 md:p-12 mb-16">
+                    <span class="inline-block bg-dcRed text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1 mb-4">Everything At A Glance</span>
+                    <h4 class="font-heading font-black text-3xl uppercase text-dcBlack mb-6">The Whole Plan On One Screen</h4>
+                    <ul class="divide-y divide-gray-200 mb-6">
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg text-dcBlack"><span class="font-bold shrink-0 md:w-2/5">Social media</span><span class="text-gray-800 flex-1">Clipping, captions, scheduled posting</span><span class="font-heading font-black shrink-0">$3,250 &ndash; $3,500</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg text-dcBlack"><span class="font-bold shrink-0 md:w-2/5">Campaign website and app</span><span class="text-gray-800 flex-1">Built once, owned by the campaign</span><span class="font-heading font-black shrink-0">$5,200 &ndash; $5,400</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg text-dcBlack"><span class="font-bold shrink-0 md:w-2/5">ManyChat</span><span class="text-gray-800 flex-1">Instagram and Facebook, answered around the clock</span><span class="font-heading font-black shrink-0">$1,250</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg text-dcBlack"><span class="font-bold shrink-0 md:w-2/5">Paid ads management</span><span class="text-gray-800 flex-1">Testing then scaling, weighted to the target wards</span><span class="font-heading font-black shrink-0">$1,000</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg text-dcBlack"><span class="font-bold shrink-0 md:w-2/5">Meta ad budget</span><span class="text-gray-800 flex-1">Paid to Meta, not to us</span><span class="font-heading font-black shrink-0">$3,200 &ndash; $5,000</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg text-dcBlack"><span class="font-bold shrink-0 md:w-2/5">Voter list</span><span class="text-gray-800 flex-1">77,286 no-party records with emails</span><span class="font-heading font-black shrink-0">$3,091</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg text-dcBlack"><span class="font-bold shrink-0 md:w-2/5">Guerrilla marketing</span><span class="text-gray-800 flex-1">500 to 1,000 posters, routed, takedown included</span><span class="font-heading font-black shrink-0">$1,200</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg text-dcBlack"><span class="font-bold shrink-0 md:w-2/5">Email blast</span><span class="text-gray-800 flex-1">Four weekly sends</span><span class="font-heading font-black shrink-0">$1,400</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg text-dcBlack"><span class="font-bold shrink-0 md:w-2/5">Website management</span><span class="text-gray-800 flex-1">Flat, through Election Day</span><span class="font-heading font-black shrink-0">$500</span></li>
+                        <li class="py-3 flex flex-col md:flex-row md:items-center gap-1 md:gap-6 text-lg text-dcBlack"><span class="font-bold shrink-0 md:w-2/5">Four free items</span><span class="text-gray-800 flex-1">Seeders, custom content, theme page, mention tracking</span><span class="font-heading font-black shrink-0">Free</span></li>
+                    </ul>
+                    <p class="text-lg text-gray-800 leading-relaxed">Pick the lines that fit. The builder at the bottom of this page adds them up and emails the list.</p>
                 </div>
 
                 <p class="font-heading font-black text-xl uppercase tracking-[0.2em] text-dcBlack mb-6 inline-block border-t-4 border-dcRed pt-2">Paid Items</p>
@@ -1063,20 +1085,7 @@
                     </div>
                 </div>
 
-                    <div class="mt-10 pt-8 border-t-2 border-dcBlack/30">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-4">How the ad budget gets set</p>
-                        <p class="text-lg text-gray-800 leading-relaxed mb-6">Meta charges by CPM, the price of 1,000 impressions. Nobody can tell you this campaign&rsquo;s CPM before it runs. It moves with the audience, the creative and whoever else is bidding for the same feed that week, and published averages are somebody else&rsquo;s campaign, not this one. The first week of spending establishes the real number. A person who sees the ad three times is three impressions, all of them paid for, so reach and frequency trade against each other on whatever the budget is.</p>
-                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-2">Reach &times; frequency = impressions. Impressions &times; CPM = budget</p>
-                        <p class="text-lg text-gray-800 leading-relaxed mb-4">Start from the number of residents you want to reach, decide how many times each one should see the ad, and that gives the impressions you have to buy. Multiply those by the rate and you have the budget. Worked below at a $12 CPM purely to show the shape of it, showing the ad twice to each person. That rate is an assumption, not a quote, and it gets replaced with the measured number after the first week:</p>
-                        <ul class="divide-y divide-gray-200 mb-6">
-                            <li class="py-3 flex items-center justify-between gap-4 text-lg text-dcBlack"><span class="font-bold">150,000 residents, twice each</span><span class="font-heading font-black">300,000 impressions &middot; $3,600</span></li>
-                            <li class="py-3 flex items-center justify-between gap-4 text-lg text-dcBlack"><span class="font-bold">250,000 residents, twice each</span><span class="font-heading font-black">500,000 impressions &middot; $6,000</span></li>
-                            <li class="py-3 flex items-center justify-between gap-4 text-lg text-dcBlack"><span class="font-bold">500,000 residents, twice each</span><span class="font-heading font-black">1,000,000 impressions &middot; $12,000</span></li>
-                            <li class="py-3 flex items-center justify-between gap-4 text-lg text-dcBlack"><span class="font-bold">1,000,000 residents, twice each</span><span class="font-heading font-black">2,000,000 impressions &middot; $24,000</span></li>
-                        </ul>
-                        <p class="text-lg text-gray-800 leading-relaxed mb-6">Once the test returns a real CPM, the same arithmetic says exactly what the $3,200 to $5,000 in this plan buys, and we bring you that number instead of a forecast. What is certain either way: raising the frequency to three views buys the same money fewer people, because every extra view is another impression to pay for.</p>
-                        <p class="text-lg text-gray-800 leading-relaxed">Anyone who quotes you a reach figure before the first dollar is spent is guessing, and a big reach paired with a high frequency on a small budget is a guess that the arithmetic above does not support. We would rather show you the method now than a report that misses later.</p>
-                    </div>
+
                 </div>
 
                 <!-- Guerrilla marketing -->
@@ -1085,26 +1094,6 @@
                         <span class="inline-block text-dcBlack text-[10px] font-bold uppercase tracking-[0.2em] border border-dcBlack px-3 py-1 mb-4">Street Phase</span>
                         <h4 class="font-heading font-black text-3xl uppercase text-dcBlack mb-4">Guerrilla Marketing</h4>
                         <p class="text-lg text-gray-800 leading-relaxed">The campaign on the street, not only in the feed. 500 to 1,000 posters put up by a crew of 8, working night and day. Not scattered across the District: the crew works a routed list of blocks inside the wards the saturation audit flagged, the ones thick with independents and the ones east of the river where turnout has been lowest, so a resident sees the poster on their corner and the video in their feed in the same week.</p>
-                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mt-8 mb-4">What the posters say</p>
-                        <p class="text-lg text-gray-800 leading-relaxed mb-4">One message per poster. A poster is read at fifteen feet by someone walking past, so it carries one line, one instruction and a code big enough to scan from the sidewalk. Two versions, printed to match the two kinds of block on the route.</p>
-                        <ul class="space-y-4 mb-6">
-                            <li class="flex items-start gap-3">
-                                <span class="text-dcRed text-2xl leading-none font-black mt-1">&#10003;</span>
-                                <span class="text-lg text-gray-800 leading-relaxed"><strong class="text-dcBlack">On the independent blocks: &ldquo;You were locked out in June. November 3 is open.&rdquo;</strong> The closed primary shut these voters out and many still think it applies. The poster corrects it in one line and the code takes them to a page that confirms they are registered.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-dcRed text-2xl leading-none font-black mt-1">&#10003;</span>
-                                <span class="text-lg text-gray-800 leading-relaxed"><strong class="text-dcBlack">On the low-turnout blocks: &ldquo;A ballot is coming to this address. Don&rsquo;t throw it out.&rdquo;</strong> In a neighborhood that has not voted in years a government envelope gets binned. Naming it before it arrives is the whole job, and the code opens the drop-box map.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-dcRed text-2xl leading-none font-black mt-1">&#10003;</span>
-                                <span class="text-lg text-gray-800 leading-relaxed"><strong class="text-dcBlack">The issue line, from the polling, not from us.</strong> Cost of living is the top concern in the District&rsquo;s own survey data, ahead of safety and housing. A rotating second run carries that as a question rather than a promise, so the poster sounds like the block it is on.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-dcRed text-2xl leading-none font-black mt-1">&#10003;</span>
-                                <span class="text-lg text-gray-800 leading-relaxed"><strong class="text-dcBlack">Every poster carries the same three marks.</strong> The date it went up, which the law requires, the paid-for attribution, and the code. No poster leaves the print run without all three.</span>
-                            </li>
-                        </ul>
                         <p class="text-lg text-gray-800 leading-relaxed mt-5"><strong class="text-dcBlack">Posted legal, and taken back down.</strong> D.C. limits posters to three per side of a street within a block, six per block when both sides are used, which means 500 posters need 91 block-slots once each precinct allocation respects that ceiling and 1,000 need 172. Each poster each one has to carry the date it went up, and two copies with the originator’s name and contact go on file with the District within 24 hours. Every campaign poster must then come down within thirty days of the election, which is <strong class="text-dcBlack">December 3</strong>, or the campaign is fined per sign left standing. At a thousand posters that is real money, so the takedown run is part of this line, not an afterthought: the same crew works the same route in reverse and the price above covers both trips.</p>
                     </div>
                     <div class="shrink-0 md:w-1/4 text-left md:text-right mt-4 md:mt-0">
